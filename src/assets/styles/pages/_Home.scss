@@ -1,4 +1,11 @@
 .home {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    height: 100%;
+  }
+
   &__intro {
     width: 220px;
     background-color: var(--primary);
@@ -29,5 +36,10 @@
     &__text {
       font-size: 12px;
     }
+  }
+
+  &__works {
+    flex-grow: 1;
+    background-color: aquamarine;
   }
 }
