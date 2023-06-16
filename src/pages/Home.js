@@ -25,12 +25,14 @@ const Home = () => {
             06 43 84 36 32 <br />
             thomas.lecam@gmail.com
           </p>
-          <div className="home__intro__socials"></div>
+          <div className="home__intro__socials">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-regular fa-envelope"></i>
+          </div>
         </div>
 
-        <div className="home__works">
-          <p>hello</p>
-        </div>
+        <div className="home__works br"></div>
       </div>
     </div>
   );
