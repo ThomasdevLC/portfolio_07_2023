@@ -72,6 +72,7 @@
       left: 0;
       margin: 10px;
       z-index: 1;
+      // opacity: 0;
     }
   }
 
@@ -80,7 +81,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-columns: 1fr;
-    gap: 6px 6px;
+    gap: 40px 6px;
     grid-auto-flow: row;
     grid-template-areas:
       "work-1 work-1 work-2"
@@ -89,10 +90,10 @@
   .work {
     height: 600px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 20px;
   }
   .home__works__image {
     height: 100%;
