@@ -34,18 +34,24 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="home__works container">
+        <div className="home__works works-container">
           {worklist.map((item) => (
             <div key={item.id} className={`work work-${item.id}`}>
-              <img src={item.image} alt={item.title} />
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <div className="tags">
-                {item.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    {tag}
-                  </span>
-                ))}
+              <img
+                className="home__works__image"
+                src={item.image}
+                alt={item.title}
+              />
+              <div className="home__works__text">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <div className="tags">
+                  {item.tags.map((tag) => (
+                    <span key={tag} className="tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

@@ -8,6 +8,7 @@
 
   &__intro {
     width: 220px;
+    height: 770px;
     background-color: var(--primary);
     padding: 20px;
     border-radius: 15px;
@@ -64,9 +65,21 @@
   &__works {
     flex-grow: 1;
     background-color: white;
+
+    &__image {
+      height: 100%;
+      object-fit: cover;
+    }
+    &__text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 10px;
+      z-index: 1;
+    }
   }
 
-  .container {
+  .works-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -77,15 +90,13 @@
       "work-1 work-1 work-2"
       "work-3 work-3 work-4";
   }
-
   .work {
-    height: 400px;
-
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
 
   .work-1 {
