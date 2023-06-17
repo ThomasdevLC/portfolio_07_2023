@@ -66,10 +66,6 @@
     flex-grow: 1;
     background-color: white;
 
-    &__image {
-      height: 100%;
-      object-fit: cover;
-    }
     &__text {
       position: absolute;
       top: 0;
@@ -97,6 +93,10 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+  }
+  .home__works__image {
+    height: 100%;
+    object-fit: cover;
   }
 
   .work-1 {
