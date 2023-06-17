@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
+import worklist from "../works/worklistData";
+
 const Home = () => {
   return (
     <div className="home">
@@ -26,13 +28,28 @@ const Home = () => {
             thomas.lecam@gmail.com
           </p>
           <div className="home__intro__socials">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-regular fa-envelope"></i>
+            <i className="fa-brands fa-linkedin-in"></i>
+            <i className="fa-brands fa-github"></i>
+            <i className="fa-regular fa-envelope"></i>
           </div>
         </div>
 
-        <div className="home__works br"></div>
+        <div className="home__works container">
+          {worklist.map((item) => (
+            <div key={item.id} className={`work work-${item.id}`}>
+              <img src={item.image} alt={item.title} />
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div className="tags">
+                {item.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
