@@ -36,15 +36,16 @@ const Home = () => {
 
         <div className="home__works works-container">
           {worklist.map((item) => (
-            <div key={item.id} className={`work work-${item.id}`}>
+            <div key={item.id} className={`work work-${item.id} overlay`}>
               <img
-                className="home__works__image"
+                className="home__works__image test"
                 src={item.image}
                 alt={item.title}
               />
               <div className="home__works__text">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                <p>{item.period}</p>
                 <div className="tags">
                   {item.tags.map((tag) => (
                     <span key={tag} className="tag">
