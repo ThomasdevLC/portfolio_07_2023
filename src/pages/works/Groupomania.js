@@ -1,10 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import WorksComponent from "../../components/WorksComponent";
 // import video from "../../../assets/videos/groupomania-video.mp4";
 
 const Groupomania = () => {
   return (
     <section className="container">
+      {/* <WorksComponent /> */}
+      <p>hey</p>
       <h1 className="container__title">GROUPOMANIA</h1>
       <NavLink to="/">
         <div className="container__backpage"> &#x2191; PORTFOLIO</div>

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
-import background from "../assets/images/background.jpg";
+import HeaderNav from "../components/HeaderNav";
 import worklist from "../worklist/worklistData";
 
 const Home = () => {
@@ -67,7 +66,7 @@ const Home = () => {
           <div className=" home__works__container">
             {worklist.map((item) => (
               <NavLink
-                to={`/${item.link}`}
+                to={`/${item.link}/${item.id}`}
                 key={item.id}
                 className={`work work-${item.id} overlay`}
               >
@@ -85,10 +84,7 @@ const Home = () => {
                   {item.tags.map(
                     (tag) =>
                       selectedTags.includes(tag) && (
-                        <span
-                          key={item.id}
-                          className="home__works__taglist__tag"
-                        >
+                        <span key={tag} className="home__works__taglist__tag">
                           {`# ${tag}`}
                         </span>
                       )
