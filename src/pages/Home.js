@@ -80,11 +80,11 @@ const Home = () => {
                   <p>{item.description}</p>
                   <p>{item.period}</p>
                 </div>
-                <div className="home__works__tag-filter">
+                <div className="home__works__taglist">
                   {item.tags.map(
                     (tag) =>
                       selectedTags.includes(tag) && (
-                        <span key={tag} className="tag">
+                        <span key={tag} className="home__works__taglist__tag">
                           {tag}
                         </span>
                       )
