@@ -4,13 +4,7 @@ import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
 import worklist from "../works/worklistData";
 
-const overlays = document.querySelectorAll(".overlay");
-
-overlays.forEach((overlay) => {
-  overlay.addEventListener("mouseleave", () => {
-    overlay.classList.add("animate-slide-out");
-  });
-});
+const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
 
 const Home = () => {
   return (
@@ -42,33 +36,42 @@ const Home = () => {
             <i className="fa-regular fa-envelope"></i>
           </div>
         </div>
-
-        <div className="home__works works-container">
-          {worklist.map((item) => (
-            <NavLink
-              to={`/${item.link}`}
-              key={item.id}
-              className={`work work-${item.id} overlay`}
-            >
-              <img
-                className="home__works__image"
-                src={item.image}
-                alt={item.title}
-              />
-              <div className="home__works__text">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <p>{item.period}</p>
-                <div className="tags">
-                  {item.tags.map((tag) => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
+        <div className="home__works">
+          <div className="home__works__tags">
+            <h3 className="home__works__tags__title">Tags</h3>
+            {tags.map((tag) => (
+              <p key={tag.id} className="home__works__tags__name">
+                {`${tag} / `}
+              </p>
+            ))}
+          </div>
+          <div className=" home__works__container">
+            {worklist.map((item) => (
+              <NavLink
+                to={`/${item.link}`}
+                key={item.id}
+                className={`work work-${item.id} overlay`}
+              >
+                <img
+                  className="home__works__image"
+                  src={item.image}
+                  alt={item.title}
+                />
+                <div className="home__works__text">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <p>{item.period}</p>
+                  <div className="tags">
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </NavLink>
-          ))}
+              </NavLink>
+            ))}
+          </div>
         </div>
       </div>
     </div>
