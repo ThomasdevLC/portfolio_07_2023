@@ -1,3 +1,5 @@
+@use "../anim";
+
 .home {
   &__content {
     display: flex;
@@ -63,7 +65,7 @@
   }
 
   &__works {
-    // flex-grow: 1;
+    flex-grow: 1;
     background-color: white;
     // max-width: 1400px;
     &__text {
@@ -77,17 +79,23 @@
 
     &__tags {
       display: flex;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 10px;
       margin-bottom: 40px;
 
       &__title {
         font-weight: 500;
-        padding-right: 20px;
+        padding-right: 10px;
+      }
+      &__title {
+        font-weight: 500;
+        padding-right: 10px;
       }
 
       &__name {
         padding-left: 4px;
+        cursor: pointer;
+        @include anim.animation-line-after;
       }
     }
 
@@ -159,5 +167,9 @@
 
   .work:not(:hover)::before {
     height: 0;
+  }
+
+  .tag-active {
+    @include anim.animation-line-after;
   }
 }

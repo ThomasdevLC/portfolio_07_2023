@@ -40,7 +40,7 @@ const Home = () => {
           <div className="home__works__tags">
             <h3 className="home__works__tags__title">Tags</h3>
             {tags.map((tag) => (
-              <p key={tag.id} className="home__works__tags__name">
+              <p key={tag.id} className="home__works__tags__name ">
                 {`${tag} / `}
               </p>
             ))}
