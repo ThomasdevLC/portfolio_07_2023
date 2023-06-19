@@ -6,7 +6,7 @@ const worklist = [
     period: "Mai 2023",
     image: require("../assets/images/ferme_rougeraie.png"),
     tags: ["Vue", "Sass", "NodeJs", "Figma"],
-    link: "",
+    link: "ferme-rougeraie",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const worklist = [
     period: "Mars 2023",
     image: require("../assets/images/pwa.png"),
     tags: ["Vue", "Sass", "Figma"],
-    link: "",
+    link: "pwa",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const worklist = [
     period: "Décembre 2022",
     image: require("../assets/images/kasa.png"),
     tags: ["React", "Sass"],
-    link: "",
+    link: "kasa",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const worklist = [
     period: "Novembre 2022",
     image: require("../assets/images/groupomania.png"),
     tags: ["React", "Sass", "NodeJs"],
-    link: "",
+    link: "groupomania",
   },
 ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
 import worklist from "../works/worklistData";
@@ -44,7 +45,11 @@ const Home = () => {
 
         <div className="home__works works-container">
           {worklist.map((item) => (
-            <div key={item.id} className={`work work-${item.id} overlay`}>
+            <NavLink
+              to={`/${item.link}`}
+              key={item.id}
+              className={`work work-${item.id} overlay`}
+            >
               <img
                 className="home__works__image"
                 src={item.image}
@@ -62,7 +67,7 @@ const Home = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </NavLink>
           ))}
         </div>
       </div>
