@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
-import worklist from "../works/worklistData";
+import background from "../assets/images/background.jpg";
+import worklist from "../worklist/worklistData";
 
 const Home = () => {
   const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
@@ -84,8 +85,11 @@ const Home = () => {
                   {item.tags.map(
                     (tag) =>
                       selectedTags.includes(tag) && (
-                        <span key={tag} className="home__works__taglist__tag">
-                          {tag}
+                        <span
+                          key={item.id}
+                          className="home__works__taglist__tag"
+                        >
+                          {`# ${tag}`}
                         </span>
                       )
                   )}
