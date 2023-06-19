@@ -79,16 +79,16 @@ const Home = () => {
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                   <p>{item.period}</p>
-                  <div className="tags">
-                    {item.tags.map(
-                      (tag) =>
-                        selectedTags.includes(tag) && (
-                          <span key={tag} className="tag">
-                            {tag}
-                          </span>
-                        )
-                    )}
-                  </div>
+                </div>
+                <div className="home__works__tag-filter">
+                  {item.tags.map(
+                    (tag) =>
+                      selectedTags.includes(tag) && (
+                        <span key={tag} className="tag">
+                          {tag}
+                        </span>
+                      )
+                  )}
                 </div>
               </NavLink>
             ))}
