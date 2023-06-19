@@ -3,6 +3,14 @@ import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
 import worklist from "../works/worklistData";
 
+const overlays = document.querySelectorAll(".overlay");
+
+overlays.forEach((overlay) => {
+  overlay.addEventListener("mouseleave", () => {
+    overlay.classList.add("animate-slide-out");
+  });
+});
+
 const Home = () => {
   return (
     <div className="home">
@@ -38,7 +46,7 @@ const Home = () => {
           {worklist.map((item) => (
             <div key={item.id} className={`work work-${item.id} overlay`}>
               <img
-                className="home__works__image test"
+                className="home__works__image"
                 src={item.image}
                 alt={item.title}
               />

@@ -99,6 +99,7 @@
 
   .home__works__image {
     height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -122,35 +123,23 @@
     opacity: 1;
   }
 
-  .overlay {
-    position: relative;
-  }
-
-  .overlay:hover::before {
+  .work::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 0;
     background-color: var(--primary);
-    opacity: 0;
-    z-index: 1;
-    animation-name: slideIn;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    opacity: 0.85;
+    transition: height 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   }
 
-  .overlay:hover::before {
-    opacity: 0.8;
+  .work:hover::before {
+    height: 100%;
   }
 
-  @keyframes slideIn {
-    0% {
-      height: 0;
-    }
-    100% {
-      height: 100%;
-    }
+  .work:not(:hover)::before {
+    height: 0;
   }
 }
