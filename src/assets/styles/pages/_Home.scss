@@ -95,7 +95,10 @@
       &__name {
         padding-left: 4px;
         cursor: pointer;
-        @include anim.animation-line-after;
+        & span.selected {
+          color: black;
+          border-bottom: 2px solid var(--secondary);
+        }
       }
     }
 
@@ -169,7 +172,7 @@
     height: 0;
   }
 
-  .tag-active {
+  .animation-line-after {
     @include anim.animation-line-after;
   }
 }

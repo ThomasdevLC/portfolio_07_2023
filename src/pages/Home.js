@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import HeaderNav from "../components/HeaderNav";
 import pic from "../assets/images/pic.png";
 import worklist from "../works/worklistData";
 
-const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
-
 const Home = () => {
+  const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
+
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  const handleTagClick = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(
+        selectedTags.filter((selectedTag) => selectedTag !== tag)
+      );
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
+  };
+
   return (
     <div className="home">
       <HeaderNav />
@@ -40,8 +52,14 @@ const Home = () => {
           <div className="home__works__tags">
             <h3 className="home__works__tags__title">Tags</h3>
             {tags.map((tag) => (
-              <p key={tag.id} className="home__works__tags__name ">
-                {`${tag} / `}
+              <p key={tag.id} className="home__works__tags__name  ">
+                <span
+                  onClick={() => handleTagClick(tag)}
+                  className={selectedTags.includes(tag) ? "selected" : ""}
+                >
+                  {tag}
+                </span>{" "}
+                /
               </p>
             ))}
           </div>
@@ -62,11 +80,14 @@ const Home = () => {
                   <p>{item.description}</p>
                   <p>{item.period}</p>
                   <div className="tags">
-                    {item.tags.map((tag) => (
-                      <span key={tag} className="tag">
-                        {tag}
-                      </span>
-                    ))}
+                    {item.tags.map(
+                      (tag) =>
+                        selectedTags.includes(tag) && (
+                          <span key={tag} className="tag">
+                            {tag}
+                          </span>
+                        )
+                    )}
                   </div>
                 </div>
               </NavLink>
