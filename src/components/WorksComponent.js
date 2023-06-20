@@ -26,26 +26,28 @@ const WorksComponent = () => {
       <div className="project">
         <p className="project__intro">{project.intro}</p>
         <p className="project__pitch">{project.pitch}</p>
-      </div>
 
-      <tbody>
-        <tr>
-          <th align="left">DATE</th>
-          <th align="left">STACK</th>
-          <th align="left">URL</th>
-        </tr>
-        <tr>
-          <td>
-            <strong class="text-sd">UI Design, Art Direction</strong>
-          </td>
-          <td>
-            <strong class="text-sd">Online</strong>
-          </td>
-          <td>
-            <strong class="text-sd">English with Subt.</strong>
-          </td>
-        </tr>
-      </tbody>
+        <div className="project__table">
+          <table>
+            <tr>
+              <th>DATE</th>
+              <th className="project__table__th">STACK</th>
+              <th>URL</th>
+            </tr>
+            <tr>
+              <td>{project.period}</td>
+              <td className="project__table__td">
+                <ul>
+                  {project.tags.map((tag, index) => (
+                    <li key={index}>{tag}</li>
+                  ))}
+                </ul>
+              </td>{" "}
+              <td>{project.url}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </section>
   );
 };
