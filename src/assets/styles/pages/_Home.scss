@@ -86,7 +86,7 @@
         padding-left: 4px;
         cursor: pointer;
         & span.selected {
-          color: black;
+          color: var(--gray-3);
           border-bottom: 2px solid var(--secondary);
         }
       }
@@ -96,8 +96,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      margin: 10px;
+      margin: 14px;
       z-index: 1;
+      color: var(--gray-3);
       opacity: 0;
     }
 

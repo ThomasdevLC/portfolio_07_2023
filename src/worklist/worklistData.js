@@ -43,7 +43,7 @@ const worklist = [
   },
   {
     id: 4,
-    title: "GROUPAMANIA",
+    title: "GROUPOMANIA",
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
     image: require("../assets/images/groupomania.png"),
