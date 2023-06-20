@@ -1,3 +1,5 @@
+@use "../anim";
+
 .container {
   height: 100vh;
   position: relative;
@@ -5,16 +7,16 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  // padding: 0 140px 80px 140px;
+  background-color: white;
 
   &__title {
+    width: 100%;
     font-size: 60px;
     text-align: center;
-    width: 100%;
     padding: 40px 0px 20px 0px;
     border-radius: 0 0 20px 20px;
     color: white;
-    background-color: var(--gray-3);
+    background-color: var(--gray-1);
   }
 
   &__backpage {
@@ -25,17 +27,17 @@
     font-weight: 700;
     transform: rotate(-90deg);
     cursor: pointer;
-  }
 
-  &__logo {
-    width: 20%;
+    &:hover {
+      color: var(--gray-3);
+    }
   }
 }
 .project {
   max-width: 800px;
 
   &__intro {
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 26px;
     line-height: 38px;
   }
@@ -47,16 +49,16 @@
 
   &__table {
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid var(--gray-3);
     margin-top: 30px;
 
     &__th {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
+      border-left: 1px solid var(--gray-3);
+      border-right: 1px solid var(--gray-3);
     }
     &__td {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
+      border-left: 1px solid var(--gray-3);
+      border-right: 1px solid var(--gray-3);
     }
   }
 }
@@ -74,7 +76,7 @@ td {
 }
 
 th {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--gray-3);
 }
 
 td {
