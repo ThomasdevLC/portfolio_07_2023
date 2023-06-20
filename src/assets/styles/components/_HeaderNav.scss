@@ -9,6 +9,9 @@
     &__name {
       font-size: 20px;
       font-weight: 500;
+      &:hover {
+        color: var(--gray-3);
+      }
     }
   }
 
