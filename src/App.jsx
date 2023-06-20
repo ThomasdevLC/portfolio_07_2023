@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import WorkPage from "./pages/WorkPage";
 import "./App.scss";
 import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
