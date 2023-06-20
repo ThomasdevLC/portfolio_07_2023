@@ -3,9 +3,8 @@ import WorksComponent from "../../components/WorksComponent";
 
 const Kasa = () => {
   return (
-    <div>
+    <div className="kasa__container">
       <WorksComponent />
-      <p>hey</p>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 const worklist = [
   {
     id: 1,
-    title: "Ferme de la Rougeraie",
-    description: "E-commerce",
+    title: "FERME DE LA ROUGERAIE",
+    description: "Site E-commerce ",
     period: "Mai 2023",
     image: require("../assets/images/ferme_rougeraie.png"),
     tags: ["Vue", "Sass", "NodeJs", "Figma"],
@@ -10,7 +10,7 @@ const worklist = [
   },
   {
     id: 2,
-    title: "Pwa - Gca",
+    title: "PWA",
     description: "Stage Hermes/Gca",
     period: "Mars 2023",
     image: require("../assets/images/pwa.png"),
@@ -19,7 +19,7 @@ const worklist = [
   },
   {
     id: 3,
-    title: "Kasa",
+    title: "KASA",
     description: "Formation OpenClassrooms",
     period: "Décembre 2022",
     image: require("../assets/images/kasa.png"),
@@ -32,7 +32,7 @@ const worklist = [
   },
   {
     id: 4,
-    title: "Groupomania",
+    title: "GROUPAMANIA",
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
     image: require("../assets/images/groupomania.png"),
