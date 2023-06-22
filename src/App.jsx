@@ -10,7 +10,7 @@ import FermeRougeraie from "./pages/works/FermeRougeraie";
 
 const App = () => {
   return (
-    <div className="appContainer">
+    <div className="main-continer">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>

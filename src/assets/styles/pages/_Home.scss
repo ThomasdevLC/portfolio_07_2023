@@ -113,27 +113,27 @@
       z-index: 1;
       &__tag {
         background-color: var(--secondary);
-        padding: 0 8px;
-        border-radius: 6px;
+        padding: 1px 10px;
+        border-radius: 10px;
       }
     }
 
     &__container {
       display: grid;
-      place-items: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      align-items: start;
       grid-auto-columns: 1fr;
-      gap: 40px 6px;
-      grid-auto-flow: row;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px 6px;
       grid-template-areas:
-        "work-1  work-2"
-        "work-3  work-4";
+        "work-2 work-1 work-1 work-4"
+        "work-2 work-3 work-3 .";
     }
   }
 
   .work {
-    height: 600px;
+    height: 400px;
     position: relative;
     cursor: pointer;
   }
@@ -142,6 +142,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    // filter: grayscale(100%);
   }
 
   .work-1 {
@@ -150,6 +151,7 @@
 
   .work-2 {
     grid-area: work-2;
+    height: 800px;
   }
 
   .work-3 {
