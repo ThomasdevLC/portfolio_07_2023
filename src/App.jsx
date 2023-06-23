@@ -2,15 +2,16 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import "./App.scss";
 import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 
+import "./App.scss";
+
 const App = () => {
   return (
-    <div className="main-continer">
+    <div className="main-container">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>

@@ -11,13 +11,16 @@ const About = () => {
           <div className="about__container__left__text">
             <div className="about__container__left__text__title">
               {/* <span>*</span>  */}
-              <h1>À propos</h1>
+              <h2>À propos</h2>
             </div>
-            <p>
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-              eum officia voluptas quisquam est omnis a vitae hic
-              exercitationem, recusandae optio sunt voluptatum nisi aspernatur
-              possimus laboriosam libero consequuntur consectetur."
+            <p className="about__container__left__text__para">
+              Thomas Le Cam, Développeur web front-end, intéressé par l’UX/UI et
+              le design. Je suis passionné de musique et constamment désireux
+              d'apprendre des nouvelles technologies d'explorer de nouvelles
+              opportunités.
+            </p>
+            <p className="about__container__left__text__link">
+              ↓ curriculum vitae
             </p>
           </div>
         </div>
