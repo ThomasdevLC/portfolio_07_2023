@@ -140,12 +140,11 @@
 
     &__container {
       display: grid;
-      justify-items: center;
-      align-items: start;
+      justify-items: start;
       grid-auto-columns: 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 20px 6px;
+      gap: 20px 20px;
       grid-template-areas:
         "work-2 work-1 work-1 work-4"
         "work-2 work-3 work-3 .";
@@ -208,9 +207,5 @@
 
   .work:not(:hover)::before {
     height: 0;
-  }
-
-  .animation-line-after {
-    @include anim.animation-line-after;
   }
 }
