@@ -46,6 +46,12 @@
   }
 }
 
+@mixin xxl-lt {
+  @media (max-width: 1910px) {
+    @content;
+  }
+}
+
 @mixin animation-line-after {
   &::after {
     content: "";

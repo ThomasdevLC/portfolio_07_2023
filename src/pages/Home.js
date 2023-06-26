@@ -34,8 +34,6 @@ const Home = () => {
             Je créé des sites et applications dans différents environnements
             tels que React, Vue.js et Node.js. <br /> Attentif à l'UX/UI, je
             m'efforce de créer les meilleurs expériences utilisateur possibles.
-            Ma curiosité insatiable me pousse à explorer de nouvelles
-            technologies et à rester à la pointe de l'innovation.
           </p>
           <p className="home__intro__city">Montpellier</p>
           <p className="home__intro__contact">
@@ -67,7 +65,7 @@ const Home = () => {
               </p>
             ))}
           </div>
-          <div className=" home__works__container">
+          <div className=" home__works__container br">
             {worklist.map((item) => (
               <NavLink
                 to={`/${item.link}/${item.id}`}

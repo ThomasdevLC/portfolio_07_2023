@@ -1,4 +1,5 @@
 @use "../anim";
+@use "../mixins" as mixin;
 
 .home {
   padding: 40px 100px;
@@ -12,7 +13,7 @@
 
   &__intro {
     width: 230px;
-    // height: 770px;
+    height: 720px;
     background-color: var(--primary);
     padding: 20px;
     border-radius: 15px;
@@ -88,8 +89,6 @@
 
   &__works {
     flex-grow: 1;
-    // background-color: white;
-    // max-width: 1400px;
 
     &__tags {
       display: flex;
@@ -144,10 +143,48 @@
       grid-auto-columns: 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 20px 20px;
+      gap: 20px 0px;
       grid-template-areas:
-        "work-2 work-1 work-1 work-4"
-        "work-2 work-3 work-3 .";
+        "work-2 work-1 work-3 . "
+        "work-2 work-4 . .";
+
+      @include mixin.xxl-lt {
+        display: grid;
+        justify-items: start;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 0px;
+        grid-template-areas:
+          "work-2 work-1 work-3  "
+          "work-2 work-4 . ";
+      }
+
+      @include mixin.lg {
+        display: grid;
+        justify-items: start;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 0px;
+        grid-template-areas:
+          "work-2 work-1  "
+          "work-2 work-4  "
+          "work-3  . ";
+      }
+      @include mixin.md {
+        display: grid;
+        justify-items: start;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px 0px;
+        grid-template-areas:
+          "work-1   "
+          "work-2   "
+          "work-3  "
+          "work-4 ";
+      }
     }
   }
 
@@ -155,6 +192,9 @@
     height: 350px;
     position: relative;
     cursor: pointer;
+    @include mixin.xxl-lt {
+      height: 300px;
+    }
   }
 
   .home__works__image {
@@ -171,6 +211,10 @@
   .work-2 {
     grid-area: work-2;
     height: 700px;
+
+    @include mixin.xxl-lt {
+      height: 600px;
+    }
   }
 
   .work-3 {
