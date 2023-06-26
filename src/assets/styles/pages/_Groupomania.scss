@@ -1,0 +1,15 @@
+.container__video-btn {
+  padding: 8px;
+  width: 110px;
+  border-radius: 15px;
+  margin: 80px 0 30px 30px;
+  margin-right: auto;
+  border: 1px solid var(--gray-3);
+  cursor: pointer;
+  &:hover {
+    color: var(--gray-3);
+  }
+}
+.container__video {
+  padding: 0 40px 40px 40px;
+}
