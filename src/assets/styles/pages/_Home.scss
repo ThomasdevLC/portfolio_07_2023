@@ -92,9 +92,10 @@
 
     &__tags {
       display: flex;
+      flex-wrap: wrap;
       font-size: 18px;
-      line-height: 10px;
-      margin-bottom: 40px;
+      line-height: 30px;
+      margin-bottom: 20px;
 
       &__title {
         font-weight: 500;
