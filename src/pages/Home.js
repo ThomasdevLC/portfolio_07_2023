@@ -31,11 +31,11 @@ const Home = () => {
           <h1 className="home__intro__name">Thomas Le Cam</h1>
           <h2 className="home__intro__position">Développeur web</h2>
           <p className="home__intro__text">
-            Mon portfolio présentent plusieurs réalisations dans des différents
-            environnements de travail tels que React, Vue.js et Node.js.
-            Attentif à l'UX/UI, je m'efforce de créer les meilleurs expériences
-            utilisateur possibles. Ma curiosité insatiable me pousse à explorer
-            de nouvelles technologies et à rester à la pointe de l'innovation.
+            Je créé des sites et applications dans différents environnements
+            tels que React, Vue.js et Node.js. Attentif à l'UX/UI, je m'efforce
+            de créer les meilleurs expériences utilisateur possibles. Ma
+            curiosité insatiable me pousse à explorer de nouvelles technologies
+            et à rester à la pointe de l'innovation.
           </p>
           <p className="home__intro__city">Montpellier</p>
           <p className="home__intro__contact">

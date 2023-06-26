@@ -1,22 +1,7 @@
 @use "../anim";
 
-.nav {
-  margin-bottom: 40px;
-  &__list {
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    &__name {
-      font-size: 20px;
-      font-weight: 500;
-      &:hover {
-        color: var(--gray-3);
-      }
-    }
-  }
-
-  .nav-active {
-    position: relative;
-    @include anim.animation-line-after;
-  }
+.header {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
 }
