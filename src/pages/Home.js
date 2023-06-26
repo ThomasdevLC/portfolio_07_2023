@@ -47,6 +47,10 @@ const Home = () => {
             <i className="fa-brands fa-github"></i>
             <i className="fa-regular fa-envelope"></i>
           </div>
+          <p className="home__intro__cv">
+            {" "}
+            <i class="fa-solid fa-arrow-down"></i> MON CV
+          </p>
         </div>
         <div className="home__works">
           <div className="home__works__tags">
@@ -85,7 +89,7 @@ const Home = () => {
                     (tag) =>
                       selectedTags.includes(tag) && (
                         <span key={tag} className="home__works__taglist__tag">
-                          {`# ${tag}`}
+                          {tag}
                         </span>
                       )
                   )}
