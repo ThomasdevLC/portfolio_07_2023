@@ -65,7 +65,7 @@ const Home = () => {
               </p>
             ))}
           </div>
-          <div className=" home__works__container br">
+          <div className=" home__works__container ">
             {worklist.map((item) => (
               <NavLink
                 to={`/${item.link}/${item.id}`}

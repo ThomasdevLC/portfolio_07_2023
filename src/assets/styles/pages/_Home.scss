@@ -6,7 +6,7 @@
   @include mixin.lg {
     padding: 40px 60px;
   }
-  @include mixin.md {
+  @include mixin.md-lt {
     padding: 40px 40px;
   }
 
@@ -18,9 +18,9 @@
     @include mixin.md {
       gap: 30px;
     }
-    @include mixin.sm {
-      gap: 30px;
+    @include mixin.sm-lt {
       flex-direction: column;
+      gap: 20px;
     }
   }
 
@@ -32,8 +32,16 @@
     border-radius: 15px;
 
     @include mixin.sm {
-      gap: 30px;
-      flex-direction: column;
+      margin: auto;
+      width: 70%;
+      height: auto;
+      padding: 60px;
+    }
+    @include mixin.xs {
+      margin: auto;
+      width: 90%;
+      height: auto;
+      padding: 60px;
     }
     &__pic {
       margin: auto;
@@ -41,6 +49,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @include mixin.sm {
+        height: 290px;
+      }
+      @include mixin.xs {
+        height: 290px;
+      }
 
       & img {
         width: 100%;
@@ -191,13 +205,13 @@
           "work-2 work-4  "
           "work-3  . ";
       }
-      @include mixin.sm {
+      @include mixin.sm-lt {
         display: grid;
-        justify-items: start;
+        justify-items: center;
         grid-auto-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        gap: 20px 0px;
+        gap: 30px 0px;
         grid-template-areas:
           "work-1   "
           "work-2   "
