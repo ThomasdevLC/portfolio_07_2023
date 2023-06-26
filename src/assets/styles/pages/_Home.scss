@@ -3,12 +3,25 @@
 
 .home {
   padding: 40px 100px;
+  @include mixin.lg {
+    padding: 40px 60px;
+  }
+  @include mixin.md {
+    padding: 40px 40px;
+  }
 
   &__content {
     display: flex;
     flex-direction: row;
     gap: 80px;
     height: 100%;
+    @include mixin.md {
+      gap: 30px;
+    }
+    @include mixin.sm {
+      gap: 30px;
+      flex-direction: column;
+    }
   }
 
   &__intro {
@@ -17,6 +30,11 @@
     background-color: var(--primary);
     padding: 20px;
     border-radius: 15px;
+
+    @include mixin.sm {
+      gap: 30px;
+      flex-direction: column;
+    }
     &__pic {
       margin: auto;
       height: 220px;
@@ -161,7 +179,7 @@
           "work-2 work-4 . ";
       }
 
-      @include mixin.lg {
+      @include mixin.lg-lt {
         display: grid;
         justify-items: start;
         grid-auto-columns: 1fr;
@@ -173,7 +191,7 @@
           "work-2 work-4  "
           "work-3  . ";
       }
-      @include mixin.md {
+      @include mixin.sm {
         display: grid;
         justify-items: start;
         grid-auto-columns: 1fr;
@@ -196,6 +214,9 @@
     @include mixin.xxl-lt {
       height: 300px;
     }
+    @include mixin.md {
+      height: 250px;
+    }
   }
 
   .home__works__image {
@@ -215,6 +236,9 @@
 
     @include mixin.xxl-lt {
       height: 600px;
+    }
+    @include mixin.md {
+      height: 500px;
     }
   }
 
