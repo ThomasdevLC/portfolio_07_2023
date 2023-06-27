@@ -137,6 +137,7 @@
       &__name {
         padding-left: 4px;
         cursor: pointer;
+
         & span.selected {
           color: var(--gray-3);
           border-bottom: 2px solid var(--secondary);
