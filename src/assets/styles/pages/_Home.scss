@@ -136,11 +136,27 @@
 
       &__name {
         padding-left: 4px;
+        position: relative;
         cursor: pointer;
 
-        & span.selected {
+        & span.selected:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
           color: var(--gray-3);
           border-bottom: 2px solid var(--secondary);
+          animation: border_anim 0.3s ease forwards;
+        }
+
+        @keyframes border_anim {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 85%;
+          }
         }
       }
     }
