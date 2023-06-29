@@ -37,7 +37,7 @@ const worklist = [
     intro:
       "Dans le cadre d'un des projet Openclassrooms, il était demandé d'intégrer la maquette figma d'une plateforme de location de logements entre particuliers avec la technologie React.js et l'utilisation de react-router.",
     pitch:
-      "Le site originale a été codé il y a plus de 10 ans avec un code legacy important. L'entreprise a lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end. Le site est responsive et les composants sont modulaires et réutilisables.",
+      "Refonte totale du site originale codé il y a plus de 10 ans avec un code legacy important. J'ai implémenté la partie front-end à l'aide de React. Le site est responsive et les composants sont modulaires et réutilisables.",
     url: "http://test.com/",
   },
   {

@@ -66,6 +66,7 @@ const Home = () => {
             ))}
           </div>
           <div className=" home__works__container ">
+            <div className="home__works__container__intro work-0"></div>
             {worklist.map((item) => (
               <NavLink
                 to={`/${item.link}/${item.id}`}
