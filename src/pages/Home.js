@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import pic from "../assets/images/pic.png";
+import arrow from "../assets/images/arrow.png";
 import HeaderNav from "../components/HeaderNav";
 import worklist from "../worklist/worklistData";
 
@@ -68,7 +69,12 @@ const Home = () => {
           <div className=" home__works__container ">
             <div className="home__works__container__intro  work-0">
               <div className="home__works__container__intro__title">
-                <p className="home__works__container__intro__title__arrow">→</p>
+                <div className="home__works__container__intro__title__arrow">
+                  {" "}
+                  {/* <img src={arrow} alt="flèche droite" /> */}
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
                 <div className="home__works__container__intro__title__name">
                   <span className="home__works__container__intro__title__name__projects">
                     Projets
@@ -78,10 +84,18 @@ const Home = () => {
 
               <div className="home__works__container__intro__date">
                 <div className="home__works__container__intro__date__space"></div>
-                <p className="home__works__container__intro__date__years">
-                  2022 - 2023
-                </p>
+                <div className="home__works__container__intro__date__years">
+                  <span className="home__works__container__intro__date__years__text">
+                    2022 - 2023
+                  </span>
+                </div>
               </div>
+              <p className="home__works__container__intro__text">
+                Je créé des sites et applications dans différents environnements
+                tels que React, Vue.js et Node.js. Attentif à l'UX/UI, je
+                m'efforce de créer les meilleurs expériences utilisateur
+                possibles.
+              </p>
             </div>
             {worklist.map((item) => (
               <NavLink
