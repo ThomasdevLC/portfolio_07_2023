@@ -6,6 +6,7 @@ import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
+import HeaderNav from "./components/HeaderNav";
 
 import "./App.scss";
 
@@ -14,7 +15,15 @@ const App = () => {
     <div className="main-container">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <HeaderNav />
+                <Home />
+              </>
+            }
+          ></Route>
           <Route path="/about" element={<About />}></Route>
           <Route
             path="/ferme-rougeraie/:id"

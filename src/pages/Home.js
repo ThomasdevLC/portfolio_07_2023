@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import pic from "../assets/images/pic.png";
 import arrow from "../assets/images/arrow.png";
-import HeaderNav from "../components/HeaderNav";
 import worklist from "../worklist/worklistData";
 
 const Home = () => {
@@ -22,8 +21,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      <HeaderNav />
-
       <div className="home__content">
         <div className="home__intro">
           <div className="home__intro__pic">
@@ -46,10 +43,7 @@ const Home = () => {
             <i className="fa-brands fa-github"></i>
             <i className="fa-regular fa-envelope"></i>
           </div>
-          <p className="home__intro__cv">
-            {" "}
-            <i class="fa-solid fa-arrow-down"></i> MON CV
-          </p>
+          <p className="home__intro__cv"> MON CV</p>
         </div>
         <div className="home__works">
           <div className="home__works__tags">
