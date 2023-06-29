@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import pic from "../assets/images/pic.png";
 import arrow from "../assets/images/arrow.png";
+import background from "../assets/images/background.jpg";
 import worklist from "../worklist/worklistData";
 
 const Home = () => {
@@ -88,7 +89,8 @@ const Home = () => {
                 Je créé des sites et applications dans différents environnements
                 tels que React, Vue.js et Node.js. Attentif à l'UX/UI, je
                 m'efforce de créer les meilleurs expériences utilisateur
-                possibles.
+                possibles. Attentif à l'UX/UI, je m'efforce de créer les
+                meilleurs expériences utilisateur possibles
               </p>
             </div>
             {worklist.map((item) => (
