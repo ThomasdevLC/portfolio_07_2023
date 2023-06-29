@@ -66,8 +66,22 @@ const Home = () => {
             ))}
           </div>
           <div className=" home__works__container ">
-            <div className="home__works__container__intro work-0">
-              <p>hello</p>
+            <div className="home__works__container__intro  work-0">
+              <div className="home__works__container__intro__title">
+                <p className="home__works__container__intro__title__arrow">→</p>
+                <div className="home__works__container__intro__title__name">
+                  <span className="home__works__container__intro__title__name__projects">
+                    Projets
+                  </span>
+                </div>
+              </div>
+
+              <div className="home__works__container__intro__date">
+                <div className="home__works__container__intro__date__space"></div>
+                <p className="home__works__container__intro__date__years">
+                  2022 - 2023
+                </p>
+              </div>
             </div>
             {worklist.map((item) => (
               <NavLink

@@ -237,10 +237,39 @@
       }
 
       &__intro {
-        height: 350px;
         width: 288px;
         background-color: var(--primary);
         border: 1px solid var(--gray-3);
+
+        &__title {
+          display: flex;
+
+          &__arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 55px;
+            width: 55px;
+            font-size: 20px;
+            border-bottom: 1px solid var(--gray-3);
+            border-right: 1px solid var(--gray-3);
+            background-color: white;
+          }
+
+          &__name {
+            height: 55px;
+
+            width: 100%;
+            font-size: 38px;
+            font-weight: 500;
+            background-color: white;
+            border-bottom: 1px solid var(--gray-3);
+
+            &__projects {
+              padding: 10px;
+            }
+          }
+        }
       }
     }
   }
@@ -248,6 +277,7 @@
   .work {
     height: 350px;
     position: relative;
+    margin: 0;
     cursor: pointer;
     @include mixin.xxl-lt {
       height: 300px;
