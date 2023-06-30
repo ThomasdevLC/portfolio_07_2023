@@ -1,4 +1,5 @@
 @use "../anim";
+@use "../mixins" as mixin;
 
 .header {
   border-bottom: 1px solid var(--gray-3);
@@ -7,6 +8,11 @@
   font-weight: 500;
   display: flex;
   justify-content: space-between;
+  &__title {
+    @include mixin.sm-lt {
+      margin: auto;
+    }
+  }
 
   &__cv {
     width: 140px;
@@ -24,6 +30,10 @@
       cursor: pointer;
       background-color: var(--gray-2);
       color: var(--gray-3);
+    }
+
+    @include mixin.sm-lt {
+      display: none;
     }
   }
 }
