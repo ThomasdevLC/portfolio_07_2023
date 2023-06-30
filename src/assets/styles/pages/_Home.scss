@@ -15,6 +15,10 @@
     padding: 40px 40px;
   }
 
+  @include mixin.sm-lt {
+    padding: 40px 20px;
+  }
+
   &__content {
     display: flex;
     flex-direction: row;
@@ -117,13 +121,14 @@
       margin-top: 20px;
       padding: 4px 0;
       border: 1px solid var(--gray-3);
-      background-color: var(--secondary);
-
       border-radius: 12px;
       &:hover {
         cursor: pointer;
         background-color: var(--gray-2);
         color: var(--gray-3);
+      }
+      @include mixin.sm-lt {
+        display: block;
       }
     }
   }
@@ -137,6 +142,12 @@
       font-size: 18px;
       line-height: 30px;
       margin-bottom: 20px;
+
+      @include mixin.sm-lt {
+        font-size: 16px;
+
+        justify-content: center;
+      }
 
       &__title {
         font-weight: 500;
@@ -252,15 +263,12 @@
         grid-template-rows: 1fr;
         gap: 30px 0px;
         grid-template-areas:
+          "work-0   "
           "work-1   "
           "work-2   "
           "work-3  "
           "work-4 ";
       }
-
-      // @include mixin.md {
-      //   height: 500px;
-      // }
 
       &__intro {
         width: 288px;
