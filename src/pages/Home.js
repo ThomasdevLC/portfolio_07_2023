@@ -40,10 +40,17 @@ const Home = () => {
             thomas.lecam@gmail.com
           </p>
           <div className="home__intro__socials">
-            <i className="fa-brands fa-linkedin-in"></i>
-            <i className="fa-brands fa-github"></i>
-            <i className="fa-regular fa-envelope"></i>
+            <a href="https://www.linkedin.com/in/thomaslecam/" target="_blank">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ThomasdevLC" target="_blank">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:thomas.lecam@gmail.com" target="_blank">
+              <i className="fa-regular fa-envelope"></i>
+            </a>
           </div>
+
           <p className="home__intro__cv"> MON CV</p>
         </div>
         <div className="home__works">
