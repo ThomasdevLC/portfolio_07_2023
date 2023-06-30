@@ -8,6 +8,13 @@
   font-weight: 500;
   display: flex;
   justify-content: space-between;
+
+  @include mixin.lg {
+    padding: 30px 60px;
+  }
+  @include mixin.md-lt {
+    padding: 30px 40px;
+  }
   &__title {
     @include mixin.sm-lt {
       margin: auto;
