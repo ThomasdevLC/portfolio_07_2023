@@ -1,4 +1,5 @@
 @use "../anim";
+@use "../mixins" as mixin;
 
 .container {
   position: relative;
@@ -16,13 +17,17 @@
     border-radius: 0 0 20px 20px;
     color: white;
     background-color: var(--gray-1);
+
+    @include mixin.md-lt {
+      font-size: 40px;
+    }
   }
 
   &__backpage {
     position: absolute;
     top: 100px;
     left: -200px;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     transform: rotate(-90deg);
     cursor: pointer;
@@ -30,20 +35,64 @@
     &:hover {
       color: var(--gray-3);
     }
+
+    @include mixin.xxl-lt {
+      color: white;
+      font-size: 20px;
+      top: 60px;
+      left: -40px;
+      &:hover {
+        color: var(--gray-2);
+      }
+    }
+
+    @include mixin.md-lt {
+      font-size: 16px;
+      top: 50px;
+      left: -20px;
+      font-weight: 500;
+    }
   }
 }
 .project {
   max-width: 800px;
 
+  @include mixin.md {
+    max-width: 680px;
+  }
+  @include mixin.sm-lt {
+    max-width: 580px;
+    padding: 20px;
+  }
+
   &__intro {
     margin-top: 50px;
     font-size: 26px;
     line-height: 38px;
+
+    @include mixin.md {
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    @include mixin.sm-lt {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &__pitch {
     margin-top: 30px;
     font-size: 18px;
     line-height: 26px;
+
+    @include mixin.md {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @include mixin.sm-lt {
+      font-size: 14px;
+    }
   }
 
   &__table {
@@ -54,10 +103,17 @@
     &__th {
       border-left: 1px solid var(--gray-3);
       border-right: 1px solid var(--gray-3);
+      @include mixin.sm {
+        font-size: 14px;
+      }
     }
     &__td {
       border-left: 1px solid var(--gray-3);
       border-right: 1px solid var(--gray-3);
+
+      @include mixin.sm-lt {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -72,6 +128,10 @@ th,
 td {
   padding: 10px 20px;
   text-align: left;
+
+  @include mixin.sm-lt {
+    font-size: 14px;
+  }
 }
 
 th {
