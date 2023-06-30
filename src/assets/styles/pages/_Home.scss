@@ -190,6 +190,9 @@
       z-index: 1;
       color: var(--gray-3);
       opacity: 0;
+      & h3 {
+        font-size: 24px;
+      }
     }
 
     &__taglist {
