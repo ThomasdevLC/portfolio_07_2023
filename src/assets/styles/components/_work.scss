@@ -19,7 +19,9 @@
     background-color: var(--gray-1);
 
     @include mixin.md-lt {
-      font-size: 42px;
+      font-size: 38px;
+      line-height: 38px;
+      padding: 46px;
     }
   }
 
@@ -52,6 +54,11 @@
       left: -20px;
       font-weight: 500;
     }
+    @include mixin.xs {
+      font-size: 14px;
+
+      font-weight: 500;
+    }
   }
 }
 .project {
@@ -76,6 +83,7 @@
     }
 
     @include mixin.sm-lt {
+      margin-top: 10px;
       font-size: 18px;
       line-height: 28px;
     }
@@ -112,7 +120,7 @@
       border-right: 1px solid var(--gray-3);
 
       @include mixin.sm-lt {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
@@ -130,7 +138,7 @@ td {
   text-align: left;
 
   @include mixin.sm-lt {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

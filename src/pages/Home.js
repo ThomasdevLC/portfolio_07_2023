@@ -21,7 +21,10 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <div
+      className="home"
+      style={{ background: `url(${background}) rgba(255, 255, 255, 0.8)` }}
+    >
       <div className="home__content">
         <div className="home__intro">
           <div className="home__intro__pic">
