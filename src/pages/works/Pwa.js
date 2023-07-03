@@ -1,10 +1,15 @@
 import React from "react";
 import WorksComponent from "../../components/WorksComponent";
-
+import pwa from "../../assets/images/pwa.png";
+import pwa_2 from "../../assets/images/pwa_2.png";
 const Pwa = () => {
   return (
-    <div>
+    <div className="pwa-container">
       <WorksComponent />
+      <div className="pwa__description">
+        <img src={pwa} alt="image projet pwa version mobile" />
+        <img src={pwa_2} alt="image projet pwa version mobile" />
+      </div>
     </div>
   );
 };
