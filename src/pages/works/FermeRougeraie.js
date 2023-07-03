@@ -9,12 +9,12 @@ const FermeRougeraie = () => {
       <WorksComponent />
       <div className="farm__description">
         <img
-          className="image-one"
+          className="farm__description__image-one"
           src={farmProducts}
           alt="image projet ferme de la rougeraie page a propos"
         />
         <img
-          className="image-two"
+          className="farm__description__image-two"
           src={farmAbout}
           alt="image projet ferme de la rougeraie page produits"
         />

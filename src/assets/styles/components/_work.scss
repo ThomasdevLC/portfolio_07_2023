@@ -2,6 +2,7 @@
 @use "../mixins" as mixin;
 
 .container {
+  max-width: 1200px;
   position: relative;
   display: flex;
   flex-direction: column;

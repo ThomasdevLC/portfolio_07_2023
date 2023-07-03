@@ -1,35 +1,51 @@
 @use "../mixins" as mixin;
 
+// .farm__description {
+//   max-width: 1200px;
+//   padding: 40px 0;
+//   margin: auto;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr;
+//   grid-auto-columns: 1fr;
+//   gap: 0px 20px;
+//   grid-auto-flow: row;
+//   grid-template-areas: "image-one image-two";
+
+//   @include mixin.lg-lt {
+//     max-width: 800px;
+//     padding: 40px 40px;
+//     margin: auto;
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr 1fr;
+//     grid-auto-columns: 1fr;
+//     gap: 20px 0px;
+//     grid-auto-flow: row;
+//     grid-template-areas: "image-one" "image-two";
+//   }
+// }
+
+// .image-one {
+//   grid-area: image-one;
+// }
+
+// .image-two {
+//   grid-area: image-two;
+// }
+
 .farm__description {
   max-width: 1200px;
-  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 20px;
-  grid-auto-flow: row;
-  grid-template-areas: "image-one image-two";
+  row-gap: 40px;
+  padding: 40px;
 
-  @include mixin.lg-lt {
-    max-width: 800px;
-    padding: 40px 40px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-columns: 1fr;
-    gap: 20px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: "image-one" "image-two";
+  &__image-one,
+  &__image-two {
+    border: 1px solid var(--gray-2);
   }
-}
-
-.image-one {
-  grid-area: image-one;
-}
-
-.image-two {
-  grid-area: image-two;
 }
