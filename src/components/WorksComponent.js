@@ -37,7 +37,7 @@ const WorksComponent = () => {
   }
 
   return (
-    <section className="container">
+    <section className="container br">
       <NavLink to="/">
         <div className="container__backpage"> &#x2191; PORTFOLIO</div>
       </NavLink>

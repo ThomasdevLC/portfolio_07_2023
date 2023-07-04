@@ -29,8 +29,8 @@ const App = () => {
 
   return (
     <div>
-      <div className={`over ${isDisplayed ? "displayed" : ""}`}></div>
-      <div className={`over-top ${isDisplayed ? "displayed" : ""}`}></div>
+      <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
+      <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div>
       <div className="main">
         <BrowserRouter>
           <Routes>

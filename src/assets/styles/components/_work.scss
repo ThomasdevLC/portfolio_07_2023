@@ -37,6 +37,7 @@
     font-weight: 700;
     transform: rotate(-90deg);
     cursor: pointer;
+    z-index: 99;
 
     &:hover {
       color: var(--gray-3);
@@ -53,12 +54,15 @@
     }
 
     @include mixin.md-lt {
+      color: white;
       font-size: 16px;
       top: 50px;
       left: -20px;
       font-weight: 500;
     }
     @include mixin.xs {
+      color: white;
+
       font-size: 14px;
 
       font-weight: 500;
