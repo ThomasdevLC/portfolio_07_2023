@@ -14,8 +14,8 @@ import "./App.scss";
 const App = () => {
   return (
     <div>
-      {/* <motion.div
-        className="overlay"
+      <motion.div
+        className="over"
         initial={{ scale: 0 }}
         animate={{ rotate: 180, scale: 1 }}
         transition={{
@@ -23,7 +23,7 @@ const App = () => {
           stiffness: 260,
           damping: 20,
         }}
-      /> */}
+      />
       <div className="main">
         <BrowserRouter>
           <Routes>
