@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import cv from "../assets/pdf/cv.pdf";
 
 const HeaderNav = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -7,23 +7,30 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import HeaderNav from "./components/HeaderNav";
-import { motion } from "framer-motion";
 
 import "./App.scss";
 
 const App = () => {
+  const [isDisplayed, setIsDisplayed] = useState(false);
+
+  useEffect(() => {
+    const delay = 800;
+
+    // Utiliser setTimeout pour définir le délai avant d'ajouter la classe "displayed"
+    const timeoutId = setTimeout(() => {
+      setIsDisplayed(true);
+    }, delay);
+
+    // Nettoyage : annuler le timeout lorsque le composant est démonté ou lorsque isDisplayed est true
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []); // Le tableau vide en tant que deuxième argument assure que l'effet n'est exécuté qu'une seule fois lors du montage initial du composant
+
   return (
     <div>
-      <motion.div
-        className="over"
-        initial={{ scale: 0 }}
-        animate={{ rotate: 180, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 260,
-          damping: 20,
-        }}
-      />
+      <div className={`over ${isDisplayed ? "displayed" : ""}`}></div>
+      <div className={`over-top ${isDisplayed ? "displayed" : ""}`}></div>
       <div className="main">
         <BrowserRouter>
           <Routes>
