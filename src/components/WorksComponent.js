@@ -8,6 +8,7 @@ const WorksComponent = () => {
   const projectId = parseInt(params.id);
   const [project, setProject] = useState(null);
   const containerRef = useRef(null);
+  const titleRef = useRef(null);
 
   useEffect(() => {
     const selectedProject = worklistData.find((w) => w.id === projectId);
@@ -19,8 +20,14 @@ const WorksComponent = () => {
       const containerElement = containerRef.current;
       gsap.fromTo(
         containerElement,
-        { opacity: 0, y: -50 },
-        { opacity: 1, duration: 1, y: 0, ease: "power2.out" }
+        { opacity: 0, y: -140 },
+        { opacity: 1, duration: 0.8, y: 0, ease: "power4.out" }
+      );
+      const titleElement = titleRef.current;
+      gsap.fromTo(
+        titleElement,
+        { opacity: 0, y: 50 },
+        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1 }
       );
     }
   }, [project]);
@@ -35,7 +42,9 @@ const WorksComponent = () => {
         <div className="container__backpage"> &#x2191; PORTFOLIO</div>
       </NavLink>
       <h1 className="container__title" ref={containerRef}>
-        {project.title}
+        <span className="container__title__span" ref={titleRef}>
+          {project.title}
+        </span>
       </h1>
       <div className="project">
         <p className="project__intro">{project.intro}</p>
