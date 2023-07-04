@@ -383,10 +383,6 @@
   .work-2 {
     grid-area: work-2;
     height: 700px;
-
-    // @include mixin.xxl-lt {
-    //   height: 600px;
-    // }
     @include mixin.md {
       height: 500px;
     }

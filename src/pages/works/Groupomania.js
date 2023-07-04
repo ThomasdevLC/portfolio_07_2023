@@ -16,7 +16,7 @@ const Groupomania = () => {
   };
 
   return (
-    <section className="container">
+    <section className="groupomania-container">
       <WorksComponent />
       <button className="container__video-btn" onClick={toggleVideo}>
         {isPlaying ? "ll Pause" : "► Play video"}
