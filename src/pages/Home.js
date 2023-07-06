@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import pic from "../assets/images/pic.png";
-import arrow from "../assets/images/arrow.png";
 import background from "../assets/images/background.jpg";
 import worklist from "../worklist/worklistData";
 
