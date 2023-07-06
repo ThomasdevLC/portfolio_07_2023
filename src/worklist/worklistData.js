@@ -17,7 +17,7 @@ const worklist = [
     title: "PWA",
     description: "Stage Hermes/Gca",
     period: "Mars 2023",
-    image: require("../assets/images/pwa.png"),
+    image: require("../assets/images/pwa_0.png"),
     tags: ["Vue", "Sass", "Figma"],
     link: "pwa",
     intro:

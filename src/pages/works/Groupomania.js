@@ -18,17 +18,20 @@ const Groupomania = () => {
   return (
     <section className="groupomania-container">
       <WorksComponent />
-      <button className="container__video-btn" onClick={toggleVideo}>
-        {isPlaying ? "ll Pause" : "► Play video"}
-      </button>
-      <video
-        className="container__video"
-        width="100%"
-        src={video}
-        type="video/mp4"
-        loop
-        ref={videoRef}
-      ></video>
+
+      <div className="container__video">
+        <button className="container__video__btn" onClick={toggleVideo}>
+          {isPlaying ? "ll Pause" : "► Play video"}
+        </button>
+        <video
+          className="container__video__player"
+          width="100%"
+          src={video}
+          type="video/mp4"
+          loop
+          ref={videoRef}
+        ></video>
+      </div>
     </section>
   );
 };
