@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import pic from "../assets/images/pic.png";
-import background from "../assets/images/background.jpg";
 import worklist from "../worklist/worklistData";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
   const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
@@ -20,10 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div
-      className="home"
-      // style={{ background: `url(${background}) rgba(255, 255, 255, 0.8)` }}
-    >
+    <div className="home">
       <div className="home__content">
         <div className="home__intro">
           <div className="home__intro__pic">
@@ -119,14 +116,22 @@ const Home = () => {
                   <p>{item.period}</p>
                 </div>
                 <div className="home__works__taglist">
-                  {item.tags.map(
-                    (tag) =>
-                      selectedTags.includes(tag) && (
-                        <span key={tag} className="home__works__taglist__tag">
-                          {tag}
-                        </span>
-                      )
-                  )}
+                  <AnimatePresence>
+                    {item.tags.map(
+                      (tag, index) =>
+                        selectedTags.includes(tag) && (
+                          <motion.span
+                            key={tag}
+                            className="home__works__taglist__tag"
+                            initial={{ y: 5, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.2, delay: index * 0.1 }}
+                          >
+                            {tag}
+                          </motion.span>
+                        )
+                    )}
+                  </AnimatePresence>
                 </div>
               </NavLink>
             ))}
