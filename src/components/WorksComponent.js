@@ -21,7 +21,7 @@ const WorksComponent = () => {
       gsap.fromTo(
         containerElement,
         { opacity: 0, y: -140 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 0.6 }
+        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 0.7 }
       );
       const titleElement = titleRef.current;
       gsap.fromTo(

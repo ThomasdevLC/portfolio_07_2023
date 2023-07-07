@@ -409,7 +409,7 @@
   }
 
   .work:hover .home__works__taglist__tag {
-    opacity: 0;
+    display: none;
   }
 
   .work::before {
