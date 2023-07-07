@@ -123,9 +123,9 @@ const Home = () => {
                           <motion.span
                             key={tag}
                             className="home__works__taglist__tag"
-                            initial={{ y: 8, opacity: 0 }}
+                            initial={{ y: 10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.2 }}
+                            transition={{ duration: 0.3 }}
                           >
                             {tag}
                           </motion.span>

@@ -27,7 +27,7 @@ const WorksComponent = () => {
       gsap.fromTo(
         titleElement,
         { opacity: 0, y: 50 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 2 }
+        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.2 }
       );
     }
   }, [project]);
