@@ -21,13 +21,13 @@ const WorksComponent = () => {
       gsap.fromTo(
         containerElement,
         { opacity: 0, y: -140 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power4.out" }
+        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 0.6 }
       );
       const titleElement = titleRef.current;
       gsap.fromTo(
         titleElement,
         { opacity: 0, y: 50 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1 }
+        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 2 }
       );
     }
   }, [project]);

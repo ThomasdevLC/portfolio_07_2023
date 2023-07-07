@@ -2,6 +2,8 @@ import React from "react";
 import WorksComponent from "../../components/WorksComponent";
 import pwa from "../../assets/images/pwa.png";
 import pwa_2 from "../../assets/images/pwa_2.png";
+import transition from "../../utils/transitions";
+
 const Pwa = () => {
   return (
     <div className="pwa-container">
@@ -14,4 +16,4 @@ const Pwa = () => {
   );
 };
 
-export default Pwa;
+export default transition(Pwa);

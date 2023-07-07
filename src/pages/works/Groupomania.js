@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import video from "../../assets/videos/groupomania-video.mp4";
+import transition from "../../utils/transitions";
 
 const Groupomania = () => {
   const videoRef = useRef(null);
@@ -36,4 +37,4 @@ const Groupomania = () => {
   );
 };
 
-export default Groupomania;
+export default transition(Groupomania);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Groupomania from "./pages/works/Groupomania";
@@ -12,6 +13,8 @@ import "./App.scss";
 
 const App = () => {
   const [isDisplayed, setIsDisplayed] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const delay = 800;
@@ -32,8 +35,8 @@ const App = () => {
       <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
       <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div>
       <div className="main">
-        <BrowserRouter>
-          <Routes>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
             <Route
               path="/"
               element={
@@ -54,7 +57,7 @@ const App = () => {
 
             <Route path="*" element={<Home />}></Route>
           </Routes>
-        </BrowserRouter>
+        </AnimatePresence>
       </div>
     </div>
   );

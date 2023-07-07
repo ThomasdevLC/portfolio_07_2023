@@ -2,6 +2,7 @@ import React from "react";
 import WorksComponent from "../../components/WorksComponent";
 import kasaXl from "../../assets/images/kasa_xl.png";
 import kasaXs from "../../assets/images/kasa_xs.png";
+import transition from "../../utils/transitions";
 
 const Kasa = () => {
   return (
@@ -15,4 +16,4 @@ const Kasa = () => {
   );
 };
 
-export default Kasa;
+export default transition(Kasa);

@@ -2,6 +2,7 @@ import React from "react";
 import WorksComponent from "../../components/WorksComponent";
 import farmProducts from "../../assets/images/ferme_rougeraie_about.png";
 import farmAbout from "../../assets/images/ferme_rougeraie_products.png";
+import transition from "../../utils/transitions";
 
 const FermeRougeraie = () => {
   return (
@@ -23,4 +24,4 @@ const FermeRougeraie = () => {
   );
 };
 
-export default FermeRougeraie;
+export default transition(FermeRougeraie);
