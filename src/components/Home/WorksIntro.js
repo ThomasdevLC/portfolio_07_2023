@@ -10,7 +10,7 @@ const worksIntro = () => {
     gsap.fromTo(
       arrowElement,
       {
-        x: -50, // Initial position off-screen to the left
+        x: -20, // Initial position off-screen to the left
         opacity: 0, // Initial opacity of 0
       },
       {
@@ -18,7 +18,7 @@ const worksIntro = () => {
         opacity: 1, // Final opacity of 1 (fully visible)
         duration: 1, // Duration of the animation
         ease: ["elastic"], // Less pronounced elastic ease effect
-        delay: 1.5,
+        delay: 1.2,
       }
     );
 
@@ -29,10 +29,10 @@ const worksIntro = () => {
 
     gsap.from(splitTitle, {
       opacity: 0.1, // Initial opacity of 0.5
-      duration: 0.5, // Duration of the animation
+      duration: 0.3, // Duration of the animation
       stagger: 0.2, // Stagger the animation by 0.1 seconds between each character
       ease: "power2.inOut", // Easing function for the animation
-      delay: 1.6,
+      delay: 1.4,
     });
   }, []);
 
