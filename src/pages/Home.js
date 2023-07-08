@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import pic from "../assets/images/pic.png";
 import worklist from "../worklist/worklistData";
-import WorksIntro from "../components/Home/WorksIntro";
+import WorksIntro from "../components/Home/WorkIntro";
+import MyIntro from "../components/Home/MyIntro";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
@@ -24,34 +24,7 @@ const Home = () => {
     <div className="home">
       <div className="home__content">
         <div className="home__intro">
-          <div className="home__intro__pic">
-            <img src={pic} alt="photo" />
-          </div>
-          <h1 className="home__intro__name">Thomas Le Cam</h1>
-          <h2 className="home__intro__position">Développeur web</h2>
-          <p className="home__intro__text">
-            Je créé des sites et applications dans différents environnements
-            tels que React, Vue.js et Node.js. <br /> Attentif à l'UX/UI, je
-            m'efforce de créer les meilleurs expériences utilisateur possibles.
-          </p>
-          <p className="home__intro__city">Montpellier</p>
-          <p className="home__intro__contact">
-            06 43 84 36 32 <br />
-            thomas.lecam@gmail.com
-          </p>
-          <div className="home__intro__socials">
-            <a href="https://www.linkedin.com/in/thomaslecam/" target="_blank">
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/ThomasdevLC" target="_blank">
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a href="mailto:thomas.lecam@gmail.com" target="_blank">
-              <i className="fa-regular fa-envelope"></i>
-            </a>
-          </div>
-
-          <p className="home__intro__cv"> MON CV</p>
+          <MyIntro />
         </div>
         <div className="home__works">
           <div className="home__works__tags">

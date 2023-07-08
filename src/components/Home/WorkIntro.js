@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import SplitType from "split-type";
 
-const worksIntro = () => {
+const WorkIntro = () => {
   const arrowRef = useRef(null);
 
   useEffect(() => {
@@ -69,4 +69,4 @@ const worksIntro = () => {
   );
 };
 
-export default worksIntro;
+export default WorkIntro;
