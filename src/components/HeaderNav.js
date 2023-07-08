@@ -15,11 +15,7 @@ const HeaderNav = () => {
       stagger: 0.02,
       ease: "back.out",
       duration: 1,
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".header__box__title",
-        start: "top 80%",
-      },
+      delay: 0.9,
     });
   }, []);
 
