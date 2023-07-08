@@ -15,7 +15,7 @@ const HeaderNav = () => {
       stagger: 0.02,
       ease: "back.out",
       duration: 1,
-      delay: 0.3,
+      delay: 0.5,
     });
   }, []);
 

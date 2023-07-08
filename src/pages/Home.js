@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
   const tags = ["React", "Vue", "NodeJs", "Sass", "Figma", "Framer-Motion"];
-
   const [selectedTags, setSelectedTags] = useState([]);
 
   const handleTagClick = (tag) => {
