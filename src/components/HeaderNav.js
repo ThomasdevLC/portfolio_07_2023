@@ -24,14 +24,14 @@ const HeaderNav = () => {
     gsap.fromTo(
       borderElement,
       { width: "0%" },
-      { width: "100%", duration: 1, ease: "power2.out", delay: 0.3 }
+      { width: "100%", duration: 1.5, ease: "power2.out", delay: 0.3 }
     );
 
     const cvElement = cvRef.current;
     gsap.fromTo(
       cvElement,
       { opacity: 0, y: 25 },
-      { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.5 }
+      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 1.1 }
     );
   }, []);
 

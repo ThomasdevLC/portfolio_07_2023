@@ -34,6 +34,7 @@
 
   &__cvbox {
     overflow: hidden;
+    padding: 5px;
     &__cv {
       font-size: 16px;
       font-weight: 500;
@@ -50,6 +51,7 @@
         cursor: pointer;
         background-color: var(--gray-2);
         color: var(--gray-3);
+
         box-shadow: -3px 3px 0px 0px var(--gray-1);
         -webkit-box-shadow: -3px 3px 0px 0px var(--gray-1);
         -moz-box-shadow: -3px 3px 0px 0px var(--gray-1);
