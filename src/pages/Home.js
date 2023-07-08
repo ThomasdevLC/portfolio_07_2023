@@ -21,7 +21,12 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <motion.div
+      className="home"
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+    >
       <div className="home__content">
         <div className="home__intro">
           <MyIntro />
@@ -84,7 +89,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

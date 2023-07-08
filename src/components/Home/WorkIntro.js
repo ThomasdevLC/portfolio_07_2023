@@ -18,7 +18,7 @@ const WorkIntro = () => {
         opacity: 1, // Final opacity of 1 (fully visible)
         duration: 1, // Duration of the animation
         ease: ["elastic"], // Less pronounced elastic ease effect
-        delay: 1.2,
+        delay: 1.1,
       }
     );
 
@@ -29,10 +29,10 @@ const WorkIntro = () => {
 
     gsap.from(splitTitle, {
       opacity: 0.1, // Initial opacity of 0.5
-      duration: 0.3, // Duration of the animation
+      duration: 0.1, // Duration of the animation
       stagger: 0.2, // Stagger the animation by 0.1 seconds between each character
       ease: "power2.inOut", // Easing function for the animation
-      delay: 1.4,
+      delay: 1.2,
     });
   }, []);
 

@@ -17,7 +17,7 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const delay = 800;
+    const delay = 300;
 
     // Utiliser setTimeout pour définir le délai avant d'ajouter la classe "displayed"
     const timeoutId = setTimeout(() => {
@@ -32,8 +32,8 @@ const App = () => {
 
   return (
     <div>
-      {/* <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
-      <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div> */}
+      <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
+      <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div>
       <div className="main">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
