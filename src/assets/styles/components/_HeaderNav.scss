@@ -2,12 +2,12 @@
 @use "../mixins" as mixin;
 
 .header {
-  border-bottom: 1px solid var(--gray-3);
   padding: 30px 160px 30px 100px;
   font-size: 24px;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @include mixin.lg {
     padding: 30px 60px;
@@ -57,4 +57,9 @@
       display: none;
     }
   }
+}
+
+.border {
+  width: 100%;
+  border-bottom: 1px solid var(--gray-3);
 }
