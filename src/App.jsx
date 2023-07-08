@@ -32,8 +32,8 @@ const App = () => {
 
   return (
     <div>
-      <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
-      <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div>
+      {/* <div className={`over ${isDisplayed ? "over-displayed" : ""}`}></div>
+      <div className={`over-top ${isDisplayed ? "over-displayed" : ""}`}></div> */}
       <div className="main">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

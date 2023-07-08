@@ -1,12 +1,47 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import SplitType from "split-type";
 
 const worksIntro = () => {
+  const arrowRef = useRef(null);
+
+  useEffect(() => {
+    const arrowElement = arrowRef.current;
+
+    gsap.fromTo(
+      arrowElement,
+      {
+        x: -50, // Initial position off-screen to the left
+        opacity: 0, // Initial opacity of 0
+      },
+      {
+        x: 0, // Final position at 0 (visible)
+        opacity: 1, // Final opacity of 1 (fully visible)
+        duration: 1, // Duration of the animation
+        ease: ["elastic"], // Less pronounced elastic ease effect
+        delay: 1.5,
+      }
+    );
+
+    const title = SplitType.create(
+      ".home__works__container__intro__title__name__projects"
+    );
+    const splitTitle = title.chars;
+
+    gsap.from(splitTitle, {
+      opacity: 0.1, // Initial opacity of 0.5
+      duration: 0.5, // Duration of the animation
+      stagger: 0.2, // Stagger the animation by 0.1 seconds between each character
+      ease: "power2.inOut", // Easing function for the animation
+      delay: 1.6,
+    });
+  }, []);
+
   return (
     <div>
       <div className="home__works__container__intro__title">
         <div className="home__works__container__intro__title__arrow">
           {" "}
-          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right" ref={arrowRef}></i>
         </div>
 
         <div className="home__works__container__intro__title__name">

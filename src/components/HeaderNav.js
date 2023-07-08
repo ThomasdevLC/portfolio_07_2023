@@ -22,7 +22,9 @@ const HeaderNav = () => {
   return (
     <div
       className="header"
-      style={{ background: `url(${background}) rgba(255, 255, 255, 0.1)` }}
+      style={{
+        background: `linear-gradient(rgba(255, 255, 255, 0.1), white), url(${background})`,
+      }}
     >
       <div className="header__box">
         <p className="header__box__title">Portfolio 2023</p>

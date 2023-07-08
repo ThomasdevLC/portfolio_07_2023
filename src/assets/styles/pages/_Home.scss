@@ -296,6 +296,7 @@
             border-right: 1px solid var(--gray-3);
             display: flex;
             justify-content: center;
+            overflow: hidden;
 
             & i {
               display: block;
@@ -314,12 +315,14 @@
             font-weight: 500;
             line-height: 50px;
             border-bottom: 1px solid var(--gray-3);
+            overflow: hidden;
             @include mixin.md {
               font-size: 28px;
             }
 
             &__projects {
               padding: 10px;
+              display: block;
             }
           }
         }
