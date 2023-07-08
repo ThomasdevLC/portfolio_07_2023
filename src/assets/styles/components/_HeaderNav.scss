@@ -15,14 +15,20 @@
   @include mixin.md-lt {
     padding: 30px 40px;
   }
-  &__title {
-    font-weight: 600;
-    @include mixin.sm-lt {
-      margin: auto;
-    }
+  &__box {
+    overflow: hidden;
+    &__title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 0.8;
+      padding-top: 12px;
+      @include mixin.sm-lt {
+        margin: auto;
+      }
 
-    & span {
-      font-size: 18px;
+      & span {
+        font-size: 18px;
+      }
     }
   }
 
