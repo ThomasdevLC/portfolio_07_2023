@@ -5,12 +5,13 @@ import SplitType from "split-type";
 
 const HeaderNav = () => {
   const borderRef = useRef(null);
+  const cvRef = useRef(null);
   useEffect(() => {
-    const title = SplitType.create(".header__box__title");
+    const title = SplitType.create(".header__titlebox__title");
     const splitTitle = title.chars;
 
     gsap.from(splitTitle, {
-      y: 24,
+      y: 25,
       opacity: 0,
       duration: 0.8,
       stagger: 0.02,
@@ -22,8 +23,15 @@ const HeaderNav = () => {
     const borderElement = borderRef.current;
     gsap.fromTo(
       borderElement,
-      { width: "0%" }, // Définir la largeur initiale à 0%
-      { width: "100%", duration: 1, ease: "power2.out", delay: 0.3 } // Définir la largeur finale à 100%
+      { width: "0%" },
+      { width: "100%", duration: 1, ease: "power2.out", delay: 0.3 }
+    );
+
+    const cvElement = cvRef.current;
+    gsap.fromTo(
+      cvElement,
+      { opacity: 0, y: 25 },
+      { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.5 }
     );
   }, []);
 
@@ -35,15 +43,23 @@ const HeaderNav = () => {
           background: `linear-gradient(rgba(255, 255, 255, 0.1), white), url(${background})`,
         }}
       >
-        <div className="header__box">
-          <p className="header__box__title">Portfolio 2023</p>
+        <div className="header__titlebox">
+          <p className="header__titlebox__title">Portfolio 2023</p>
         </div>
         {/* <span>2023</span> */}
-        <a className="header__cv" href={cv} target="_blank" rel="noreferrer">
-          MON CV
-        </a>
+        <div className="header__cvbox ">
+          <a
+            className="header__cvbox__cv "
+            ref={cvRef}
+            href={cv}
+            target="_blank"
+            rel="noreferrer"
+          >
+            MON CV
+          </a>
+        </div>
       </div>
-      <div ref={borderRef} className="border"></div>
+      <div className="border" ref={borderRef}></div>
     </>
   );
 };
