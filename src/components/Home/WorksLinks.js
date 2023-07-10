@@ -36,6 +36,13 @@ const WorksLinks = () => {
               key={index}
             >
               <p className="workslinks__box__name">{item.title}</p>
+              <div className="workslinks__box__tag">
+                {item.tags.map((tag, index) => (
+                  <span key={index} className="workslinks__box__tag__name">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </NavLink>
         );
