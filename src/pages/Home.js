@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import worklist from "../worklist/worklistData";
 import MyIntro from "../components/Home/MyIntro";
 import WorksTitle from "../components/Home/WorksTitle";
+import WorksLinks from "../components/Home/WorksLinks";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
@@ -22,13 +23,7 @@ const Home = () => {
             <WorksTitle />
           </div>
           <div className=" home__works__container ">
-            {worklist.map((item) => (
-              <NavLink
-                to={`/${item.link}/${item.id}`}
-                key={item.id}
-                className={`work work-${item.id} overlay`}
-              ></NavLink>
-            ))}
+            <WorksLinks />
           </div>
         </div>
       </div>
