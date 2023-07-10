@@ -1,0 +1,18 @@
+.workslinks {
+  //   position: relative;
+  width: 100%;
+  &__box {
+    border-top: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: -46px;
+    background-color: white;
+    &__name {
+      margin: 0px;
+      font-size: 5vw;
+      padding-left: 40px;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+  }
+}

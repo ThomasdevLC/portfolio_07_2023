@@ -54,6 +54,20 @@ const worklist = [
       "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
     url: "http://test.com/",
   },
+  {
+    id: 5,
+    title: "PORTFOLIO",
+    description: "Formation OpenClassrooms",
+    period: "Novembre 2022",
+    image: require("../assets/images/groupomania.png"),
+    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
+    link: "groupomania",
+    intro:
+      " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
+    pitch:
+      "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
+    url: "http://test.com/",
+  },
 ];
 
 export default worklist;
