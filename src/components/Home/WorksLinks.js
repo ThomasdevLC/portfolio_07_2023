@@ -7,7 +7,7 @@ const WorksLinks = () => {
     gsap.to(e.target, {
       top: "-2vw",
       backgroundColor: "#FF7070",
-      duration: 0.3,
+      duration: 0.4,
     });
   };
 
@@ -42,6 +42,13 @@ const WorksLinks = () => {
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="workslinks__box__imagebox">
+                <img
+                  className="workslinks__box__image"
+                  src={item.image}
+                  alt={item.title}
+                />
               </div>
             </div>
           </NavLink>
