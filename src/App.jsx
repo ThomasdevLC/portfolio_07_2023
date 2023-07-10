@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
@@ -46,7 +45,6 @@ const App = () => {
                 </>
               }
             ></Route>
-            <Route path="/about" element={<About />}></Route>
             <Route
               path="/ferme-rougeraie/:id"
               element={<FermeRougeraie />}
