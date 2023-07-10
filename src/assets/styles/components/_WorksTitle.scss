@@ -1,0 +1,32 @@
+.workstitle {
+  padding-left: 40px;
+  display: flex;
+  gap: 20px;
+  &__ellipse {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-3);
+    &__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 80px;
+      font-size: 60px;
+    }
+  }
+  &__container {
+    height: 80px;
+    width: 560px;
+    border-radius: 35px;
+    border: 1px solid var(--gray-3);
+    background-color: #f49731;
+
+    &__text {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 80px;
+      text-align: center;
+    }
+  }
+}

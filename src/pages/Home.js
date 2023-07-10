@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import worklist from "../worklist/worklistData";
 import MyIntro from "../components/Home/MyIntro";
+import WorksTitle from "../components/Home/WorksTitle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
@@ -17,6 +18,9 @@ const Home = () => {
           <MyIntro />
         </div>
         <div className="home__works">
+          <div className="home__works__title">
+            <WorksTitle />
+          </div>
           <div className=" home__works__container ">
             {worklist.map((item) => (
               <NavLink
