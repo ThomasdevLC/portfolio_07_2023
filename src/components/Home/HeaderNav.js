@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import cv from "../assets/pdf/cv.pdf";
-import background from "../assets/images/header_background.jpg";
+import cv from "../../assets/pdf/cv.pdf";
+import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 
 const HeaderNav = () => {

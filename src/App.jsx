@@ -6,7 +6,7 @@ import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
-import HeaderNav from "./components/HeaderNav";
+import HeaderNav from "./components/Home/HeaderNav";
 
 import "./App.scss";
 
