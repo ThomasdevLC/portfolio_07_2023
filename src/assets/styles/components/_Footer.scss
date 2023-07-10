@@ -1,5 +1,9 @@
-.test-footer {
-  background-color: aqua;
-  height: 100%;
+.footer {
+  background-color: white;
+  height: 110px;
   position: relative;
+  &__border {
+    width: 100%;
+    border-top: 1px solid var(--gray-3);
+  }
 }
