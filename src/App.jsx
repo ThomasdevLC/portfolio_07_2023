@@ -6,6 +6,7 @@ import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
+import Portfolio from "./pages/works/Portfolio";
 import HeaderNav from "./components/Home/HeaderNav";
 import Footer from "./components/Home/Footer";
 
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/groupomania/:id" element={<Groupomania />}></Route>
             <Route path="/kasa/:id" element={<Kasa />}></Route>
             <Route path="/pwa/:id" element={<Pwa />}></Route>
+            <Route path="/Portfolio/:id" element={<Portfolio />}></Route>
 
             <Route path="*" element={<Home />}></Route>
           </Routes>

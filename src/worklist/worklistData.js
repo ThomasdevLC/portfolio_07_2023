@@ -61,7 +61,7 @@ const worklist = [
     period: "Novembre 2022",
     image: require("../assets/images/kasa.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
-    link: "groupomania",
+    link: "portfolio",
     intro:
       " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
     pitch:
