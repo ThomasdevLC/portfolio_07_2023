@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import worklist from "../worklist/worklistData";
 import MyIntro from "../components/Home/MyIntro";
 import WorksTitle from "../components/Home/WorksTitle";
 import WorksLinks from "../components/Home/WorksLinks";

@@ -7,6 +7,7 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import HeaderNav from "./components/Home/HeaderNav";
+import Footer from "./components/Home/Footer";
 
 import "./App.scss";
 
@@ -42,6 +43,7 @@ const App = () => {
                 <>
                   <HeaderNav />
                   <Home />
+                  <Footer />
                 </>
               }
             ></Route>
