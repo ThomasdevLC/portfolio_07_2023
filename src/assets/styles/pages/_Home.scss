@@ -2,7 +2,7 @@
 @use "../mixins" as mixin;
 
 .home {
-  padding: 40px 0 0 100px;
+  padding: 40px 0 0 60px;
 
   @include mixin.xxl-lt {
     padding: 40px 80px;
@@ -34,11 +34,11 @@
   }
 
   &__intro {
-    width: 230px;
+    width: 250px;
     height: 680px;
     background-color: var(--primary);
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
 
     @include mixin.sm {
       margin: auto;
