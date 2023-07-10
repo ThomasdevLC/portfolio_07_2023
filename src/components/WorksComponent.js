@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import worklistData from "../worklist/worklistData";
+import backbtn from "../assets/images/backbtn.png";
 
 const WorksComponent = () => {
   const params = useParams();
@@ -39,7 +40,10 @@ const WorksComponent = () => {
   return (
     <section className="container">
       <NavLink to="/">
-        <div className="container__backpage"> &#x2191; PORTFOLIO</div>
+        {/* <div className="container__backpage"> &#x2191; PORTFOLIO</div> */}
+        <div className="container__backpage">
+          <img src={backbtn} alt="bouton retour page d'accueil" />
+        </div>
       </NavLink>
       <h1 className="container__title" ref={containerRef}>
         <span className="container__title__span" ref={titleRef}>
