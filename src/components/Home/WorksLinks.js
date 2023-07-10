@@ -22,9 +22,9 @@ const WorksLinks = () => {
 
   return (
     <div className="workslinks">
-      {worklist.map((item, index) => {
+      {worklist.map((project, index) => {
         return (
-          <NavLink to={`/${item.link}/${item.id}`} key={item.id}>
+          <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
             <div
               className="workslinks__box"
               onMouseEnter={(e) => {
@@ -35,9 +35,9 @@ const WorksLinks = () => {
               }}
               key={index}
             >
-              <p className="workslinks__box__name">{item.title}</p>
+              <p className="workslinks__box__name">{project.title}</p>
               <div className="workslinks__box__tag">
-                {item.tags.map((tag, index) => (
+                {project.tags.map((tag, index) => (
                   <span key={index} className="workslinks__box__tag__name">
                     {tag}
                   </span>
@@ -46,8 +46,8 @@ const WorksLinks = () => {
               <div className="workslinks__box__imagebox">
                 <img
                   className="workslinks__box__image"
-                  src={item.image}
-                  alt={item.title}
+                  src={project.image}
+                  alt={project.title}
                 />
               </div>
             </div>
