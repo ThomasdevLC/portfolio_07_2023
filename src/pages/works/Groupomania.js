@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import WorksComponent from "../../components/WorksComponent";
+import BackBtn from "../../components/works/BackBtn";
 import video from "../../assets/videos/groupomania-video.mp4";
 import transition from "../../utils/transitions";
 
@@ -18,8 +19,8 @@ const Groupomania = () => {
 
   return (
     <section className="groupomania-container">
+      <BackBtn />
       <WorksComponent />
-
       <div className="container__video">
         <button className="container__video__btn" onClick={toggleVideo}>
           {isPlaying ? "ll Pause" : "► Play video"}
