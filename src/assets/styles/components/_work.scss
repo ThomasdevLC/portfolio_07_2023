@@ -29,41 +29,6 @@
       padding: 46px;
     }
   }
-
-  &__backpage {
-    position: fixed;
-    top: 70px;
-    left: 100px;
-    cursor: pointer;
-    z-index: 99;
-
-    &__backpage img {
-      height: 80%;
-    }
-
-    @include mixin.xxl-lt {
-      color: white;
-      font-size: 20px;
-      top: 60px;
-      left: -40px;
-      &:hover {
-        color: var(--gray-2);
-      }
-    }
-
-    @include mixin.md-lt {
-      color: white;
-      font-size: 16px;
-      top: 50px;
-      left: -20px;
-      font-weight: 500;
-    }
-    @include mixin.xs {
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
 }
 .project {
   max-width: 800px;
