@@ -32,10 +32,14 @@
 
   &__backpage {
     position: fixed;
-    top: 80px;
+    top: 70px;
     left: 100px;
     cursor: pointer;
     z-index: 99;
+
+    &__backpage img {
+      height: 80%;
+    }
 
     @include mixin.xxl-lt {
       color: white;
