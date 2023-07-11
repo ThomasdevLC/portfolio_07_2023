@@ -15,7 +15,7 @@ const worklist = [
   {
     id: 2,
     title: "GCA",
-    description: "Stage Hermes/Gca",
+    description: "Stage Gca",
     period: "Mars 2023",
     image: require("../assets/images/gca.png"),
     tags: ["Vue", "Sass", "Figma"],
@@ -45,7 +45,7 @@ const worklist = [
     title: "GROUPOMANIA",
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
-    image: require("../assets/images/kasa.png"),
+    image: require("../assets/images/groupomania.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
     intro:
@@ -59,7 +59,7 @@ const worklist = [
     title: "PORTFOLIO",
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
-    image: require("../assets/images/kasa.png"),
+    image: require("../assets/images/portfolio.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
     link: "portfolio",
     intro:

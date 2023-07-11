@@ -3,7 +3,6 @@
 
 .home {
   padding: 40px 0 0 60px;
-
   @include mixin.xxl-lt {
     padding: 40px 80px;
   }

@@ -31,14 +31,15 @@
       }
     }
     &__imagebox {
-      width: 100px;
+      height: 100px;
       pointer-events: none;
       position: relative;
-      top: 115px;
+      top: 100px;
       margin-left: 30px;
       transition: top 0.5s ease-in-out 0.1s;
+      // transition: scale 0.1s ease-in-out 0.1s;
       & img {
-        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
@@ -47,6 +48,7 @@
 
 .workslinks__box:hover .workslinks__box__imagebox {
   top: 10px;
+  scale: 1.1;
 }
 
 .workslinks__box:hover .workslinks__box__tag__name {
