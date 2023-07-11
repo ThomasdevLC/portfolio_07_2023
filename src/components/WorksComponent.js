@@ -25,7 +25,7 @@ const WorksComponent = () => {
       const titleElement = titleRef.current;
       gsap.fromTo(
         titleElement,
-        { opacity: 0, y: 45 },
+        { opacity: 0, y: 65 },
         { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.2 }
       );
     }
