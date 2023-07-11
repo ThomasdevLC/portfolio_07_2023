@@ -2,7 +2,7 @@
 @use "../mixins" as mixin;
 
 .header {
-  padding: 30px 60px 30px 60px;
+  padding: 30px 60px;
   font-size: 24px;
   font-weight: 500;
   display: flex;
@@ -34,27 +34,19 @@
 
   &__cvbox {
     overflow: hidden;
-    padding: 5px;
     &__cv {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       text-align: center;
-      padding: 4px 30px;
+      padding: 8px 30px;
       border: 1px solid var(--gray-3);
       background-color: var(--primary);
       display: block;
-      // box-shadow: -3px 3px 0px 0px var(--gray-3);
-      // -webkit-box-shadow: -3px 3px 0px 0px var(--gray-3);
-      // -moz-box-shadow: -3px 3px 0px 0px var(--gray-3);
-      border-radius: 12px;
+      border-radius: 30px;
       &:hover {
         cursor: pointer;
         background-color: var(--gray-2);
         color: var(--gray-3);
-
-        box-shadow: -3px 3px 0px 0px var(--gray-1);
-        -webkit-box-shadow: -3px 3px 0px 0px var(--gray-1);
-        -moz-box-shadow: -3px 3px 0px 0px var(--gray-1);
       }
 
       @include mixin.sm-lt {
