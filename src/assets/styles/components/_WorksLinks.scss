@@ -31,13 +31,12 @@
       }
     }
     &__imagebox {
-      height: 100px;
+      height: 95px;
       pointer-events: none;
       position: relative;
-      top: 100px;
+      top: 105px;
       margin-left: 30px;
       transition: top 0.5s ease-in-out 0.1s;
-      // transition: scale 0.1s ease-in-out 0.1s;
       & img {
         height: 100%;
         object-fit: cover;
@@ -48,7 +47,9 @@
 
 .workslinks__box:hover .workslinks__box__imagebox {
   top: 10px;
-  scale: 1.11;
+}
+.workslinks__box:hover .workslinks__box__imagebox img {
+  scale: 1.2;
 }
 
 .workslinks__box:hover .workslinks__box__tag__name {

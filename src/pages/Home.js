@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MyIntro from "../components/Home/MyIntro";
 import WorksTitle from "../components/Home/WorksTitle";
 import WorksLinks from "../components/Home/WorksLinks";
