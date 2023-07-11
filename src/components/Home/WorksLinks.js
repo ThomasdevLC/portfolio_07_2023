@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import worklist from "../../worklist/worklistData";
+import { motion } from "framer-motion";
 
 const WorksLinks = () => {
+  const [showImageBox, setShowImageBox] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowImageBox(true);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const manageMouseEnter = (e, index) => {
     gsap.to(e.target, {
       top: "-32px",
@@ -25,8 +36,14 @@ const WorksLinks = () => {
       {worklist.map((project, index) => {
         return (
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
-            <div
+            <motion.div
               className="workslinks__box"
+              initial={{ opacity: 0, y: 300 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.1,
+              }}
               onMouseEnter={(e) => {
                 manageMouseEnter(e, index);
               }}
@@ -43,14 +60,17 @@ const WorksLinks = () => {
                   </span>
                 ))}
               </div>
-              <div className="workslinks__box__imagebox">
-                <img
-                  className="workslinks__box__image"
-                  src={project.image}
-                  alt={project.title}
-                />
-              </div>
-            </div>
+
+              {showImageBox && (
+                <div className="workslinks__box__imagebox">
+                  <img
+                    className="workslinks__box__image"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+              )}
+            </motion.div>
           </NavLink>
         );
       })}
