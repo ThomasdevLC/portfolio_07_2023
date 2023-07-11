@@ -37,9 +37,11 @@
       top: 105px;
       margin-left: 30px;
       transition: top 0.5s ease-in-out 0.1s;
+
       & img {
         height: 100%;
         object-fit: cover;
+        transition: transform 0.2s ease-in-out;
       }
     }
   }
@@ -49,7 +51,7 @@
   top: 10px;
 }
 .workslinks__box:hover .workslinks__box__imagebox img {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .workslinks__box:hover .workslinks__box__tag__name {
