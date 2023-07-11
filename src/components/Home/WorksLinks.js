@@ -9,7 +9,7 @@ const WorksLinks = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowImageBox(true);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, []);
