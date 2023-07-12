@@ -2,13 +2,13 @@
   //   position: relative;
   width: 100%;
   &__box {
-    display: flex;
     border-top: 1px solid black;
-    cursor: pointer;
-    position: relative;
     margin-bottom: -46px;
     background-color: white;
     color: var(--gray-3);
+    display: flex;
+    position: relative;
+    cursor: pointer;
 
     &__name {
       margin: 0px;
@@ -22,6 +22,7 @@
       gap: 10px;
       margin: 35px 0 0 15px;
       pointer-events: none;
+
       &__name {
         height: 25px;
         padding: 1px 10px;
@@ -31,7 +32,7 @@
       }
     }
     &__imagebox {
-      height: 95px;
+      height: 92px;
       pointer-events: none;
       position: relative;
       top: 105px;
