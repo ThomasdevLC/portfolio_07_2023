@@ -27,13 +27,13 @@ const WorksLinks = () => {
     gsap.to(e.target, {
       top: "0",
       backgroundColor: "white",
-      duration: 0.3,
+      duration: 0.4,
       delay: 0.1,
     });
   };
 
   return (
-    <div className="workslinks">
+    <div className="workslinks br">
       {worklist.map((project, index) => {
         return (
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>

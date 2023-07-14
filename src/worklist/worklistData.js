@@ -5,7 +5,7 @@ const worklist = [
     description: "Site E-commerce ",
     period: "Mai 2023",
     image: require("../assets/images/ferme_rougeraie.png"),
-    tags: ["Vue", "Sass", "NodeJs", "Figma"],
+    tags: ["Vue", "Pinia", "Sass", "NodeJs", "Figma"],
     link: "ferme-rougeraie",
     intro: " Site e-commerce pour une productrice de produits bio .",
     pitch:
@@ -18,7 +18,7 @@ const worklist = [
     description: "Stage Gca",
     period: "Mars 2023",
     image: require("../assets/images/gca.png"),
-    tags: ["Vue", "Sass", "Figma"],
+    tags: ["Vue", "Pinia", "Sass", "Figma"],
     link: "pwa",
     intro:
       "Lors de mon stage dans l'entreprise GCA, j'ai développé une application mobile first conçue spécifiquement pour répondre aux besoins des équipes commerciales.",
