@@ -13,7 +13,7 @@ const Home = () => {
       transition={{ duration: 0.8, delay: 0.3 }}
     >
       <div className="home__content">
-        <div className="home__intro">
+        <div>
           <MyIntro />
         </div>
         <div className="home__works">

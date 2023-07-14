@@ -33,7 +33,7 @@ const WorksLinks = () => {
   };
 
   return (
-    <div className="workslinks br">
+    <div className="workslinks ">
       {worklist.map((project, index) => {
         return (
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>

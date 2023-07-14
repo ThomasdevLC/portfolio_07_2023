@@ -1,7 +1,13 @@
+@use "../mixins" as mixin;
+
 .workstitle {
   padding-left: 40px;
   display: flex;
   gap: 20px;
+  @include mixin.xxl-lt {
+    justify-content: center;
+    margin: 40px 0;
+  }
   &__ellipse {
     height: 80px;
     width: 80px;
