@@ -42,7 +42,6 @@
       & img {
         height: 100%;
         object-fit: cover;
-        transition: transform 0.2s ease-in-out;
       }
     }
   }
@@ -53,8 +52,10 @@
 }
 .workslinks__box:hover .workslinks__box__imagebox img {
   transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 
 .workslinks__box:hover .workslinks__box__tag__name {
   background-color: white;
+  transition: background-color 0.2s ease-in-out;
 }
