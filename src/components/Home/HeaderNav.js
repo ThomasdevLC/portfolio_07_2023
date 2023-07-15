@@ -44,9 +44,10 @@ const HeaderNav = () => {
         }}
       >
         <div className="header__titlebox">
-          <p className="header__titlebox__title">Portfolio 2023</p>
+          <p className="header__titlebox__title">
+            Portfolio <span>2023</span>
+          </p>
         </div>
-        {/* <span>2023</span> */}
         <div className="header__cvbox ">
           <a
             className="header__cvbox__cv "
