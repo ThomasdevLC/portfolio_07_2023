@@ -1,12 +1,40 @@
+@use "../mixins" as mixin;
+
 .backpage {
   position: fixed;
-  top: 70px;
-  left: 100px;
-  cursor: pointer;
+  width: 185px;
+  top: 55px;
+  left: 80px;
   z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+
+  @include mixin.xxl-lt {
+    top: 90px;
+    left: 60px;
+    width: 140px;
+    position: absolute;
+  }
+  @include mixin.md {
+    top: 60px;
+    left: 20px;
+    width: 140px;
+    position: absolute;
+  }
+  @include mixin.sm {
+    top: 70px;
+    left: 20px;
+    width: 100px;
+    position: absolute;
+  }
+  @include mixin.xs {
+    top: 60px;
+    left: 20px;
+    width: 80px;
+    position: absolute;
+  }
   &__content {
     position: absolute;
     top: 50%;
@@ -14,8 +42,15 @@
     transform: translate(-50%, -50%);
 
     &__icon {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
+
+      @include mixin.xxl-lt {
+        font-size: 20px;
+      }
+      @include mixin.sm-lt {
+        font-size: 15px;
+      }
 
       & :hover {
         color: var(--gray-3);

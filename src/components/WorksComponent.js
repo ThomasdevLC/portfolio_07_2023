@@ -36,7 +36,7 @@ const WorksComponent = () => {
   }
 
   return (
-    <section className="container">
+    <section className="container br">
       <h1 className="container__title" ref={containerRef}>
         <span className="container__title__span" ref={titleRef}>
           {project.title}
