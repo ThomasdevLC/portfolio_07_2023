@@ -58,7 +58,7 @@ const worklist = [
     id: 5,
     title: "PORTFOLIO",
     description: "Formation OpenClassrooms",
-    period: "Novembre 2022",
+    period: "Juillet 2023",
     image: require("../assets/images/portfolio.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
     link: "portfolio",

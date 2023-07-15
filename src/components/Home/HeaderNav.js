@@ -16,7 +16,7 @@ const HeaderNav = () => {
       duration: 0.8,
       stagger: 0.02,
       ease: "back.out",
-      duration: 1,
+      duration: 0.7,
       delay: 0.5,
     });
 
@@ -45,7 +45,14 @@ const HeaderNav = () => {
       >
         <div className="header__titlebox">
           <p className="header__titlebox__title">
-            Portfolio <span>2023</span>
+            Portfolio
+            <span> </span>
+            <span>
+              <span>2</span>
+              <span>0</span>
+              <span>2</span>
+              <span>3</span>
+            </span>
           </p>
         </div>
         <div className="header__cvbox ">
