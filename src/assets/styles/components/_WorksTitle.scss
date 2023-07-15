@@ -4,22 +4,36 @@
   padding-left: 40px;
   display: flex;
   gap: 20px;
+
   @include mixin.xxl-lt {
     justify-content: center;
     margin: 40px 0;
     padding: 0;
+  }
+  @include mixin.sm {
+    width: 70%;
+    margin: 20px auto;
   }
   &__ellipse {
     height: 80px;
     width: 80px;
     border-radius: 50%;
     border: 1px solid var(--gray-3);
+
+    @include mixin.sm {
+      height: 55px;
+    }
     &__arrow {
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 80px;
       font-size: 60px;
+
+      @include mixin.sm {
+        line-height: 52px;
+        font-size: 30px;
+      }
     }
   }
   &__container {
@@ -29,11 +43,19 @@
     border: 1px solid var(--gray-3);
     background-color: #ff879d;
 
+    @include mixin.sm {
+      height: 55px;
+    }
+
     &__text {
       font-size: 48px;
       font-weight: 600;
       line-height: 80px;
       text-align: center;
+      @include mixin.sm {
+        font-size: 27px;
+        line-height: 58px;
+      }
     }
   }
 }
