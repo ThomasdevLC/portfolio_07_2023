@@ -7,6 +7,7 @@
   @include mixin.xxl-lt {
     justify-content: center;
     margin: 40px 0;
+    padding: 0;
   }
   &__ellipse {
     height: 80px;

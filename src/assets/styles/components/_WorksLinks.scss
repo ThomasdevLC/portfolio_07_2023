@@ -1,7 +1,7 @@
 @use "../mixins" as mixin;
 
 .workslinks {
-  //   position: relative;
+  position: relative;
   width: 100%;
   &__box {
     border-top: 1px solid black;
