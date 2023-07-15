@@ -14,14 +14,19 @@
     width: 70%;
     margin: 20px auto;
   }
+
+  @include mixin.xs {
+    width: 90%;
+    margin: 20px auto;
+  }
   &__ellipse {
     height: 80px;
     width: 80px;
     border-radius: 50%;
     border: 1px solid var(--gray-3);
 
-    @include mixin.sm {
-      height: 55px;
+    @include mixin.sm-lt {
+      display: none;
     }
     &__arrow {
       display: flex;
@@ -29,11 +34,6 @@
       justify-content: center;
       line-height: 80px;
       font-size: 60px;
-
-      @include mixin.sm {
-        line-height: 52px;
-        font-size: 30px;
-      }
     }
   }
   &__container {
@@ -44,6 +44,10 @@
     background-color: #ff879d;
 
     @include mixin.sm {
+      height: 60px;
+    }
+
+    @include mixin.xs {
       height: 55px;
     }
 
@@ -53,8 +57,13 @@
       line-height: 80px;
       text-align: center;
       @include mixin.sm {
-        font-size: 27px;
-        line-height: 58px;
+        font-size: 30px;
+        line-height: 60px;
+      }
+
+      @include mixin.xs {
+        font-size: 30px;
+        line-height: 55px;
       }
     }
   }
