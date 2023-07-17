@@ -7,7 +7,7 @@ const HeaderNav = () => {
   const borderRef = useRef(null);
   const cvRef = useRef(null);
   useEffect(() => {
-    const title = SplitType.create(".header__titlebox__title");
+    const title = SplitType.create(".header__titlebox");
     const splitTitle = title.chars;
 
     gsap.from(splitTitle, {
@@ -44,15 +44,13 @@ const HeaderNav = () => {
         }}
       >
         <div className="header__titlebox">
-          <p className="header__titlebox__title">
-            Portfolio
-            <span> </span>
-            <span>
-              <span>2</span>
-              <span>0</span>
-              <span>2</span>
-              <span>3</span>
-            </span>
+          <p className="header__titlebox__title">Portfolio</p>
+          <p className="header__titlebox__year">
+            {" "}
+            <span>2</span>
+            <span>0</span>
+            <span>2</span>
+            <span>3</span>
           </p>
         </div>
         <div className="header__cvbox ">
