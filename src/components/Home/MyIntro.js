@@ -1,6 +1,7 @@
 import React from "react";
 import pic from "../../assets/images/pic.png";
-import { motion, AnimatePresence } from "framer-motion";
+import cv from "../../assets/pdf/cv.pdf";
+import { motion } from "framer-motion";
 
 const MyIntro = () => {
   return (
@@ -37,7 +38,17 @@ const MyIntro = () => {
         </a>
       </div>
 
-      <p className="home__intro__cv"> MON CV</p>
+      <div className="home__intro__cv">
+        {" "}
+        <a
+          className="header__cvbox__cv "
+          href={cv}
+          target="_blank"
+          rel="noreferrer"
+        >
+          MON CV
+        </a>
+      </div>
     </motion.div>
   );
 };

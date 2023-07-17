@@ -16,9 +16,6 @@
       margin-bottom: -20px;
     }
     @include mixin.sm-lt {
-      margin-bottom: -32px;
-    }
-    @include mixin.xs {
       margin-bottom: 0px;
     }
 
@@ -40,7 +37,7 @@
         padding-left: 30px;
       }
       @include mixin.sm {
-        font-size: 60px;
+        font-size: 50px;
         padding-left: 25px;
         font-weight: 500;
       }
@@ -57,8 +54,9 @@
       margin: 35px 0 0 15px;
       height: 20px;
       pointer-events: none;
-      @include mixin.lg {
+      @include mixin.lg-lt {
         margin: 25px 0 0 15px;
+        gap: 8px;
       }
       @include mixin.md-lt {
         margin: 23px 10px 0 15px;
@@ -71,13 +69,13 @@
         border: 1px solid var(--gray-3);
         line-height: 22px;
         @include mixin.lg {
-          font-size: 13px;
+          font-size: 12px;
         }
         @include mixin.md {
           font-size: 12px;
           padding: 1px 8px;
         }
-        @include mixin.xs {
+        @include mixin.sm-lt {
           display: none;
         }
       }
