@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import cv from "../../assets/pdf/cv.pdf";
 import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
+import LangContext from "../../context/LangContext"; // Import the LangContext
 
 const HeaderNav = () => {
-  const [switchLang, setSwitchLang] = useState("fr");
-
+  const { switchLang, setSwitchLang } = useContext(LangContext);
   const borderRef = useRef(null);
   const cvRef = useRef(null);
   useEffect(() => {

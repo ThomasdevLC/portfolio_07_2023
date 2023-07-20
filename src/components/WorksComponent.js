@@ -42,6 +42,7 @@ const WorksComponent = () => {
           {project.title}
         </span>
       </h1>
+      <div></div>
       <div className="project">
         <p className="project__intro">{project.intro}</p>
         <p className="project__pitch">{project.pitch}</p>
