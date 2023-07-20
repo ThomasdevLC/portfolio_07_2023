@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import worklist from "../../worklist/worklistData";
 import { motion } from "framer-motion";
-import LangContext from "..//../context/LangContext";
 
 const WorksLinks = () => {
   const [showImageBox, setShowImageBox] = useState(false);
-  const { switchLang } = useContext(LangContext);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -36,8 +34,6 @@ const WorksLinks = () => {
 
   return (
     <div className="workslinks">
-      <p>The current language is: {switchLang}</p>
-
       {worklist.map((project, index) => {
         return (
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>

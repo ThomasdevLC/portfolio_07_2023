@@ -1,4 +1,4 @@
-const worklist = [
+const worklistEn = [
   {
     id: 1,
     title: "FERME LA ROUGERAIE",
@@ -70,4 +70,4 @@ const worklist = [
   },
 ];
 
-export default worklist;
+export default worklistEn;

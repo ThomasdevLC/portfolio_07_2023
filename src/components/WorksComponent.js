@@ -1,6 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { useParams } from "react-router-dom";
-import worklistData from "../worklist/worklistData";
+import worklistFr from "../worklist/worklistData";
+import worklistEn from "../worklist/worklistDataEn";
+import LangContext from "../context/LangContext";
 
 const WorksComponent = () => {
   const params = useParams();
@@ -8,11 +10,18 @@ const WorksComponent = () => {
   const [project, setProject] = useState(null);
   const containerRef = useRef(null);
   const titleRef = useRef(null);
+  const { selectedLang } = useContext(LangContext);
 
   useEffect(() => {
-    const selectedProject = worklistData.find((w) => w.id === projectId);
-    setProject(selectedProject);
-  }, [projectId]);
+    // Check if selectedLang is 'fr'
+    if (selectedLang === "fr") {
+      const selectedProject = worklistFr.find((w) => w.id === projectId);
+      setProject(selectedProject);
+    } else {
+      const selectedProject = worklistEn.find((w) => w.id === projectId);
+      setProject(selectedProject);
+    }
+  }, [projectId, selectedLang]);
 
   useEffect(() => {
     if (project) {
