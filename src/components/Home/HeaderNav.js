@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import cv from "../../assets/pdf/cv.pdf";
 import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 
 const HeaderNav = () => {
+  const [switchLang, setSwitchLang] = useState("fr");
+
   const borderRef = useRef(null);
   const cvRef = useRef(null);
   useEffect(() => {
@@ -35,6 +37,10 @@ const HeaderNav = () => {
     );
   }, []);
 
+  const toggleLanguage = () => {
+    setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
+  };
+  console.log(switchLang);
   return (
     <>
       <div
@@ -53,16 +59,42 @@ const HeaderNav = () => {
             <span>3</span>
           </p>
         </div>
-        <div className="header__cvbox ">
-          <a
-            className="header__cvbox__cv "
-            ref={cvRef}
-            href={cv}
-            target="_blank"
-            rel="noreferrer"
-          >
-            MON CV
-          </a>
+        <div className="header__right">
+          <div className="header__right__box ">
+            <a
+              className="header__right__cvbox__cv "
+              ref={cvRef}
+              href={cv}
+              target="_blank"
+              rel="noreferrer"
+            >
+              MON CV
+            </a>
+          </div>
+          <nav className="header__right__lang">
+            <ul className="header__right__lang__nav">
+              <li
+                className={`header__right__lang__nav__mode ${
+                  switchLang === "fr"
+                    ? "header__right__lang__nav__mode-selected"
+                    : ""
+                }`}
+                onClick={toggleLanguage}
+              >
+                FR
+              </li>
+              <li
+                className={`header__right__lang__nav__mode ${
+                  switchLang === "en"
+                    ? "header__right__lang__nav__mode-selected"
+                    : ""
+                }`}
+                onClick={toggleLanguage}
+              >
+                EN
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div className="border" ref={borderRef}></div>
