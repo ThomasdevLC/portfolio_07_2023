@@ -1,5 +1,4 @@
 .lang {
-  background-color: white;
   cursor: pointer;
 
   &__nav {
@@ -9,7 +8,8 @@
     height: 45px;
     padding: 0px 5px;
     border: 1px solid var(--gray-3);
-    border-radius: 50px;
+    border-radius: 35px;
+    background-color: white;
 
     &__btn {
       height: 35px;
