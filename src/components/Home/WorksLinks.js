@@ -9,7 +9,7 @@ const WorksLinks = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowImageBox(true);
-    }, 1000);
+    }, 2500);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -39,11 +39,12 @@ const WorksLinks = () => {
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
             <motion.div
               className="workslinks__box"
-              initial={{ opacity: 0, y: 300 }}
+              initial={{ opacity: 0, y: 2500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 2,
                 delay: index * 0.1,
+                ease: [0.22, 1, 1, 1],
               }}
               onMouseEnter={(e) => {
                 manageMouseEnter(e, index);
