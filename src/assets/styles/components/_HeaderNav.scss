@@ -56,25 +56,6 @@
         }
       }
     }
-    &__lang {
-      &__nav {
-        display: flex;
-        gap: 10px;
-
-        padding: 8px 30px;
-        border: 1px solid var(--gray-3);
-        border-radius: 35px;
-
-        &__mode {
-          font-size: 18px;
-          font-weight: 500;
-          cursor: pointer;
-        }
-        &__mode-selected {
-          color: var(--secondary);
-        }
-      }
-    }
   }
 }
 .border {

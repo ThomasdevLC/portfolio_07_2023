@@ -3,6 +3,7 @@ import cv from "../../assets/pdf/cv.pdf";
 import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 import LangContext from "../../context/LangContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeaderNav = () => {
   const { switchLang, setSwitchLang } = useContext(LangContext);
@@ -40,7 +41,7 @@ const HeaderNav = () => {
   const toggleLanguage = () => {
     setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
   };
-  console.log(switchLang);
+  console.log(switchLang, "header");
   return (
     <>
       <div
@@ -71,30 +72,7 @@ const HeaderNav = () => {
               MON CV
             </a>
           </div>
-          <nav className="header__right__lang">
-            <ul className="header__right__lang__nav">
-              <li
-                className={`header__right__lang__nav__mode ${
-                  switchLang === "fr"
-                    ? "header__right__lang__nav__mode-selected"
-                    : ""
-                }`}
-                onClick={toggleLanguage}
-              >
-                FR
-              </li>
-              <li
-                className={`header__right__lang__nav__mode ${
-                  switchLang === "en"
-                    ? "header__right__lang__nav__mode-selected"
-                    : ""
-                }`}
-                onClick={toggleLanguage}
-              >
-                EN
-              </li>
-            </ul>
-          </nav>
+          <LanguageSwitcher />
         </div>
       </div>
       <div className="border" ref={borderRef}></div>

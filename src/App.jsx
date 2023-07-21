@@ -18,6 +18,8 @@ const App = () => {
   const [switchLang, setSwitchLang] = useState("fr");
   const location = useLocation();
 
+  console.log(switchLang, "app");
+
   useEffect(() => {
     const delay = 300;
 
