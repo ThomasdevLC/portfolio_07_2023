@@ -9,6 +9,7 @@ const HeaderNav = () => {
   const { switchLang, setSwitchLang } = useContext(LangContext);
   const borderRef = useRef(null);
   const cvRef = useRef(null);
+  const langRef = useRef(null);
   useEffect(() => {
     const title = SplitType.create(".header__titlebox");
     const splitTitle = title.chars;
@@ -36,12 +37,15 @@ const HeaderNav = () => {
       { opacity: 0, y: 25 },
       { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 1.1 }
     );
+
+    const langElement = langRef.current;
+    gsap.fromTo(
+      langElement,
+      { opacity: 0, y: 25 },
+      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 1.2 }
+    );
   }, []);
 
-  const toggleLanguage = () => {
-    setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
-  };
-  console.log(switchLang, "header");
   return (
     <>
       <div
@@ -72,7 +76,9 @@ const HeaderNav = () => {
               MON CV
             </a>
           </div>
-          <LanguageSwitcher />
+          <div className="header__right__langmode" ref={langRef}>
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
       <div className="border" ref={borderRef}></div>

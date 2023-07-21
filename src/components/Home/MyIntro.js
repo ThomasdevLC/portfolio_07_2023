@@ -18,8 +18,8 @@ const MyIntro = () => {
       <h2 className="home__intro__position">Développeur web</h2>
       <p className="home__intro__text">
         Je créé des sites et applications dans différents environnements tels
-        que React, Vue.js et Node.js. <br /> Attentif à l'UX/UI, je m'efforce de
-        créer les meilleurs expériences utilisateur possibles.
+        que React, Vue.js et Node.js. <br /> Attentif à l'UX/UI, je m'applique à
+        proposer les meilleurs expériences possibles.
       </p>
       <p className="home__intro__city">Montpellier</p>
       <p className="home__intro__contact">
