@@ -17,36 +17,50 @@ import "./App.scss";
 const App = () => {
   const [switchLang, setSwitchLang] = useState("fr");
   const location = useLocation();
+  const [isSlideInVisible, setIsSlideInVisible] = useState(true);
+
+  // Fonction pour gérer la fin de l'animation
+  const handleAnimationComplete = () => {
+    setIsSlideInVisible(false);
+  };
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
-      <div>
-        <div className="main">
-          <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <HeaderNav />
-                    <Home />
-                    <Footer />
-                  </>
-                }
-              ></Route>
-              <Route
-                path="/ferme-rougeraie/:id"
-                element={<FermeRougeraie />}
-              ></Route>
-              <Route path="/groupomania/:id" element={<Groupomania />}></Route>
-              <Route path="/kasa/:id" element={<Kasa />}></Route>
-              <Route path="/pwa/:id" element={<Pwa />}></Route>
-              <Route path="/Portfolio/:id" element={<Portfolio />}></Route>
+      <motion.div
+        className="slide-in"
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        exit={{ scaleY: 1 }}
+        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        onAnimationComplete={handleAnimationComplete} // Appel de la fonction quand l'animation est terminée
+        hidden={!isSlideInVisible} // Masque l'élément pendant l'animation de sortie
+      ></motion.div>
 
-              <Route path="*" element={<Home />}></Route>
-            </Routes>
-          </AnimatePresence>
-        </div>
+      <div className="main">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeaderNav />
+                  <Home />
+                  <Footer />
+                </>
+              }
+            ></Route>
+            <Route
+              path="/ferme-rougeraie/:id"
+              element={<FermeRougeraie />}
+            ></Route>
+            <Route path="/groupomania/:id" element={<Groupomania />}></Route>
+            <Route path="/kasa/:id" element={<Kasa />}></Route>
+            <Route path="/pwa/:id" element={<Pwa />}></Route>
+            <Route path="/Portfolio/:id" element={<Portfolio />}></Route>
+
+            <Route path="*" element={<Home />}></Route>
+          </Routes>
+        </AnimatePresence>
       </div>
     </LangContext.Provider>
   );
