@@ -21,28 +21,28 @@ const HeaderNav = () => {
       stagger: 0.02,
       ease: "back.out",
       duration: 0.7,
-      delay: 0.5,
+      delay: 1.5,
     });
 
     const borderElement = borderRef.current;
     gsap.fromTo(
       borderElement,
       { width: "0%" },
-      { width: "100%", duration: 1.5, ease: "power2.out", delay: 0.3 }
+      { width: "100%", duration: 1.5, ease: "power2.out", delay: 1.3 }
     );
 
     const cvElement = cvRef.current;
     gsap.fromTo(
       cvElement,
       { opacity: 0, y: 25 },
-      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 1.1 }
+      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.1 }
     );
 
     const langElement = langRef.current;
     gsap.fromTo(
       langElement,
       { opacity: 0, y: 25 },
-      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 1.2 }
+      { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.2 }
     );
   }, []);
 

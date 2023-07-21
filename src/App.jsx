@@ -31,7 +31,7 @@ const App = () => {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         exit={{ scaleY: 1 }}
-        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         onAnimationComplete={handleAnimationComplete} // Appel de la fonction quand l'animation est terminée
         hidden={!isSlideInVisible} // Masque l'élément pendant l'animation de sortie
       ></motion.div>

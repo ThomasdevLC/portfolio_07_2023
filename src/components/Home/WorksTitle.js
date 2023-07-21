@@ -18,7 +18,7 @@ const WorksTitle = () => {
         opacity: 1,
         duration: 1,
         ease: ["elastic"],
-        delay: 0.6,
+        delay: 1.6,
       }
     );
 
@@ -31,7 +31,7 @@ const WorksTitle = () => {
       stagger: 0.02,
       ease: "back.out",
       duration: 1,
-      delay: 0.7,
+      delay: 1.7,
     });
   }, []);
 
