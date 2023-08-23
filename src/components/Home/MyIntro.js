@@ -3,10 +3,14 @@ import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
+import introFr from "../../data/intro/introFr";
+import introEn from "../../data/intro/introEn";
+import LangContext from "../../context/LangContext";
 
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
   const Element = !preventAnim ? motion.div : "div";
+  const { switchLang } = useContext(LangContext);
 
   return (
     <Element
@@ -20,11 +24,13 @@ const MyIntro = () => {
       </div>
       <h1 className="home__intro__name">Thomas Le Cam</h1>
       <h2 className="home__intro__position">Développeur web</h2>
-      <p className="home__intro__text">
-        Je créé des sites et applications dans différents environnements tels
-        que React, Vue.js et Node.js. <br /> Attentif à l'UX/UI, je m'applique à
-        proposer les meilleurs expériences possibles.
-      </p>
+
+      {switchLang === "fr" ? (
+        <p className="home__intro__text">{introFr}</p>
+      ) : (
+        <p className="home__intro__text">{introEn}</p>
+      )}
+
       <p className="home__intro__city">Montpellier</p>
       <p className="home__intro__contact">
         06 43 84 36 32 <br />

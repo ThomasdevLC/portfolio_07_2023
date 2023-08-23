@@ -12,10 +12,7 @@ const WorksComponent = () => {
   const titleRef = useRef(null);
   const { switchLang } = useContext(LangContext);
 
-  console.log(switchLang, "w");
-
   useEffect(() => {
-    // Check if switchLang  is 'fr'
     if (switchLang === "fr") {
       const selectedProject = worklistFr.find((w) => w.id === projectId);
       setProject(selectedProject);
