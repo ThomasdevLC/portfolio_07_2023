@@ -3,10 +3,12 @@ import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
 import video from "../../assets/videos/groupomania-video.mp4";
 import transition from "../../utils/transitions";
+import usePrevent from "../../hooks/usePrevent";
 
 const Groupomania = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  usePrevent(true);
 
   const toggleVideo = () => {
     if (isPlaying) {

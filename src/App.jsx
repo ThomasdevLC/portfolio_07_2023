@@ -21,7 +21,7 @@ const App = () => {
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState("");
 
-  const handleDataFromChild = (data) => {
+  const handlePrevent = (data) => {
     setPreventAnim(data);
   };
   // Fonction pour gérer la fin de l'animation
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
-      <PreventContext.Provider value={{ preventAnim, handleDataFromChild }}>
+      <PreventContext.Provider value={{ preventAnim, handlePrevent }}>
         <motion.div
           className="slide-in"
           initial={{ scaleY: 0 }}
@@ -57,9 +57,7 @@ const App = () => {
               ></Route>
               <Route
                 path="/ferme-rougeraie/:id"
-                element={
-                  <FermeRougeraie sendDataToParent={handleDataFromChild} />
-                }
+                element={<FermeRougeraie sendDataToParent={handlePrevent} />}
               ></Route>
               <Route path="/groupomania/:id" element={<Groupomania />}></Route>
               <Route path="/kasa/:id" element={<Kasa />}></Route>

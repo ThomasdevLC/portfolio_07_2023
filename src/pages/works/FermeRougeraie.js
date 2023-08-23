@@ -1,18 +1,13 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
 import farmProducts from "../../assets/images/ferme_rougeraie_about.png";
 import farmAbout from "../../assets/images/ferme_rougeraie_products.png";
 import transition from "../../utils/transitions";
-import PreventContext from "../../context/PreventContext";
+import usePrevent from "../../hooks/usePrevent";
 
 const FermeRougeraie = () => {
-  const { handleDataFromChild } = useContext(PreventContext);
-
-  useEffect(() => {
-    const data = true;
-    handleDataFromChild(data);
-  }, [handleDataFromChild]);
+  usePrevent(true);
 
   return (
     <div className="farm__container">

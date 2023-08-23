@@ -4,8 +4,11 @@ import BackBtn from "../../components/works/BackBtn";
 import pwa from "../../assets/images/pwa.png";
 import pwa_2 from "../../assets/images/pwa_2.png";
 import transition from "../../utils/transitions";
+import usePrevent from "../../hooks/usePrevent";
 
 const Pwa = () => {
+  usePrevent(true);
+
   return (
     <div className="pwa-container">
       <BackBtn />
