@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import worklist from "../../worklist/worklistData";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
+import worklist from "../../worklist/worklistData";
 
 const WorksLinks = () => {
   const [showImageBox, setShowImageBox] = useState(false);
   const { preventAnim } = useContext(PreventContext);
+
+  const Element = !preventAnim ? motion.div : "div";
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -38,81 +40,42 @@ const WorksLinks = () => {
       {worklist.map((project, index) => {
         return (
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
-            {!preventAnim ? (
-              <motion.div
-                className="workslinks__box"
-                initial={{ opacity: 0, y: 2500 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 2,
-                  delay: index * 0.1,
-                  ease: [0.22, 1, 1, 1],
-                }}
-                onMouseEnter={(e) => {
-                  manageMouseEnter(e, index);
-                }}
-                onMouseLeave={(e) => {
-                  manageMouseLeave(e, index);
-                }}
-                key={index}
-              >
-                <p className="workslinks__box__name">{project.title}</p>
-                <div className="workslinks__box__tag">
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="workslinks__box__tag__name">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {showImageBox && (
-                  <div className="workslinks__box__imagebox">
-                    <img
-                      className="workslinks__box__image"
-                      src={project.image}
-                      alt={project.title}
-                    />
-                  </div>
-                )}
-              </motion.div>
-            ) : (
-              <div
-                className="workslinks__box"
-                initial={{ opacity: 0, y: 2500 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 2,
-                  delay: index * 0.1,
-                  ease: [0.22, 1, 1, 1],
-                }}
-                onMouseEnter={(e) => {
-                  manageMouseEnter(e, index);
-                }}
-                onMouseLeave={(e) => {
-                  manageMouseLeave(e, index);
-                }}
-                key={index}
-              >
-                <p className="workslinks__box__name">{project.title}</p>
-                <div className="workslinks__box__tag">
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="workslinks__box__tag__name">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {showImageBox && (
-                  <div className="workslinks__box__imagebox">
-                    <img
-                      className="workslinks__box__image"
-                      src={project.image}
-                      alt={project.title}
-                    />
-                  </div>
-                )}
+            <Element
+              className="workslinks__box"
+              initial={{ opacity: 0, y: 2500 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 2,
+                delay: index * 0.1,
+                ease: [0.22, 1, 1, 1],
+              }}
+              onMouseEnter={(e) => {
+                manageMouseEnter(e, index);
+              }}
+              onMouseLeave={(e) => {
+                manageMouseLeave(e, index);
+              }}
+              key={index}
+            >
+              <p className="workslinks__box__name">{project.title}</p>
+              <div className="workslinks__box__tag">
+                {project.tags.map((tag, index) => (
+                  <span key={index} className="workslinks__box__tag__name">
+                    {tag}
+                  </span>
+                ))}
               </div>
-            )}
+
+              {showImageBox && (
+                <div className="workslinks__box__imagebox">
+                  <img
+                    className="workslinks__box__image"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+              )}
+            </Element>
           </NavLink>
         );
       })}

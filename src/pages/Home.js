@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import MyIntro from "../components/Home/MyIntro";
 import WorksTitle from "../components/Home/WorksTitle";
 import WorksLinks from "../components/Home/WorksLinks";
 import { motion } from "framer-motion";
+import PreventContext from "../context/PreventContext";
 
 const Home = () => {
+  const { preventAnim } = useContext(PreventContext);
+  const Element = !preventAnim ? motion.div : "div";
+
   return (
-    <motion.div
+    <Element
       className="home"
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -25,7 +29,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </Element>
   );
 };
 
