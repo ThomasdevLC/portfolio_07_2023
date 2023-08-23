@@ -12,6 +12,7 @@ import Portfolio from "./pages/works/Portfolio";
 import HeaderNav from "./components/Home/HeaderNav";
 import Footer from "./components/Home/Footer";
 import PreventContext from "./context/PreventContext";
+import transition from "./utils/transitions";
 
 import "./App.scss";
 
@@ -73,4 +74,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default transition(App);
