@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import { motion } from "framer-motion";
+import PreventContext from "../../context/PreventContext";
 
 const MyIntro = () => {
+  const { preventAnim } = useContext(PreventContext);
+  const Element = !preventAnim ? motion.div : "div";
+
   return (
-    <motion.div
+    <Element
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 1.4 }}
@@ -49,7 +53,7 @@ const MyIntro = () => {
           MON CV
         </a>
       </div>
-    </motion.div>
+    </Element>
   );
 };
 
