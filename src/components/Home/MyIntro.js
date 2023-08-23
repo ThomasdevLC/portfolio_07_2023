@@ -23,8 +23,12 @@ const MyIntro = () => {
         <img src={pic} alt="photo" />
       </div>
       <h1 className="home__intro__name">Thomas Le Cam</h1>
-      <h2 className="home__intro__position">Développeur web</h2>
 
+      {switchLang === "fr" ? (
+        <h2 className="home__intro__position">{homeFr.position}</h2>
+      ) : (
+        <h2 className="home__intro__position">{homeEn.position}</h2>
+      )}
       {switchLang === "fr" ? (
         <p className="home__intro__text">{homeFr.intro}</p>
       ) : (
