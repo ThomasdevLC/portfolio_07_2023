@@ -4,10 +4,10 @@ import BackBtn from "../../components/works/BackBtn";
 import farmProducts from "../../assets/images/ferme_rougeraie_about.png";
 import farmAbout from "../../assets/images/ferme_rougeraie_products.png";
 import transition from "../../utils/transitions";
-import DataContext from "../../context/DataContext";
+import PreventContext from "../../context/PreventContext";
 
 const FermeRougeraie = () => {
-  const { handleDataFromChild } = useContext(DataContext);
+  const { handleDataFromChild } = useContext(PreventContext);
 
   useEffect(() => {
     const data = true;

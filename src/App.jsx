@@ -11,7 +11,7 @@ import FermeRougeraie from "./pages/works/FermeRougeraie";
 import Portfolio from "./pages/works/Portfolio";
 import HeaderNav from "./components/Home/HeaderNav";
 import Footer from "./components/Home/Footer";
-import DataContext from "./context/DataContext";
+import PreventContext from "./context/PreventContext";
 
 import "./App.scss";
 
@@ -19,12 +19,12 @@ const App = () => {
   const [switchLang, setSwitchLang] = useState("fr");
   const location = useLocation();
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
-  const [dataFromChild, setDataFromChild] = useState("");
+  const [preventAnim, setPreventAnim] = useState("");
 
   const handleDataFromChild = (data) => {
-    setDataFromChild(data);
+    setPreventAnim(data);
   };
-  console.log("app prevent", dataFromChild);
+  console.log("app prevent", preventAnim);
   // Fonction pour gérer la fin de l'animation
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
-      <DataContext.Provider value={{ dataFromChild, handleDataFromChild }}>
+      <PreventContext.Provider value={{ preventAnim, handleDataFromChild }}>
         <motion.div
           className="slide-in"
           initial={{ scaleY: 0 }}
@@ -71,7 +71,7 @@ const App = () => {
             </Routes>
           </AnimatePresence>
         </div>
-      </DataContext.Provider>
+      </PreventContext.Provider>
     </LangContext.Provider>
   );
 };

@@ -3,21 +3,21 @@ import cv from "../../assets/pdf/cv.pdf";
 import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 // import LangContext from "../../context/LangContext";
-import DataContext from "../../context/DataContext";
+import PreventContext from "../../context/PreventContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeaderNav = () => {
   // const { switchLang, setSwitchLang } = useContext(LangContext);
-  const { dataFromChild } = useContext(DataContext);
+  const { preventAnim } = useContext(PreventContext);
   const borderRef = useRef(null);
   const cvRef = useRef(null);
   const langRef = useRef(null);
 
-  console.log("datanav", dataFromChild);
+  console.log("datanav", preventAnim);
 
   useEffect(() => {
-    if (!dataFromChild) {
-      // Check if dataFromChild is false (or falsy)
+    if (!preventAnim) {
+      // Check if preventAnim is false (or falsy)
       const title = SplitType.create(".header__titlebox");
       const splitTitle = title.chars;
 
@@ -52,7 +52,7 @@ const HeaderNav = () => {
         { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.2 }
       );
     }
-  }, [dataFromChild]);
+  }, [preventAnim]);
 
   return (
     <>
