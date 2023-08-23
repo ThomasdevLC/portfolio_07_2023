@@ -24,7 +24,6 @@ const App = () => {
   const handleDataFromChild = (data) => {
     setPreventAnim(data);
   };
-  console.log("app prevent", preventAnim);
   // Fonction pour gérer la fin de l'animation
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);

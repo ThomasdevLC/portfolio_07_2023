@@ -17,7 +17,6 @@ const HeaderNav = () => {
 
   useEffect(() => {
     if (!preventAnim) {
-      // Check if preventAnim is false (or falsy)
       const title = SplitType.create(".header__titlebox");
       const splitTitle = title.chars;
 
