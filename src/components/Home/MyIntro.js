@@ -3,8 +3,8 @@ import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
-import introFr from "../../data/intro/introFr";
-import introEn from "../../data/intro/introEn";
+import homeFr from "../../data/homeText/homeFr";
+import homeEn from "../../data/homeText/homeEn";
 import LangContext from "../../context/LangContext";
 
 const MyIntro = () => {
@@ -26,9 +26,9 @@ const MyIntro = () => {
       <h2 className="home__intro__position">Développeur web</h2>
 
       {switchLang === "fr" ? (
-        <p className="home__intro__text">{introFr}</p>
+        <p className="home__intro__text">{homeFr.intro}</p>
       ) : (
-        <p className="home__intro__text">{introEn}</p>
+        <p className="home__intro__text">{homeEn.intro}</p>
       )}
 
       <p className="home__intro__city">Montpellier</p>
