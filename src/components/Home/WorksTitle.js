@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useContext } from "react";
 import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
+import homeFr from "../../data/homeText/homeFr";
+import homeEn from "../../data/homeText/homeEn";
+import LangContext from "../../context/LangContext";
 
 const WorksTitle = () => {
+  const { switchLang } = useContext(LangContext);
   const { preventAnim } = useContext(PreventContext);
   const arrowRef = useRef(null);
 
@@ -50,7 +54,11 @@ const WorksTitle = () => {
         </span>
       </div>
       <div className="workstitle__container">
-        <h2 className="workstitle__container__text">PROJETS 2022 - 2023 </h2>
+        {switchLang === "fr" ? (
+          <h2 className="workstitle__container__text">{homeFr.title}</h2>
+        ) : (
+          <h2 className="workstitle__container__text">{homeEn.title}</h2>
+        )}
       </div>
     </div>
   );
