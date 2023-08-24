@@ -17,8 +17,8 @@ const SvgModule = () => {
       preserveAspectRatio="xMinYMin slice"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      width="1322"
-      height="151"
+      width="1586"
+      height="181"
     >
       <g clip-path="url(#clip0_215_1707)">
         <path

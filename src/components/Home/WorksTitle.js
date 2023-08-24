@@ -46,25 +46,27 @@ const WorksTitle = () => {
   }, []);
 
   return (
-    <div className="workstitle">
-      <span className="background-container">
+    <div className="">
+      <div className="svgBox">
         <SvgModule />
-      </span>
-      {/* <div className="workstitle__ellipse">
-        <span
-          class="workstitle__ellipse__arrow material-symbols-outlined"
-          ref={arrowRef}
-        >
-          arrow_right_alt
-        </span>
       </div>
-      <div className="workstitle__container">
-        {switchLang === "fr" ? (
-          <h2 className="workstitle__container__text">{homeFr.title}</h2>
-        ) : (
-          <h2 className="workstitle__container__text">{homeEn.title}</h2>
-        )}
-      </div> */}
+      <div className="workstitle">
+        <div className="workstitle__ellipse">
+          <span
+            class="workstitle__ellipse__arrow material-symbols-outlined"
+            ref={arrowRef}
+          >
+            arrow_right_alt
+          </span>
+        </div>
+        <div className="workstitle__container">
+          {switchLang === "fr" ? (
+            <h2 className="workstitle__container__text">{homeFr.title}</h2>
+          ) : (
+            <h2 className="workstitle__container__text">{homeEn.title}</h2>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

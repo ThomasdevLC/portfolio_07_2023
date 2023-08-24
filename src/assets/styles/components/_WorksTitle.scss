@@ -1,10 +1,10 @@
 @use "../mixins" as mixin;
 
 .workstitle {
-  padding-left: 40px;
+  position: relative;
   display: flex;
   gap: 20px;
-
+  padding: 30px 40px;
   @include mixin.xxl-lt {
     justify-content: center;
     margin: 40px 0;
@@ -52,8 +52,9 @@
     }
 
     &__text {
-      font-size: 48px;
-      font-weight: 600;
+      font-family: var(--font-title);
+      font-size: 32px;
+      // font-weight: 600;
       line-height: 80px;
       text-align: center;
       @include mixin.sm {
@@ -67,4 +68,7 @@
       }
     }
   }
+}
+.svgBox {
+  position: absolute;
 }

@@ -1,8 +1,7 @@
 @use "../mixins" as mixin;
 
 .home {
-  padding: 40px 0 0 60px;
-
+  position: relative;
   @include mixin.xxl-lt {
     padding: 40px 0 0 0px;
   }

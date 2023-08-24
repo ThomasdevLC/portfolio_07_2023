@@ -20,6 +20,7 @@ const Home = () => {
         <div>
           <MyIntro />
         </div>
+
         <div className="home__works">
           <div className="home__works__title">
             <WorksTitle />

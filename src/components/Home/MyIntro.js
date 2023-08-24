@@ -22,7 +22,7 @@ const MyIntro = () => {
       <div className="home__intro__pic">
         <img src={pic} alt="photo" />
       </div>
-      <h1 className="home__intro__name">Thomas Le Cam</h1>
+      <h1 className="home__intro__name">THOMAS LE CAM</h1>
 
       {switchLang === "fr" ? (
         <h2 className="home__intro__position">{homeFr.position}</h2>
