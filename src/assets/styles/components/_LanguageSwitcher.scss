@@ -2,8 +2,6 @@
   cursor: pointer;
 
   &__nav {
-    font-family: var(--font-title);
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -24,8 +22,9 @@
     }
     &__mode {
       width: 35px;
+      font-family: var(--font-title);
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       overflow: hidden;
     }

@@ -39,14 +39,14 @@ const HeaderNav = () => {
       gsap.fromTo(
         cvElement,
         { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.1 }
+        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 3 }
       );
 
       const langElement = langRef.current;
       gsap.fromTo(
         langElement,
         { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.2 }
+        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 3.1 }
       );
     }
   }, [preventAnim]);
@@ -61,13 +61,7 @@ const HeaderNav = () => {
       >
         <div className="header__titlebox">
           <p className="header__titlebox__title">PORTFOLIO</p>
-          <p className="header__titlebox__year">
-            {" "}
-            <span>2</span>
-            <span>0</span>
-            <span>2</span>
-            <span>3</span>
-          </p>
+          <p className="header__titlebox__year"> </p>
         </div>
         <div className="header__right">
           <div className="header__right__box ">
