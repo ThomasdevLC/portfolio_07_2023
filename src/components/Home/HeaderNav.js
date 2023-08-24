@@ -60,7 +60,7 @@ const HeaderNav = () => {
         }}
       >
         <div className="header__titlebox">
-          <p className="header__titlebox__title">Portfolio</p>
+          <p className="header__titlebox__title">PORTFOLIO</p>
           <p className="header__titlebox__year">
             {" "}
             <span>2</span>

@@ -4,6 +4,8 @@ import PreventContext from "../../context/PreventContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
 import LangContext from "../../context/LangContext";
+import SvgModule from "../../svg/SvgModule.js"; // Chemin vers le module SVG
+import "../../svg/SvgModule.css"; // Importez le fichier de style
 
 const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);
@@ -45,7 +47,10 @@ const WorksTitle = () => {
 
   return (
     <div className="workstitle">
-      <div className="workstitle__ellipse">
+      <span className="background-container">
+        <SvgModule />
+      </span>
+      {/* <div className="workstitle__ellipse">
         <span
           class="workstitle__ellipse__arrow material-symbols-outlined"
           ref={arrowRef}
@@ -59,7 +64,7 @@ const WorksTitle = () => {
         ) : (
           <h2 className="workstitle__container__text">{homeEn.title}</h2>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
