@@ -4,14 +4,14 @@ import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
 import LanguageSwitcher from "./LanguageSwitcher";
+import LangContext from "../../context/LangContext";
 
 const HeaderNav = () => {
   const { preventAnim } = useContext(PreventContext);
+  const { switchLang } = useContext(LangContext);
   const borderRef = useRef(null);
   const cvRef = useRef(null);
   const langRef = useRef(null);
-
-  console.log("datanav", preventAnim);
 
   useEffect(() => {
     if (!preventAnim) {
@@ -71,15 +71,27 @@ const HeaderNav = () => {
         </div>
         <div className="header__right">
           <div className="header__right__box ">
-            <a
-              className="header__right__cvbox__cv "
-              ref={cvRef}
-              href={cv}
-              target="_blank"
-              rel="noreferrer"
-            >
-              MON CV
-            </a>
+            {switchLang === "fr" ? (
+              <a
+                className="header__right__cvbox__cv "
+                ref={cvRef}
+                href={cv}
+                target="_blank"
+                rel="noreferrer"
+              >
+                MON CV
+              </a>
+            ) : (
+              <a
+                className="header__right__cvbox__cv "
+                ref={cvRef}
+                href={cv}
+                target="_blank"
+                rel="noreferrer"
+              >
+                MY CV
+              </a>
+            )}
           </div>
           <div className="header__right__langmode" ref={langRef}>
             <LanguageSwitcher />

@@ -34,6 +34,10 @@
   &__right {
     display: flex;
     gap: 20px;
+
+    &__box {
+      width: 138px;
+    }
     &__cvbox {
       overflow: hidden;
       &__cv {
@@ -42,7 +46,6 @@
         text-align: center;
         line-height: 43px;
         height: 45px;
-        padding: 0px 30px;
         border: 1px solid var(--gray-3);
         background-color: var(--primary);
         display: block;
