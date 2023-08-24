@@ -12,8 +12,6 @@ import Portfolio from "./pages/works/Portfolio";
 import HeaderNav from "./components/Home/HeaderNav";
 import Footer from "./components/Home/Footer";
 import PreventContext from "./context/PreventContext";
-// import transition from "./utils/transitions";
-
 import "./App.scss";
 
 const App = () => {
@@ -25,7 +23,7 @@ const App = () => {
   const handlePrevent = (data) => {
     setPreventAnim(data);
   };
-  // Fonction pour gérer la fin de l'animation
+
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);
   };
@@ -39,8 +37,8 @@ const App = () => {
           animate={{ scaleY: 1 }}
           exit={{ scaleY: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          onAnimationComplete={handleAnimationComplete} // Appel de la fonction quand l'animation est terminée
-          hidden={!isSlideInVisible} // Masque l'élément pendant l'animation de sortie
+          onAnimationComplete={handleAnimationComplete}
+          hidden={!isSlideInVisible}
         ></motion.div>
 
         <div className="main">
@@ -58,7 +56,7 @@ const App = () => {
               ></Route>
               <Route
                 path="/ferme-rougeraie/:id"
-                element={<FermeRougeraie sendDataToParent={handlePrevent} />}
+                element={<FermeRougeraie />}
               ></Route>
               <Route path="/groupomania/:id" element={<Groupomania />}></Route>
               <Route path="/kasa/:id" element={<Kasa />}></Route>

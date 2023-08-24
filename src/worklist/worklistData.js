@@ -23,7 +23,7 @@ const worklist = [
     intro:
       "Lors de mon stage dans l'entreprise GCA, j'ai développé une application mobile first conçue spécifiquement pour répondre aux besoins des équipes commerciales.",
     pitch:
-      "Ce projet, développé en utilisant Vue 3 et configurée avec Vite, a été créé dans le but de tenir les commerciaux informés de leurs chiffres de vente et de leurs objectifs en temps réel. En adoptant une approche PWA (Progressive Web App), l'application peut  être installée directement sur l'écran d'accueil des utilisateurs, offrant ainsi une expérience similaire à celle d'une application native.",
+      "Ce projet, développé avec Vue 3 et configuré avec Vite, a été créé dans le but de tenir les commerciaux informés de leurs chiffres de vente et de leurs objectifs en temps réel. En adoptant une approche PWA (Progressive Web App), l'application peut  être installée directement sur l'écran d'accueil des utilisateurs, offrant ainsi une expérience similaire à celle d'une application native.",
     url: "http://test.com/",
   },
   {
