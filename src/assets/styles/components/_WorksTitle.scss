@@ -2,7 +2,7 @@
 
 .workstitle {
   position: relative;
-  // padding-top: 10px;
+  padding-top: 10px;
   @include mixin.xxl-lt {
     justify-content: center;
     margin: 40px 0;
@@ -57,7 +57,7 @@
       color: var(--gray-3);
 
       font-family: var(--font-title);
-      font-size: 95px;
+      font-size: 98px;
       text-align: center;
       // font-weight: 600;
       // line-height: 80px;

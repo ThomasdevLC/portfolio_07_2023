@@ -32,11 +32,11 @@ const App = () => {
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
       <PreventContext.Provider value={{ preventAnim, handlePrevent }}>
         <motion.div
-          className="slide-in"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          exit={{ scaleY: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="slide-out"
+          initial={{ scaleY: 1 }}
+          animate={{ scaleY: 0 }}
+          exit={{ scaleY: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
           onAnimationComplete={handleAnimationComplete}
           hidden={!isSlideInVisible}
         ></motion.div>
