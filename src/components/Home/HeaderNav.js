@@ -25,7 +25,7 @@ const HeaderNav = () => {
         stagger: 0.02,
         ease: "back.out",
         duration: 0.7,
-        delay: 1.5,
+        delay: 2,
       });
 
       const borderElement = borderRef.current;
