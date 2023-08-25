@@ -1,14 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import PreventContext from "../context/PreventContext";
 
 const SvgModule = () => {
+  const { preventAnim } = useContext(PreventContext);
   const [isActive, setIsActive] = useState(false);
+  const [backgroundStyle, setBackgroundStyle] = useState({
+    backgroundColor: "lightgrey",
+    opacity: preventAnim ? 1 : 0,
+    transition: "opacity 0.8s ease",
+  });
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsActive(true);
-    }, 2500);
+    if (!preventAnim) {
+      setTimeout(() => {
+        setIsActive(true);
+        setBackgroundStyle({
+          ...backgroundStyle,
+          opacity: 1,
+        });
+      }, 2500);
+    }
   }, []);
-
   return (
     <svg
       className={`svg-container${isActive ? " active" : ""}`}
@@ -19,6 +31,7 @@ const SvgModule = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="1600"
       height="181"
+      style={backgroundStyle}
     >
       <g clip-path="url(#clip0_215_1707)">
         <path
@@ -26,7 +39,7 @@ const SvgModule = () => {
           stroke="url(#paint0_linear_215_1707)"
           stroke-width="7"
           stroke-linecap="round"
-          class="svg-elem-1"
+          className={preventAnim ? "" : "svg-elem-1"}
         ></path>
       </g>
       <defs>
