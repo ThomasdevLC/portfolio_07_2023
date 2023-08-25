@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
 import homeFr from "../../data/homeText/homeFr";
@@ -10,7 +10,22 @@ import "../../svg/SvgModule.css";
 const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);
   const { preventAnim } = useContext(PreventContext);
+  const [backgroundStyle, setBackgroundStyle] = useState({
+    backgroundColor: "lightgrey",
+    opacity: 0,
+    transition: "opacity 1s ease", // Ajout de la transition
+  });
   const titleRef = useRef(null);
+
+  useEffect(() => {
+    // Ajouter une transition en modifiant l'opacité après un délai
+    setTimeout(() => {
+      setBackgroundStyle({
+        ...backgroundStyle,
+        opacity: 1,
+      });
+    }, 2600);
+  }, []);
 
   useEffect(() => {
     if (!preventAnim) {
@@ -25,11 +40,11 @@ const WorksTitle = () => {
 
   return (
     <div className="">
-      <div className="svgBox">
-        <SvgModule />
-      </div>
       <div className="workstitle">
-        <div className="workstitle__container">
+        <div className="svgBox">
+          <SvgModule />
+        </div>
+        <div className="workstitle__container" style={backgroundStyle}>
           <p className="workstitle__container__text" ref={titleRef}>
             PROJETS 2022-2023
           </p>

@@ -1,7 +1,7 @@
 .svg-elem-1 {
   stroke-dashoffset: 4761.95654296875px;
   stroke-dasharray: 4761.95654296875px;
-  transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+  transition: stroke-dashoffset 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s;
 }
 
 .svg-container.active .svg-elem-1 {

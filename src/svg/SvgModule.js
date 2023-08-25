@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 
 const SvgModule = () => {
   const [isActive, setIsActive] = useState(false);
-  const [backgroundStyle, setBackgroundStyle] = useState({});
 
   useEffect(() => {
     setTimeout(() => {
       setIsActive(true);
-      setBackgroundStyle({ backgroundColor: "lightgrey" });
-    }, 2600);
+    }, 2500);
   }, []);
 
   return (
@@ -21,7 +19,6 @@ const SvgModule = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="1600"
       height="181"
-      style={backgroundStyle}
     >
       <g clip-path="url(#clip0_215_1707)">
         <path
