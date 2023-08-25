@@ -1,12 +1,15 @@
 @use "../mixins" as mixin;
 
+.intro-container {
+  border-right: 1px solid black;
+}
+
 .home__intro {
   width: 320px;
   height: 680px;
-  background: linear-gradient(to bottom, white, #fdff87 50%);
+  background: linear-gradient(to bottom, white, #fdff87 70%);
   padding: 20px 60px;
   // border-radius: 25px 25px 0 0;
-  border-right: 1px solid black;
 
   @include mixin.xxl-lt {
     margin: auto;
