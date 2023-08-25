@@ -7,15 +7,17 @@ import worklist from "../../worklist/worklistData";
 const WorksLinks = () => {
   const [showImageBox, setShowImageBox] = useState(false);
   const { preventAnim } = useContext(PreventContext);
-
   const Element = !preventAnim ? motion.div : "div";
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    if (!preventAnim) {
+      const timeout = setTimeout(() => {
+        setShowImageBox(true);
+      }, 2800);
+      return () => clearTimeout(timeout);
+    } else {
       setShowImageBox(true);
-    }, 2500);
-
-    return () => clearTimeout(timeout);
+    }
   }, []);
 
   const manageMouseEnter = (e, index) => {
