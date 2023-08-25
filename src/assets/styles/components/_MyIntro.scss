@@ -2,13 +2,14 @@
 
 .intro-container {
   border-right: 1px solid black;
+  width: 320px;
+  height: 100%;
 }
 
 .home__intro {
-  width: 320px;
-  height: 680px;
   background: linear-gradient(to bottom, white, #fdff87 70%);
   padding: 20px 60px;
+  height: 100%;
   // border-radius: 25px 25px 0 0;
 
   @include mixin.xxl-lt {
