@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
-import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
@@ -30,9 +29,15 @@ const WorksTitle = () => {
       </div>
       <div className="workstitle">
         <div className="workstitle__container">
-          <p className="workstitle__container__text" ref={titleRef}>
-            PROJETS 2022-2023
-          </p>
+          {switchLang === "fr" ? (
+            <p className="workstitle__container__text" ref={titleRef}>
+              {homeFr.title}
+            </p>
+          ) : (
+            <p className="workstitle__container__text" ref={titleRef}>
+              {homeEn.title}
+            </p>
+          )}
         </div>
       </div>
     </div>
