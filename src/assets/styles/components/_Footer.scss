@@ -2,9 +2,25 @@
   background-color: white;
   height: 120px;
   position: relative;
-  // margin-bottom: auto;
   &__border {
     width: 100%;
     border-bottom: 1px solid var(--gray-3);
+  }
+  &__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+
+    &__mark {
+      & img {
+        width: 35px;
+      }
+    }
+    &__chart {
+      & img {
+        width: 150px;
+      }
+    }
   }
 }
