@@ -69,7 +69,7 @@ const WorksLinks = () => {
                 ))}
               </div>
 
-              {showImageBox && (
+              {/* {showImageBox && (
                 <div className="workslinks__box__imagebox">
                   <img
                     className="workslinks__box__image"
@@ -77,7 +77,7 @@ const WorksLinks = () => {
                     alt={project.title}
                   />
                 </div>
-              )}
+              )} */}
             </Element>
           </NavLink>
         );

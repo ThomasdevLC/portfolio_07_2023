@@ -10,6 +10,7 @@ const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);
   const { preventAnim } = useContext(PreventContext);
   const titleRef = useRef(null);
+  const titleEnRef = useRef(null);
 
   useEffect(() => {
     if (!preventAnim) {
@@ -20,7 +21,15 @@ const WorksTitle = () => {
         { duration: 1, y: 0, ease: "power2.out", delay: 2.6 }
       );
     }
-  }, []);
+    if (switchLang === "en" && preventAnim) {
+      const titleEnElement = titleEnRef.current;
+      gsap.fromTo(
+        titleEnElement,
+        { y: -180 },
+        { duration: 1, y: 0, ease: "power2.out" }
+      );
+    }
+  }, [switchLang]);
 
   return (
     <div className="">
@@ -34,7 +43,7 @@ const WorksTitle = () => {
               {homeFr.title}
             </p>
           ) : (
-            <p className="workstitle__container__text" ref={titleRef}>
+            <p className="workstitle__container__text" ref={titleEnRef}>
               {homeEn.title}
             </p>
           )}
