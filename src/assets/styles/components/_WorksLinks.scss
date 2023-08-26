@@ -127,9 +127,9 @@
 
 .workslinks__box__imgbox {
   pointer-events: none;
-  height: 140px;
+  height: 300px;
   top: 50%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
   position: absolute;
 
@@ -141,7 +141,7 @@
 }
 
 .workslinks__box:hover .workslinks__box__imgbox img {
-  transform: scale(1.8);
-  transition: transform 0.2s ease-in-out;
+  // transform: scale(1.8);
+  // transition: transform 0.2s ease-in-out;
   opacity: 1;
 }

@@ -9,10 +9,6 @@ const WorksLinks = () => {
   const { preventAnim } = useContext(PreventContext);
   const Element = !preventAnim ? motion.div : "div";
 
-  const itemRef = useRef(null);
-  const imageWrapperRef = useRef(null);
-  const itemBoundsRef = useRef(null);
-
   useEffect(() => {
     if (!preventAnim) {
       const timeout = setTimeout(() => {
@@ -49,7 +45,6 @@ const WorksLinks = () => {
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
             <Element
               className="workslinks__box"
-              ref={itemRef}
               initial={{ opacity: 0, y: 2500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -74,16 +69,7 @@ const WorksLinks = () => {
                 ))}
               </div>
 
-              {/* {showImageBox && (
-                <div className="workslinks__box__imagebox">
-                  <img
-                    className="workslinks__box__image"
-                    src={project.image}
-                    alt={project.title}
-                  />
-                </div>
-              )} */}
-              <div className="workslinks__box__imgbox" ref={imageWrapperRef}>
+              <div className="workslinks__box__imgbox">
                 <img
                   className="workslinks__box__img"
                   src={project.image}
