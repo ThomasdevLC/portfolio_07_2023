@@ -38,7 +38,7 @@ const BackBtn = () => {
           />
           <div className="backpage__content">
             <span className="backpage__content__icon">
-              <i class="fa-solid fa-arrow-left"></i>
+              <i className="fa-solid fa-arrow-left"></i>
             </span>
           </div>
         </div>

@@ -5,27 +5,31 @@ import PreventContext from "../../context/PreventContext";
 import worklist from "../../worklist/worklistData";
 
 const WorksLinks = () => {
-  const [showImageBox, setShowImageBox] = useState(false);
   const { preventAnim } = useContext(PreventContext);
   const Element = !preventAnim ? motion.div : "div";
 
-  useEffect(() => {
-    if (!preventAnim) {
-      const timeout = setTimeout(() => {
-        setShowImageBox(true);
-      }, 2800);
-      return () => clearTimeout(timeout);
-    } else {
-      setShowImageBox(true);
-    }
-  }, []);
+  const imgBoxRefs = useRef([]);
+  const workLinkRefs = useRef([]);
 
   const manageMouseEnter = (e, index) => {
     gsap.to(e.target, {
       top: "-32px",
-      // backgroundColor: "#FFAF87",
       backgroundColor: "#fdff87",
       duration: 0.4,
+    });
+
+    const imgBox = imgBoxRefs.current[index]; // Utilisation de la référence actuelle
+    gsap.set(imgBox, {
+      xPercent: 25,
+      yPercent: 50,
+      rotation: -15,
+    });
+
+    gsap.to(imgBox, {
+      opacity: 1,
+      scale: 1,
+      yPercent: -50,
+      rotation: 5,
     });
   };
 
@@ -36,6 +40,34 @@ const WorksLinks = () => {
       duration: 0.4,
       delay: 0.1,
     });
+
+    const imgBox = imgBoxRefs.current[index]; // Utilisation de la référence actuelle
+    gsap.to(imgBox, {
+      opacity: 0,
+      yPercent: 30,
+      xPercent: 25,
+      scale: 0.8,
+      rotation: -2,
+      delay: 0.1,
+      duration: 0.4,
+      ease: "power3.inOut",
+    });
+  };
+
+  const manageMouseMove = (e, index) => {
+    const workLink = workLinkRefs.current[index];
+    const imgBox = imgBoxRefs.current[index];
+
+    const workLinkRect = workLink.getBoundingClientRect();
+    const offsetX = e.clientX - workLinkRect.left;
+    // const offsetY = e.clientY - workLinkRect.top;
+
+    gsap.to(imgBox, {
+      x: offsetX - workLinkRect.width / 2,
+      // y: offsetY - workLinkRect.height / 3,
+      duration: 2,
+      ease: "power2.out",
+    });
   };
 
   return (
@@ -45,6 +77,7 @@ const WorksLinks = () => {
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
             <Element
               className="workslinks__box"
+              ref={(el) => (workLinkRefs.current[index] = el)}
               initial={{ opacity: 0, y: 2500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -58,6 +91,9 @@ const WorksLinks = () => {
               onMouseLeave={(e) => {
                 manageMouseLeave(e, index);
               }}
+              onMouseMove={(e) => {
+                manageMouseMove(e, index);
+              }}
               key={index}
             >
               <p className="workslinks__box__name">{project.title}</p>
@@ -69,7 +105,10 @@ const WorksLinks = () => {
                 ))}
               </div>
 
-              <div className="workslinks__box__imgbox">
+              <div
+                className="workslinks__box__imgbox"
+                ref={(im) => (imgBoxRefs.current[index] = im)}
+              >
                 <img
                   className="workslinks__box__img"
                   src={project.image}
