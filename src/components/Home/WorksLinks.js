@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
@@ -8,6 +8,10 @@ const WorksLinks = () => {
   const [showImageBox, setShowImageBox] = useState(false);
   const { preventAnim } = useContext(PreventContext);
   const Element = !preventAnim ? motion.div : "div";
+
+  const itemRef = useRef(null);
+  const imageWrapperRef = useRef(null);
+  const itemBoundsRef = useRef(null);
 
   useEffect(() => {
     if (!preventAnim) {
@@ -45,6 +49,7 @@ const WorksLinks = () => {
           <NavLink to={`/${project.link}/${project.id}`} key={project.id}>
             <Element
               className="workslinks__box"
+              ref={itemRef}
               initial={{ opacity: 0, y: 2500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -78,6 +83,13 @@ const WorksLinks = () => {
                   />
                 </div>
               )} */}
+              <div className="workslinks__box__imgbox" ref={imageWrapperRef}>
+                <img
+                  className="workslinks__box__img"
+                  src={project.image}
+                  alt={project.title}
+                />
+              </div>
             </Element>
           </NavLink>
         );
