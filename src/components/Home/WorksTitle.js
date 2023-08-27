@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import PreventContext from "../../context/PreventContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
@@ -9,28 +9,29 @@ import "../../svg/SvgModule.css";
 const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);
   const { preventAnim } = useContext(PreventContext);
+
   const titleRef = useRef(null);
-  const titleEnRef = useRef(null);
+  const titleRefLangChange = useRef(null);
 
   useEffect(() => {
+    const titleElement = titleRef.current;
     if (!preventAnim) {
-      const titleElement = titleRef.current;
       gsap.fromTo(
         titleElement,
         { y: -180 },
         { duration: 1, y: 0, ease: "power2.out", delay: 2.6 }
       );
     }
-    if (switchLang === "en" && preventAnim) {
-      const titleEnElement = titleEnRef.current;
-      gsap.fromTo(
-        titleEnElement,
-        { y: -180 },
-        { duration: 1, y: 0, ease: "power2.out" }
-      );
-    }
-  }, [switchLang]);
+  }, []);
 
+  // if (switchLang) {
+  //   const titleElement = titleRef.current;
+  //   gsap.fromTo(
+  //     titleElement,
+  //     { y: -180 },
+  //     { duration: 1, y: 0, ease: "power2.out", delay: 0.2 }
+  //   );
+  // }
   return (
     <div className="">
       <div className="svgBox">
@@ -38,15 +39,9 @@ const WorksTitle = () => {
       </div>
       <div className="workstitle">
         <div className="workstitle__container">
-          {switchLang === "fr" ? (
-            <p className="workstitle__container__text" ref={titleRef}>
-              {homeFr.title}
-            </p>
-          ) : (
-            <p className="workstitle__container__text" ref={titleEnRef}>
-              {homeEn.title}
-            </p>
-          )}
+          <p className="workstitle__container__text" ref={titleRef}>
+            {switchLang === "fr" ? homeFr.title : homeEn.title}
+          </p>
         </div>
       </div>
     </div>
