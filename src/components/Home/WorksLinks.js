@@ -20,7 +20,7 @@ const WorksLinks = () => {
 
     const imgBox = imgBoxRefs.current[index]; // Utilisation de la référence actuelle
     gsap.set(imgBox, {
-      xPercent: 25,
+      xPercent: 80,
       yPercent: 50,
       rotation: -15,
     });
@@ -65,7 +65,7 @@ const WorksLinks = () => {
     gsap.to(imgBox, {
       x: offsetX - workLinkRect.width / 2,
       // y: offsetY - workLinkRect.height / 3,
-      duration: 2,
+      duration: 0.8,
       ease: "power2.out",
     });
   };

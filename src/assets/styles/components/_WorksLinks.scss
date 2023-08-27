@@ -129,7 +129,7 @@
   pointer-events: none;
   height: 200px;
   top: 50%;
-  left: 70%;
+  left: 50%;
   // transform: translate(-50%, -50%);
   position: absolute;
   opacity: 0;
@@ -137,6 +137,9 @@
   & img {
     height: 100%;
     object-fit: cover;
+    box-shadow: -5px 5px 14px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -5px 5px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px 5px 14px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
