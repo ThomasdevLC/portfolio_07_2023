@@ -1,8 +1,23 @@
 const worklist = [
   {
     id: 1,
+    title: "ASPHALT",
+    description: "Site E-commerce",
+    period: "Août 2023",
+    // image: require("../assets/images/portfolio.png"),
+    image: require("../assets/images/josh4.webp"),
+    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
+    link: "portfolio",
+    intro:
+      " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
+    pitch:
+      "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
+    url: "http://test.com/",
+  },
+  {
+    id: 2,
     title: "FERME LA ROUGERAIE",
-    description: "Site E-commerce ",
+    description: "Site E-commerce",
     period: "Mai 2023",
     // image: require("../assets/images/ferme_rougeraie.png"),
     image: require("../assets/images/josh.webp"),
@@ -14,7 +29,7 @@ const worklist = [
     url: "http://test.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "GCA",
     description: "Stage Gca",
     period: "Mars 2023",
@@ -29,7 +44,7 @@ const worklist = [
     url: "http://test.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "KASA",
     description: "Formation OpenClassrooms",
     period: "Décembre 2022",
@@ -44,7 +59,7 @@ const worklist = [
     url: "http://test.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "GROUPOMANIA",
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
@@ -52,21 +67,6 @@ const worklist = [
     image: require("../assets/images/ferme_rougeraie_about.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
-    intro:
-      " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
-    pitch:
-      "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
-    url: "http://test.com/",
-  },
-  {
-    id: 5,
-    title: "PORTFOLIO",
-    description: "Formation OpenClassrooms",
-    period: "Juillet 2023",
-    // image: require("../assets/images/portfolio.png"),
-    image: require("../assets/images/josh4.webp"),
-    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
-    link: "portfolio",
     intro:
       " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
     pitch:

@@ -1,6 +1,21 @@
 const worklistEn = [
   {
     id: 1,
+    title: "ASPHALT",
+    description: "E-commerce Website",
+    period: "August 2023",
+    image: require("../assets/images/portfolio.png"),
+    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
+    link: "portfolio",
+    intro:
+      "Internal social network for employees of a company, created during my OpenClassrooms training.",
+    pitch:
+      "The full-stack project includes a login page allowing the user to sign in or create an account, a feature to create messages, as well as a page listing posts and comments.",
+    url: "http://test.com/",
+  },
+
+  {
+    id: 2,
     title: "FERME LA ROUGERAIE",
     description: "E-commerce Website",
     period: "May 2023",
@@ -13,7 +28,7 @@ const worklistEn = [
     url: "http://test.com/",
   },
   {
-    id: 2,
+    id: 3,
     title: "GCA",
     description: "Gca Internship",
     period: "March 2023",
@@ -27,7 +42,7 @@ const worklistEn = [
     url: "http://test.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "KASA",
     description: "OpenClassrooms Training",
     period: "December 2022",
@@ -41,27 +56,13 @@ const worklistEn = [
     url: "http://test.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "GROUPOMANIA",
     description: "OpenClassrooms Training",
     period: "November 2022",
     image: require("../assets/images/groupomania.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
-    intro:
-      "Internal social network for employees of a company, created during my OpenClassrooms training.",
-    pitch:
-      "The full-stack project includes a login page allowing the user to sign in or create an account, a feature to create messages, as well as a page listing posts and comments.",
-    url: "http://test.com/",
-  },
-  {
-    id: 5,
-    title: "PORTFOLIO",
-    description: "OpenClassrooms Training",
-    period: "July 2023",
-    image: require("../assets/images/portfolio.png"),
-    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
-    link: "portfolio",
     intro:
       "Internal social network for employees of a company, created during my OpenClassrooms training.",
     pitch:
