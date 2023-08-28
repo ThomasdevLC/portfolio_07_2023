@@ -5,13 +5,6 @@ import { NavLink } from "react-router-dom";
 const BackBtn = () => {
   const imageRef = useRef(null);
 
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     const scrollRotate = () => {
       if (imageRef.current) {
@@ -29,7 +22,7 @@ const BackBtn = () => {
   return (
     <div>
       <NavLink to="/">
-        <div className="backpage" onClick={handleClick}>
+        <div className="backpage">
           <img
             src={backbtn}
             id="backhome"
