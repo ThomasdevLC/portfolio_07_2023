@@ -5,7 +5,7 @@ const worklist = [
     description: "Site E-commerce",
     period: "Août 2023",
     // image: require("../assets/images/portfolio.png"),
-    image: require("../assets/images/josh4.webp"),
+    image: require("../assets/images/asphalt_link.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
     link: "portfolio",
     intro:
@@ -19,8 +19,8 @@ const worklist = [
     title: "FERME LA ROUGERAIE",
     description: "Site E-commerce",
     period: "Mai 2023",
-    // image: require("../assets/images/ferme_rougeraie.png"),
-    image: require("../assets/images/josh.webp"),
+    // image: require("../assets/images/fermerougeraie.png"),
+    image: require("../assets/images/ferme.png"),
     tags: ["Vue", "Pinia", "Sass", "NodeJs", "Figma"],
     link: "ferme-rougeraie",
     intro: " Site e-commerce pour une productrice de produits bio .",
@@ -34,7 +34,7 @@ const worklist = [
     description: "Stage Gca",
     period: "Mars 2023",
     // image: require("../assets/images/gca.png"),
-    image: require("../assets/images/pwa_0.png"),
+    image: require("../assets/images/pwa_link.png"),
     tags: ["Vue", "Pinia", "Sass", "Figma"],
     link: "pwa",
     intro:
@@ -49,7 +49,7 @@ const worklist = [
     description: "Formation OpenClassrooms",
     period: "Décembre 2022",
     // image: require("../assets/images/kasa.png"),
-    image: require("../assets/images/kasa_xl.png"),
+    image: require("../assets/images/kasa_link.png"),
     tags: ["React", "Sass"],
     link: "kasa",
     intro:
@@ -64,7 +64,7 @@ const worklist = [
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
     // image: require("../assets/images/groupomania.png"),
-    image: require("../assets/images/ferme_rougeraie_about.png"),
+    image: require("../assets/images/groupomania_link.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
     intro:
