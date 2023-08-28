@@ -19,6 +19,7 @@ const App = () => {
   const location = useLocation();
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState("");
+  const hideOverflow = location.pathname === "/";
 
   const handlePrevent = (data) => {
     setPreventAnim(data);
@@ -27,7 +28,6 @@ const App = () => {
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);
   };
-  const hideOverflow = location.pathname === "/";
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
