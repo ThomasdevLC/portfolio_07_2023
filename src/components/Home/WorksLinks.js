@@ -18,11 +18,12 @@ const WorksLinks = () => {
       duration: 0.4,
     });
 
-    const imgBox = imgBoxRefs.current[index]; // Utilisation de la référence actuelle
+    const imgBox = imgBoxRefs.current[index];
     gsap.set(imgBox, {
-      xPercent: 80,
+      xPercent: 60,
       yPercent: 50,
       rotation: -15,
+      delay: 0.1,
     });
 
     gsap.to(imgBox, {
@@ -30,6 +31,7 @@ const WorksLinks = () => {
       scale: 1,
       yPercent: -50,
       rotation: 5,
+      delay: 0.1,
     });
   };
 
@@ -38,10 +40,10 @@ const WorksLinks = () => {
       top: "0",
       backgroundColor: "white",
       duration: 0.4,
-      delay: 0.1,
+      delay: 0.2,
     });
 
-    const imgBox = imgBoxRefs.current[index]; // Utilisation de la référence actuelle
+    const imgBox = imgBoxRefs.current[index];
     gsap.to(imgBox, {
       opacity: 0,
       yPercent: 30,
@@ -51,6 +53,7 @@ const WorksLinks = () => {
       delay: 0.1,
       duration: 0.4,
       ease: "power3.inOut",
+      delay: 0.2,
     });
   };
 
@@ -60,11 +63,9 @@ const WorksLinks = () => {
 
     const workLinkRect = workLink.getBoundingClientRect();
     const offsetX = e.clientX - workLinkRect.left;
-    // const offsetY = e.clientY - workLinkRect.top;
 
     gsap.to(imgBox, {
       x: offsetX - workLinkRect.width / 2,
-      // y: offsetY - workLinkRect.height / 3,
       duration: 0.8,
       ease: "power2.out",
     });

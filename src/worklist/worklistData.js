@@ -19,7 +19,7 @@ const worklist = [
     description: "Stage Gca",
     period: "Mars 2023",
     // image: require("../assets/images/gca.png"),
-    image: require("../assets/images/josh1.webp"),
+    image: require("../assets/images/pwa_0.png"),
     tags: ["Vue", "Pinia", "Sass", "Figma"],
     link: "pwa",
     intro:
@@ -34,7 +34,7 @@ const worklist = [
     description: "Formation OpenClassrooms",
     period: "Décembre 2022",
     // image: require("../assets/images/kasa.png"),
-    image: require("../assets/images/josh2.webp"),
+    image: require("../assets/images/kasa_xl.png"),
     tags: ["React", "Sass"],
     link: "kasa",
     intro:
@@ -49,7 +49,7 @@ const worklist = [
     description: "Formation OpenClassrooms",
     period: "Novembre 2022",
     // image: require("../assets/images/groupomania.png"),
-    image: require("../assets/images/josh3.webp"),
+    image: require("../assets/images/ferme_rougeraie_about.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
     intro:

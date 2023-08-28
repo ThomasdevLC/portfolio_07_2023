@@ -27,7 +27,7 @@ const App = () => {
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);
   };
-  const shouldHideOverflow = location.pathname === "/"; // Check if path is "/"
+  const hideOverflow = location.pathname === "/";
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
@@ -42,7 +42,7 @@ const App = () => {
           hidden={!isSlideInVisible}
         ></motion.div>
 
-        <div className={`main ${shouldHideOverflow ? "overflow-hidden" : ""}`}>
+        <div className={`main ${hideOverflow ? "overflow-hidden" : ""}`}>
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route
