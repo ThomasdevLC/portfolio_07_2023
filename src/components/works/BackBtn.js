@@ -13,10 +13,6 @@ const BackBtn = () => {
     };
 
     window.addEventListener("scroll", scrollRotate);
-
-    return () => {
-      window.removeEventListener("scroll", scrollRotate);
-    };
   }, []);
 
   return (

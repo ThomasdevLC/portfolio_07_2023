@@ -62,7 +62,7 @@ const WorksLinks = () => {
     const imgBox = imgBoxRefs.current[index];
 
     const workLinkRect = workLink.getBoundingClientRect();
-    const offsetX = Math.min(e.clientX - workLinkRect.left, 640);
+    const offsetX = Math.min(e.clientX - workLinkRect.left, 550);
 
     gsap.to(imgBox, {
       x: offsetX - workLinkRect.width / 2,
