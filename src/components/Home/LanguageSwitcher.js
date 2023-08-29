@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import fr from "../../assets/images/fr.png";
 import uk from "../../assets/images/uk.png";
-
+import ClickedLangContext from "../../context/ClickedLangContext";
 import LangContext from "../../context/LangContext";
 
 const LanguageSwitcher = () => {
   const { switchLang, setSwitchLang } = useContext(LangContext);
+  const { setClickedLang } = useContext(ClickedLangContext);
 
   const toggleLanguage = () => {
     setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
+
+    setClickedLang(true);
   };
 
   return (
