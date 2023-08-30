@@ -1,16 +1,38 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
+import LangContext from "../../context/LangContext";
+import ClickedLangContext from "../../context/ClickedLangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
-import LangContext from "../../context/LangContext";
 
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
+  const { clickedLang } = useContext(ClickedLangContext);
   const Element = !preventAnim ? motion.div : "div";
   const { switchLang } = useContext(LangContext);
+
+  console.log("MyIntro", clickedLang);
+
+  const positionRef = useRef(null);
+  const textRef = useRef(null);
+
+  if (clickedLang === "click") {
+    const positionElement = positionRef.current;
+    gsap.fromTo(
+      positionElement,
+      { y: 40 },
+      { duration: 1, y: 0, ease: "power2.out", delay: 0.6 }
+    );
+    const textElement = textRef.current;
+    gsap.fromTo(
+      textElement,
+      { y: 200 },
+      { duration: 1, y: 0, ease: "power2.out", delay: 0.2 }
+    );
+  }
 
   return (
     <div className="intro-container">
@@ -25,16 +47,17 @@ const MyIntro = () => {
         </div>
         <h1 className="home__intro__name">THOMAS LE CAM</h1>
 
-        {switchLang === "fr" ? (
-          <h2 className="home__intro__position">{homeFr.position}</h2>
-        ) : (
-          <h2 className="home__intro__position">{homeEn.position}</h2>
-        )}
-        {switchLang === "fr" ? (
-          <p className="home__intro__text">{homeFr.intro}</p>
-        ) : (
-          <p className="home__intro__text">{homeEn.intro}</p>
-        )}
+        <h2 className="home__intro__position">
+          <div ref={positionRef}>
+            {switchLang === "fr" ? homeFr.position : homeEn.position}
+          </div>
+        </h2>
+        <p className="home__intro__text">
+          <div ref={textRef}>
+            {" "}
+            {switchLang === "fr" ? homeFr.intro : homeEn.intro}
+          </div>
+        </p>
 
         <p className="home__intro__city">Montpellier</p>
         <p className="home__intro__contact">

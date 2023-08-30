@@ -13,7 +13,6 @@ const WorksTitle = () => {
   const { preventAnim } = useContext(PreventContext);
 
   const titleRef = useRef(null);
-  const titleRefLangChange = useRef(null);
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -26,7 +25,7 @@ const WorksTitle = () => {
     }
   }, []);
 
-  if (clickedLang) {
+  if (clickedLang === "click") {
     const titleElement = titleRef.current;
     gsap.fromTo(
       titleElement,

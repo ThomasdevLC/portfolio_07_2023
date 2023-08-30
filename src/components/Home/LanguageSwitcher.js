@@ -8,10 +8,9 @@ const LanguageSwitcher = () => {
   const { switchLang, setSwitchLang } = useContext(LangContext);
   const { setClickedLang } = useContext(ClickedLangContext);
 
-  const toggleLanguage = () => {
+  const toggleLanguage = (event) => {
     setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
-
-    setClickedLang(true);
+    setClickedLang(event.type);
   };
 
   return (

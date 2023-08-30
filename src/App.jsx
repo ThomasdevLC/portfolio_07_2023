@@ -18,7 +18,7 @@ import "./App.scss";
 const App = () => {
   const location = useLocation();
   const [switchLang, setSwitchLang] = useState("fr");
-  const [clickedLang, setClickedLang] = useState(false);
+  const [clickedLang, setClickedLang] = useState(null);
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState("");
   const hideOverflow = location.pathname === "/";
@@ -34,7 +34,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    setClickedLang(false);
+    setClickedLang(null);
   }, [location.pathname]);
 
   return (
