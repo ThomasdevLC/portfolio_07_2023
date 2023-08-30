@@ -20,7 +20,7 @@ const WorksTitle = () => {
       gsap.fromTo(
         titleElement,
         { y: -180 },
-        { duration: 1, y: 0, ease: "power2.out", delay: 2.6 }
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 2.6 }
       );
     }
   }, []);

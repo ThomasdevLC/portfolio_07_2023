@@ -20,10 +20,8 @@ const App = () => {
   const [switchLang, setSwitchLang] = useState("fr");
   const [clickedLang, setClickedLang] = useState(null);
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
-  const [preventAnim, setPreventAnim] = useState("");
+  const [preventAnim, setPreventAnim] = useState(null);
   const hideOverflow = location.pathname === "/";
-
-  console.log("clickedLang", clickedLang);
 
   const handlePrevent = (data) => {
     setPreventAnim(data);
@@ -36,6 +34,8 @@ const App = () => {
   useEffect(() => {
     setClickedLang(null);
   }, [location.pathname]);
+
+  console.log("preventAnim", preventAnim);
 
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>

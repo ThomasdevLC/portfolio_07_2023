@@ -14,8 +14,6 @@ const MyIntro = () => {
   const Element = !preventAnim ? motion.div : "div";
   const { switchLang } = useContext(LangContext);
 
-  console.log("MyIntro", clickedLang);
-
   const positionRef = useRef(null);
   const textRef = useRef(null);
 
@@ -24,13 +22,13 @@ const MyIntro = () => {
     gsap.fromTo(
       positionElement,
       { y: 40 },
-      { duration: 1, y: 0, ease: "power2.out", delay: 0.6 }
+      { duration: 0.8, y: 0, ease: "power2.out", delay: 0.5 }
     );
     const textElement = textRef.current;
     gsap.fromTo(
       textElement,
       { y: 200 },
-      { duration: 1, y: 0, ease: "power2.out", delay: 0.2 }
+      { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
     );
   }
 
@@ -48,16 +46,16 @@ const MyIntro = () => {
         <h1 className="home__intro__name">THOMAS LE CAM</h1>
 
         <h2 className="home__intro__position">
-          <div ref={positionRef}>
+          <p ref={positionRef}>
             {switchLang === "fr" ? homeFr.position : homeEn.position}
-          </div>
+          </p>
         </h2>
-        <p className="home__intro__text">
-          <div ref={textRef}>
+        <div className="home__intro__text">
+          <p ref={textRef}>
             {" "}
             {switchLang === "fr" ? homeFr.intro : homeEn.intro}
-          </div>
-        </p>
+          </p>
+        </div>
 
         <p className="home__intro__city">Montpellier</p>
         <p className="home__intro__contact">
