@@ -57,22 +57,26 @@ const WorksComponent = () => {
 
         <div className="project__table">
           <table>
-            <tr>
-              <th>DATE</th>
-              <th className="project__table__th">STACK</th>
-              <th>URL</th>
-            </tr>
-            <tr>
-              <td>{project.period}</td>
-              <td className="project__table__td">
-                <ul>
-                  {project.tags.map((tag, index) => (
-                    <li key={index}>{tag}</li>
-                  ))}
-                </ul>
-              </td>{" "}
-              <td>{project.url}</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>DATE</th>
+                <th className="project__table__th">STACK</th>
+                <th>URL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{project.period}</td>
+                <td className="project__table__td">
+                  <ul>
+                    {project.tags.map((tag, index) => (
+                      <li key={index}>{tag}</li>
+                    ))}
+                  </ul>
+                </td>
+                <td>{project.url}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
