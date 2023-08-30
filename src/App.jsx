@@ -35,8 +35,6 @@ const App = () => {
     setClickedLang(null);
   }, [location.pathname]);
 
-  console.log("preventAnim", preventAnim);
-
   return (
     <LangContext.Provider value={{ switchLang, setSwitchLang }}>
       <ClickedLangContext.Provider value={{ clickedLang, setClickedLang }}>
