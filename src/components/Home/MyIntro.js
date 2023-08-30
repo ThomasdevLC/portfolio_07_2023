@@ -22,12 +22,12 @@ const MyIntro = () => {
     gsap.fromTo(
       positionElement,
       { y: 40 },
-      { duration: 0.8, y: 0, ease: "power2.out", delay: 0.5 }
+      { duration: 0.8, y: 0, ease: "power2.out", delay: 0.6 }
     );
     const textElement = textRef.current;
     gsap.fromTo(
       textElement,
-      { y: 200 },
+      { y: 170 },
       { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
     );
   }
