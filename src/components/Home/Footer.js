@@ -5,12 +5,7 @@ import mark from "../../assets/images/mark.png";
 
 const Footer = () => {
   return (
-    <div
-      className="footer"
-      style={{
-        background: `linear-gradient(rgba(255, 255, 255, 0.1), white), url(${background})`,
-      }}
-    >
+    <div className="footer">
       <div className="footer__border"></div>
       <div className="footer__box">
         <div className="footer__box__mark">

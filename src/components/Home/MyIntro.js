@@ -21,7 +21,7 @@ const MyIntro = () => {
     const positionElement = positionRef.current;
     gsap.fromTo(
       positionElement,
-      { y: 40 },
+      { y: -40 },
       { duration: 0.8, y: 0, ease: "power2.out", delay: 0.4 }
     );
     const textElement = textRef.current;

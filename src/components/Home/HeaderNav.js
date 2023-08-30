@@ -53,12 +53,7 @@ const HeaderNav = () => {
 
   return (
     <>
-      <div
-        className="header"
-        style={{
-          background: `linear-gradient(rgba(255, 255, 255, 0.1), white), url(${background})`,
-        }}
-      >
+      <div className="header">
         <div className="header__titlebox">
           <p className="header__titlebox__title">PORTFOLIO</p>
           <p className="header__titlebox__year"> </p>
