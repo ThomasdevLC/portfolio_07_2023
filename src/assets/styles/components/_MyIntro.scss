@@ -30,12 +30,7 @@
     height: auto;
     padding: 40px;
   }
-  @include mixin.sm {
-    margin: auto;
-    width: 70%;
-    height: auto;
-    padding: 20px 50px;
-  }
+
   @include mixin.xs {
     margin: auto;
     width: 90%;
@@ -132,9 +127,6 @@
       cursor: pointer;
       background-color: var(--gray-2);
       color: var(--gray-3);
-    }
-    @include mixin.sm-lt {
-      display: block;
     }
   }
 }

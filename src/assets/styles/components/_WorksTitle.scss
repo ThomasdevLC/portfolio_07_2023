@@ -3,11 +3,6 @@
 .workstitle {
   position: relative;
 
-  @include mixin.sm {
-    width: 70%;
-    margin: 20px auto;
-  }
-
   @include mixin.xs {
     width: 90%;
     margin: 20px auto;
@@ -42,13 +37,14 @@
       @include mixin.lg {
         font-size: 78px;
       }
-      @include mixin.lg {
-        font-size: 78px;
+      @include mixin.md {
+        font-size: 55px;
       }
 
       @include mixin.sm {
-        font-size: 30px;
-        line-height: 60px;
+        line-height: 80px;
+
+        font-size: 50px;
       }
 
       @include mixin.xs {
