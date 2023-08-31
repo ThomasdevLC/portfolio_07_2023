@@ -5,7 +5,7 @@ import homeEn from "../../data/homeText/homeEn";
 import LangContext from "../../context/LangContext";
 import ClickedLangContext from "../../context/ClickedLangContext";
 import SvgModule from "../../svg/SvgModule.js";
-import "../../svg/SvgModule.css";
+import "../../svg/SvgModule.scss";
 
 const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);

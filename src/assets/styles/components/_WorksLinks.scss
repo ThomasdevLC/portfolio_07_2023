@@ -5,7 +5,7 @@
   width: 100%;
   margin-bottom: -26px;
 
-  @include mixin.md-lt {
+  @include mixin.lg-lt {
     margin-bottom: 0px;
   }
 
@@ -18,10 +18,7 @@
     position: relative;
     cursor: pointer;
 
-    @include mixin.md-lt {
-      margin-bottom: -20px;
-    }
-    @include mixin.sm-lt {
+    @include mixin.lg-lt {
       margin-bottom: 0px;
     }
 

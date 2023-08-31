@@ -4,8 +4,7 @@ import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
 import LangContext from "../../context/LangContext";
 import ClickedLangContext from "../../context/ClickedLangContext";
-import SvgModule from "../../svg/SvgModule.js";
-import "../../svg/SvgModule.css";
+import backgroundImage from "../../assets/images/header_background.jpg";
 
 const WorksTitleResp = () => {
   const { switchLang } = useContext(LangContext);
@@ -35,7 +34,10 @@ const WorksTitleResp = () => {
   }
   return (
     <div className="workstitle">
-      <div className="workstitle__container">
+      <div
+        className="workstitle__container"
+        // style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
         <p className="workstitle__container__text" ref={titleRef}>
           {switchLang === "fr" ? homeFr.title : homeEn.title}
         </p>
