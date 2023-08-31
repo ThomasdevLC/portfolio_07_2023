@@ -10,7 +10,7 @@ const Pwa = () => {
   usePrevent(true);
 
   return (
-    <div className="pwa-container">
+    <div className="pwa__container">
       <BackBtn />
       <WorksComponent />
       <div className="pwa__description">

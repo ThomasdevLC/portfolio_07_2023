@@ -1,5 +1,9 @@
 @use "../mixins" as mixin;
 
+.farm__container {
+  background-color: var(--background);
+}
+
 .farm__description {
   max-width: 1200px;
   display: flex;

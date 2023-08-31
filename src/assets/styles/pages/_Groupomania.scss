@@ -1,5 +1,9 @@
 @use "../mixins" as mixin;
 
+.groupomania-container {
+  background-color: var(--background);
+}
+
 .container__video {
   max-width: 1200px;
   display: flex;
