@@ -16,6 +16,10 @@
     width: 50%;
     display: flex;
   }
+
+  @include mixin.xs {
+    width: 100%;
+  }
 }
 
 .home__intro {
@@ -25,18 +29,11 @@
 
   @include mixin.xxl-lt {
     border-right: 1px solid var(--gray-3);
-
     margin: auto;
     height: auto;
     padding: 40px;
   }
 
-  @include mixin.xs {
-    margin: auto;
-    width: 90%;
-    height: auto;
-    padding: 30px 40px;
-  }
   &__pic {
     margin: auto;
     height: 220px;
@@ -128,11 +125,14 @@
       background-color: var(--gray-2);
       color: var(--gray-3);
     }
+    @include mixin.xs {
+      display: block;
+    }
   }
 }
 .resp-title {
   display: none;
-  @include mixin.xxl-lt {
+  @media (min-width: 577px) and (max-width: 1910px) {
     display: block;
   }
 }
