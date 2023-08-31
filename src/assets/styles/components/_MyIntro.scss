@@ -1,35 +1,34 @@
 @use "../mixins" as mixin;
 
-.intro-container {
-  border-right: 1px solid black;
-  width: 320px;
+.intro-main {
   height: 100%;
-}
-
-.home {
-  overflow: hidden;
 
   @include mixin.xxl-lt {
-    margin: auto;
-    width: 650px;
-    height: auto;
-    padding: 20px 40px;
-    border-radius: 25px;
+    display: flex;
+  }
+}
+.intro-container {
+  border-right: 1px solid var(--gray-3);
+  width: 320px;
+  height: 100%;
+  @include mixin.xxl-lt {
+    border-right: none;
+    width: 50%;
+    display: flex;
   }
 }
 
 .home__intro {
-  background: linear-gradient(to bottom, white, #fdff87 70%);
+  background: linear-gradient(to bottom, white, var(--primary) 70%);
   padding: 20px 60px;
   height: 100%;
-  // border-radius: 25px 25px 0 0;
 
   @include mixin.xxl-lt {
+    border-right: 1px solid var(--gray-3);
+
     margin: auto;
-    width: 650px;
     height: auto;
-    padding: 20px 40px;
-    border-radius: 25px;
+    padding: 40px;
   }
   @include mixin.sm {
     margin: auto;
@@ -84,6 +83,10 @@
     font-size: 14px;
     margin: 10px 0 30px 0;
     height: 170px;
+
+    @include mixin.xxl-lt {
+      height: 120px;
+    }
   }
   &__city {
     font-size: 18px;
@@ -133,5 +136,11 @@
     @include mixin.sm-lt {
       display: block;
     }
+  }
+}
+.resp-title {
+  display: none;
+  @include mixin.xxl-lt {
+    display: block;
   }
 }
