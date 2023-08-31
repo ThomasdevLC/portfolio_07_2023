@@ -6,6 +6,18 @@
   height: 100%;
 }
 
+.home {
+  overflow: hidden;
+
+  @include mixin.xxl-lt {
+    margin: auto;
+    width: 650px;
+    height: auto;
+    padding: 20px 40px;
+    border-radius: 25px;
+  }
+}
+
 .home__intro {
   background: linear-gradient(to bottom, white, #fdff87 70%);
   padding: 20px 60px;

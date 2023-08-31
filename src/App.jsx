@@ -21,7 +21,6 @@ const App = () => {
   const [clickedLang, setClickedLang] = useState(null);
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState(null);
-  const hideOverflow = location.pathname === "/";
 
   const handlePrevent = (data) => {
     setPreventAnim(data);
@@ -49,7 +48,7 @@ const App = () => {
             hidden={!isSlideInVisible}
           ></motion.div>
 
-          <div className={`main ${hideOverflow ? "overflow-hidden" : ""}`}>
+          <div className="main">
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
                 <Route
