@@ -8,7 +8,7 @@ const Portfolio = () => {
   usePrevent(true);
 
   return (
-    <div>
+    <div className="portfolio__container">
       <BackBtn />
       <WorksComponent />
     </div>
