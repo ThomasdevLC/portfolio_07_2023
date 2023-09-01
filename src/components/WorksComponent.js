@@ -14,13 +14,10 @@ const WorksComponent = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
-    if (switchLang === "fr") {
-      const selectedProject = worklistFr.find((w) => w.id === projectId);
-      setProject(selectedProject);
-    } else {
-      const selectedProject = worklistEn.find((w) => w.id === projectId);
-      setProject(selectedProject);
-    }
+    const selectedProject = (
+      switchLang === "fr" ? worklistFr : worklistEn
+    ).find((w) => w.id === projectId);
+    setProject(selectedProject);
   }, [projectId, switchLang]);
 
   useEffect(() => {
@@ -40,47 +37,48 @@ const WorksComponent = () => {
     }
   }, [project]);
 
-  if (!project) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <section className="container">
-      <h1 className="container__title" ref={containerRef}>
-        <span className="container__title__span" ref={titleRef}>
-          {project.title}
-        </span>
-      </h1>
-      <div></div>
-      <div className="project">
-        <p className="project__intro">{project.intro}</p>
-        <p className="project__pitch">{project.pitch}</p>
+      {project ? (
+        <>
+          <h1 className="container__title" ref={containerRef}>
+            <span className="container__title__span" ref={titleRef}>
+              {project.title}
+            </span>
+          </h1>
+          <div className="project">
+            <p className="project__intro">{project.intro}</p>
+            <p className="project__pitch">{project.pitch}</p>
 
-        <div className="project__table">
-          <table>
-            <thead>
-              <tr>
-                <th>DATE</th>
-                <th className="project__table__th">STACK</th>
-                <th>URL</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{project.period}</td>
-                <td className="project__table__td">
-                  <ul>
-                    {project.tags.map((tag, index) => (
-                      <li key={index}>{tag}</li>
-                    ))}
-                  </ul>
-                </td>
-                <td>{project.url}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+            <div className="project__table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>DATE</th>
+                    <th className="project__table__th">STACK</th>
+                    <th>URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{project.period}</td>
+                    <td className="project__table__td">
+                      <ul>
+                        {project.tags.map((tag, index) => (
+                          <li key={index}>{tag}</li>
+                        ))}
+                      </ul>
+                    </td>
+                    <td>{project.url}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div>Loading...</div>
+      )}
     </section>
   );
 };
