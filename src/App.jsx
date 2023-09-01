@@ -13,6 +13,7 @@ import Footer from "./components/Home/Footer";
 import LangContext from "./context/LangContext";
 import ClickedLangContext from "./context/ClickedLangContext";
 import PreventContext from "./context/PreventContext";
+import getWindowWidth from "./utils/widthWatcher";
 import "./App.scss";
 
 const App = () => {
@@ -22,12 +23,16 @@ const App = () => {
   const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState(null);
 
-  const handlePrevent = (data) => {
-    setPreventAnim(data);
-  };
+  useEffect(() => {
+    getWindowWidth() == true ? setPreventAnim(true) : setPreventAnim(null);
+  }, []);
 
   const handleAnimationComplete = () => {
     setIsSlideInVisible(false);
+  };
+
+  const handlePrevent = (data) => {
+    setPreventAnim(data);
   };
 
   useEffect(() => {

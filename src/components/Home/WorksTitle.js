@@ -1,16 +1,18 @@
-import React, { useEffect, useContext, useRef } from "react";
+import React, { useEffect, useContext, useRef, useState } from "react";
 import PreventContext from "../../context/PreventContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
 import LangContext from "../../context/LangContext";
 import ClickedLangContext from "../../context/ClickedLangContext";
 import SvgModule from "../../svg/SvgModule.js";
+import getWindowWidth from "../../utils/widthWatcher";
 import "../../svg/SvgModule.scss";
 
 const WorksTitle = () => {
   const { switchLang } = useContext(LangContext);
   const { clickedLang } = useContext(ClickedLangContext);
   const { preventAnim } = useContext(PreventContext);
+  const [windowLimit, setWindowLimit] = useState();
 
   const titleRef = useRef(null);
 

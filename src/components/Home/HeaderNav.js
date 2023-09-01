@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useContext } from "react";
 import cv from "../../assets/pdf/cv.pdf";
-import background from "../../assets/images/header_background.jpg";
 import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -49,7 +48,7 @@ const HeaderNav = () => {
         { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 3.1 }
       );
     }
-  }, [preventAnim]);
+  }, []);
 
   return (
     <>
