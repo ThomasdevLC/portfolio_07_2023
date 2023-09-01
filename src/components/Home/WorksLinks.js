@@ -30,6 +30,7 @@ const WorksLinks = () => {
       opacity: 1,
       scale: 1,
       yPercent: -50,
+      // yPercent: -67,
       rotation: 5,
       delay: 0.1,
     });
