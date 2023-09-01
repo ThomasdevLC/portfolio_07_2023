@@ -7,10 +7,11 @@ import LangContext from "../context/LangContext";
 const WorksComponent = () => {
   const params = useParams();
   const projectId = parseInt(params.id);
+  const { switchLang } = useContext(LangContext);
   const [project, setProject] = useState(null);
+
   const containerRef = useRef(null);
   const titleRef = useRef(null);
-  const { switchLang } = useContext(LangContext);
 
   useEffect(() => {
     if (switchLang === "fr") {

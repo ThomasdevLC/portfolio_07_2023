@@ -8,8 +8,8 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import Portfolio from "./pages/works/Portfolio";
-import HeaderNav from "./components/Home/HeaderNav";
-import Footer from "./components/Home/Footer";
+// import HeaderNav from "./components/Home/HeaderNav";
+// import Footer from "./components/Home/Footer";
 import LangContext from "./context/LangContext";
 import ClickedLangContext from "./context/ClickedLangContext";
 import PreventContext from "./context/PreventContext";
@@ -60,9 +60,9 @@ const App = () => {
                   path="/"
                   element={
                     <>
-                      <HeaderNav />
+                      {/* <HeaderNav /> */}
                       <Home />
-                      <Footer />
+                      {/* <Footer /> */}
                     </>
                   }
                 ></Route>
