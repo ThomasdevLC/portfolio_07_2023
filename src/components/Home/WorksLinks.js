@@ -14,7 +14,7 @@ const WorksLinks = () => {
   const manageMouseEnter = (e, index) => {
     gsap.to(e.target, {
       top: "-32px",
-      backgroundColor: "var(--primary)",
+      backgroundColor: "#fdff87",
       duration: 0.4,
     });
 
