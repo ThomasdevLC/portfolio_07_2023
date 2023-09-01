@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../../assets/images/header_background.jpg";
 import chart from "../../assets/images/chart.png";
 import mark from "../../assets/images/mark.png";
 

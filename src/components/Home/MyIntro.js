@@ -2,12 +2,12 @@ import React, { useContext, useRef } from "react";
 import { motion } from "framer-motion";
 import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
+import WorksTitleResp from "../../components/Home/WorksTitleResp";
 import PreventContext from "../../context/PreventContext";
 import LangContext from "../../context/LangContext";
 import ClickedLangContext from "../../context/ClickedLangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
-import WorksTitleResp from "../../components/Home/WorksTitleResp";
 
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
