@@ -33,21 +33,21 @@ const HeaderNav = () => {
       gsap.fromTo(
         borderElement,
         { width: "0%" },
-        { width: "100%", duration: 1.5, ease: "power2.out", delay: 1.3 }
+        { width: "100%", duration: 1.5, ease: "power2.out", delay: 1.2 }
       );
 
       const cvElement = cvRef.current;
       gsap.fromTo(
         cvElement,
         { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 3 }
+        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.8 }
       );
 
       const langElement = langRef.current;
       gsap.fromTo(
         langElement,
         { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 3.1 }
+        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.9 }
       );
     }
   }, []);

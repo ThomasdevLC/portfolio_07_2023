@@ -18,7 +18,7 @@ const SvgModule = () => {
           ...backgroundStyle,
           opacity: 1,
         });
-      }, 2500);
+      }, 1700);
     }
   }, []);
   return (

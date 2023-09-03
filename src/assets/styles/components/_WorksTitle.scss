@@ -24,11 +24,14 @@
 
     &__text {
       color: var(--gray-3);
-      font-family: var(--font-title);
-      font-size: 98px;
+      font-family: var(--font-main-title);
+      // font-size: 98px;
+      font-size: 218px;
       text-align: center;
-      line-height: 80px;
+      // line-height: 80px;
+      line-height: 150px;
       text-align: center;
+      letter-spacing: 8px;
 
       @include mixin.xxl-lt {
         line-height: 120px;

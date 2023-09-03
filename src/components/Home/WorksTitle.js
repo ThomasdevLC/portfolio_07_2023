@@ -19,8 +19,8 @@ const WorksTitle = () => {
     if (!preventAnim) {
       gsap.fromTo(
         titleElement,
-        { y: -180 },
-        { duration: 0.8, y: 0, ease: "power2.out", delay: 2.6 }
+        { y: 180 },
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 1.7 }
       );
     }
   }, []);

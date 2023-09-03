@@ -80,10 +80,10 @@ const WorksLinks = () => {
             <Element
               className="workslinks__box"
               ref={(el) => (workLinkRefs.current[index] = el)}
-              initial={{ opacity: 0, y: 2500 }}
+              initial={{ opacity: 0, y: 3500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 2.5,
+                duration: 1.8,
                 delay: index * 0.1,
                 ease: [0.22, 1, 1, 1],
               }}
