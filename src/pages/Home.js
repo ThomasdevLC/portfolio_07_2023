@@ -4,6 +4,7 @@ import WorksTitle from "../components/Home/WorksTitle";
 import WorksLinks from "../components/Home/WorksLinks";
 import HeaderNav from "../components/Home/HeaderNav";
 import Footer from "../components/Home/Footer";
+import transition from "../utils/transitions";
 
 import { motion } from "framer-motion";
 import PreventContext from "../context/PreventContext";
@@ -43,4 +44,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);

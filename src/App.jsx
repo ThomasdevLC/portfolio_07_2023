@@ -8,8 +8,6 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import Portfolio from "./pages/works/Portfolio";
-// import HeaderNav from "./components/Home/HeaderNav";
-// import Footer from "./components/Home/Footer";
 import LangContext from "./context/LangContext";
 import ClickedLangContext from "./context/ClickedLangContext";
 import PreventContext from "./context/PreventContext";
@@ -20,16 +18,13 @@ const App = () => {
   const location = useLocation();
   const [switchLang, setSwitchLang] = useState("fr");
   const [clickedLang, setClickedLang] = useState(null);
-  const [isSlideInVisible, setIsSlideInVisible] = useState(true);
   const [preventAnim, setPreventAnim] = useState(null);
+
+  console.log("preventAnim", preventAnim);
 
   useEffect(() => {
     getWindowWidth() == true ? setPreventAnim(true) : setPreventAnim(null);
   }, []);
-
-  // const handleAnimationComplete = () => {
-  //   setIsSlideInVisible(false);
-  // };
 
   const handlePrevent = (data) => {
     setPreventAnim(data);
@@ -48,9 +43,11 @@ const App = () => {
             initial={{ scaleY: 1 }}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 1.2 }}
-            // onAnimationComplete={handleAnimationComplete}
-            // hidden={!isSlideInVisible}
+            transition={{
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 1.2,
+            }}
           ></motion.div>
 
           <div className="main">
@@ -60,9 +57,7 @@ const App = () => {
                   path="/"
                   element={
                     <>
-                      {/* <HeaderNav /> */}
                       <Home />
-                      {/* <Footer /> */}
                     </>
                   }
                 ></Route>
