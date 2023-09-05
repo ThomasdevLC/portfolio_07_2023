@@ -17,8 +17,6 @@ const HeaderNav = () => {
       const title = SplitType.create(".header__titlebox");
       const splitTitle = title.chars;
 
-      console.log("header");
-
       gsap.from(splitTitle, {
         y: 25,
         opacity: 0,

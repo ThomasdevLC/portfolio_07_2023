@@ -16,7 +16,7 @@ const MyIntro = () => {
   const positionRef = useRef(null);
   const textRef = useRef(null);
   useEffect(() => {
-    if (switchLang !== setSwitchLang) {
+    if (setSwitchLang !== switchLang) {
       const positionElement = positionRef.current;
       gsap.fromTo(
         positionElement,
@@ -32,7 +32,7 @@ const MyIntro = () => {
     }
   }, [switchLang]);
 
-  console.log(switchLang);
+  console.log("intro ", switchLang);
   return (
     <div className="intro-main">
       <div className="intro-container">

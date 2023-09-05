@@ -20,8 +20,6 @@ const App = () => {
   const [clickedLang, setClickedLang] = useState(null);
   const [preventAnim, setPreventAnim] = useState(null);
 
-  console.log("preventAnim", preventAnim);
-
   useEffect(() => {
     getWindowWidth() == true ? setPreventAnim(true) : setPreventAnim(null);
   }, []);

@@ -9,9 +9,10 @@ const LanguageSwitcher = () => {
   const toggleLanguage = () => {
     setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
   };
+  console.log("header switchLang", switchLang);
 
   return (
-    <nav className="lang" onClick={toggleLanguage}>
+    <nav className="lang" onClick={() => toggleLanguage()}>
       <ul className="lang__nav">
         <div
           className={`lang__nav__btn ${
