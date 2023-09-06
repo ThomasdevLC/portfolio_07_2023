@@ -30,7 +30,7 @@ const SvgModule = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width="1600"
-      height="181"
+      height="150"
       style={backgroundStyle}
     >
       <g clipPath="url(#clip0_215_1707)">

@@ -13,9 +13,11 @@ const WorksTitleResp = () => {
         className="workstitle__container"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <p className="workstitle__container__text">
-          {switchLang === "fr" ? homeFr.title : homeEn.title}
-        </p>
+        <div className="workstitle__container__text">
+          {/* {switchLang === "fr" ? homeFr.title : homeEn.title} */}
+          <p className="workstitle__container__text__works">PROJETS</p>
+          <p className="workstitle__container__text__years">2022 - 2023</p>
+        </div>
       </div>
     </div>
   );

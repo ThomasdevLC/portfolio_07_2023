@@ -33,6 +33,9 @@
     height: auto;
     padding: 40px;
   }
+  @include mixin.md {
+    padding: 20px 30px;
+  }
   @include mixin.xs {
     border-right: none;
   }
@@ -81,6 +84,9 @@
 
     @include mixin.xl-lt {
       height: 130px;
+    }
+    @include mixin.md-lt {
+      margin: 0;
     }
   }
   &__city {
@@ -137,5 +143,9 @@
   display: none;
   @include mixin.xl-lt {
     display: block;
+    flex-grow: 1;
+  }
+  @include mixin.xs {
+    display: none;
   }
 }
