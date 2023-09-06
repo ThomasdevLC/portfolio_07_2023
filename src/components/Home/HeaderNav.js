@@ -52,7 +52,7 @@ const HeaderNav = () => {
 
   return (
     <>
-      <div className="header">
+      <div className="header br">
         <div className="header__titlebox">
           <p className="header__titlebox__title">PORTFOLIO</p>
           <p className="header__titlebox__year"> </p>
