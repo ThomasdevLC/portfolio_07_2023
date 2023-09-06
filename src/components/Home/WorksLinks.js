@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import PreventContext from "../../context/PreventContext";
 import worklist from "../../worklist/worklistData";
+import getWindowWidth from "../../utils/widthWatcher";
 
 const WorksLinks = () => {
   const { preventAnim } = useContext(PreventContext);
@@ -30,7 +31,6 @@ const WorksLinks = () => {
       opacity: 1,
       scale: 1,
       yPercent: -50,
-      // yPercent: -67,
       rotation: 5,
       delay: 0.1,
     });
@@ -63,7 +63,10 @@ const WorksLinks = () => {
     const imgBox = imgBoxRefs.current[index];
 
     const workLinkRect = workLink.getBoundingClientRect();
-    const offsetX = Math.min(e.clientX - workLinkRect.left, 550);
+    const offsetX = Math.min(
+      e.clientX - workLinkRect.left,
+      getWindowWidth() < 1910 ? 250 : 520
+    );
 
     gsap.to(imgBox, {
       x: offsetX - workLinkRect.width / 2,

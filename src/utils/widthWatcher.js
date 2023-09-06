@@ -1,5 +1,5 @@
 const getWindowWidth = () => {
-  return window.innerWidth < 1470;
+  return window.innerWidth;
 };
 
 export default getWindowWidth;

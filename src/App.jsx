@@ -21,7 +21,7 @@ const App = () => {
   const [preventAnim, setPreventAnim] = useState(null);
 
   useEffect(() => {
-    getWindowWidth() == true ? setPreventAnim(true) : setPreventAnim(null);
+    getWindowWidth() < 1470 ? setPreventAnim(true) : setPreventAnim(null);
   }, []);
 
   const handlePrevent = (data) => {
