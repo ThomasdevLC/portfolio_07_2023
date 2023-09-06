@@ -3,7 +3,7 @@
 .intro-main {
   height: 100%;
 
-  @include mixin.xxl-lt {
+  @include mixin.xl-lt {
     display: flex;
   }
 }
@@ -11,7 +11,7 @@
   border-right: 1px solid var(--gray-3);
   width: 320px;
   height: 100%;
-  @include mixin.xxl-lt {
+  @include mixin.xl-lt {
     border-right: none;
     width: 50%;
     display: flex;
@@ -27,7 +27,7 @@
   padding: 20px 60px;
   height: 100%;
 
-  @include mixin.xxl-lt {
+  @include mixin.xl-lt {
     border-right: 1px solid var(--gray-3);
     margin: auto;
     height: auto;
@@ -44,7 +44,7 @@
     justify-content: center;
     align-items: center;
 
-    @include mixin.xxl-lt {
+    @include mixin.xl-lt {
       height: 190px;
     }
 
@@ -59,7 +59,7 @@
     font-size: 23px;
     font-weight: 700;
     padding-top: 10px;
-    @include mixin.xxl-lt {
+    @include mixin.xl-lt {
       text-align: center;
     }
   }
@@ -68,7 +68,7 @@
     font-size: 16px;
     font-weight: 500;
 
-    @include mixin.xxl-lt {
+    @include mixin.xl-lt {
       text-align: center;
       margin-bottom: 20px;
     }
@@ -79,7 +79,7 @@
     margin: 10px 0 30px 0;
     height: 170px;
 
-    @include mixin.xxl-lt {
+    @include mixin.xl-lt {
       height: 130px;
     }
   }
@@ -135,7 +135,7 @@
 }
 .resp-title {
   display: none;
-  @media (min-width: 577px) and (max-width: 1910px) {
+  @include mixin.xl-lt {
     display: block;
   }
 }

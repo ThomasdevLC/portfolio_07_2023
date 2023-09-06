@@ -11,7 +11,7 @@
   justify-content: center;
   cursor: pointer;
 
-  @include mixin.xxl-lt {
+  @include mixin.xl-lt {
     top: 90px;
     left: 60px;
     width: 140px;
@@ -45,7 +45,7 @@
       font-size: 28px;
       font-weight: bold;
 
-      @include mixin.xxl-lt {
+      @include mixin.xl-lt {
         font-size: 20px;
       }
       @include mixin.sm-lt {

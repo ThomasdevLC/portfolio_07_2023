@@ -9,7 +9,7 @@
     height: 180px;
     overflow: hidden;
 
-    @include mixin.xxl-lt {
+    @include mixin.xl-lt {
       height: 653px;
       padding: 0 20px;
       display: flex;
@@ -27,13 +27,14 @@
       font-family: var(--font-main-title);
       // font-size: 98px;
       font-size: 218px;
+      font-size: 10.5vw;
       text-align: center;
       // line-height: 80px;
       line-height: 150px;
       text-align: center;
       letter-spacing: 8px;
 
-      @include mixin.xxl-lt {
+      @include mixin.xl-lt {
         line-height: 120px;
       }
 
