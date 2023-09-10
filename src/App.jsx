@@ -31,23 +31,12 @@ const App = () => {
         <div className="main">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Home />
-                  </>
-                }
-              ></Route>
-              <Route
-                path="/ferme-rougeraie/:id"
-                element={<FermeRougeraie />}
-              ></Route>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/ferme-rougeraie/:id" element={<FermeRougeraie />}></Route>
               <Route path="/groupomania/:id" element={<Groupomania />}></Route>
               <Route path="/kasa/:id" element={<Kasa />}></Route>
               <Route path="/pwa/:id" element={<Pwa />}></Route>
               <Route path="/Portfolio/:id" element={<Portfolio />}></Route>
-
               <Route path="*" element={<Home />}></Route>
             </Routes>
           </AnimatePresence>
