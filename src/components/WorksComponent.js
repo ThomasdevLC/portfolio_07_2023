@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import { useParams } from "react-router-dom";
 import worklistFr from "../worklist/worklistData";
 import worklistEn from "../worklist/worklistDataEn";
-import LangContext from "../context/LangContext";
+import { LangContext } from "../context/LangContext";
 
 const WorksComponent = () => {
   const params = useParams();

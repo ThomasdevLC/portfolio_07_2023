@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
-import LangContext from "../../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 import backgroundImage from "../../assets/images/line.png";
 
 const WorksTitleResp = () => {

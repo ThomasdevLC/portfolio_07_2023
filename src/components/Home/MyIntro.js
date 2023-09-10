@@ -1,38 +1,41 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import WorksTitleResp from "../../components/Home/WorksTitleResp";
 import PreventContext from "../../context/PreventContext";
-import LangContext from "../../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
 
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
+  const { switchLang } = useContext(LangContext);
   const Element = !preventAnim ? motion.div : "div";
-  const { switchLang, setSwitchLang } = useContext(LangContext);
+  const [prevSwitchLang, setPrevSwitchLang] = useState(switchLang);
 
   const positionRef = useRef(null);
   const textRef = useRef(null);
-  // useEffect(() => {
-  //   if (setSwitchLang !== switchLang) {
-  //     const positionElement = positionRef.current;
-  //     gsap.fromTo(
-  //       positionElement,
-  //       { y: -40 },
-  //       { duration: 0.8, y: 0, ease: "power2.out", delay: 0.4 }
-  //     );
-  //     const textElement = textRef.current;
-  //     gsap.fromTo(
-  //       textElement,
-  //       { y: 170 },
-  //       { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
-  //     );
-  //   }
-  // }, [switchLang]);
 
-  console.log("intro ", switchLang);
+  useEffect(() => {
+    if (prevSwitchLang !== switchLang) {
+      const positionElement = positionRef.current;
+      gsap.fromTo(
+        positionElement,
+        { y: -40 },
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.3 }
+      );
+      const textElement = textRef.current;
+      gsap.fromTo(
+        textElement,
+        { y: 170 },
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
+      );
+    }
+
+    setPrevSwitchLang(switchLang);
+  }, [switchLang, prevSwitchLang]);
+
   return (
     <div className="intro-main">
       <div className="intro-container">

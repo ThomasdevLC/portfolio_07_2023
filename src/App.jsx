@@ -8,7 +8,7 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import Portfolio from "./pages/works/Portfolio";
-import LangContext from "./context/LangContext";
+import { LangProvider } from "./context/LangContext";
 import ClickedLangContext from "./context/ClickedLangContext";
 import PreventContext from "./context/PreventContext";
 import getWindowWidth from "./utils/widthWatcher";
@@ -16,7 +16,6 @@ import "./App.scss";
 
 const App = () => {
   const location = useLocation();
-  const [switchLang, setSwitchLang] = useState("fr");
   const [clickedLang, setClickedLang] = useState(null);
   const [preventAnim, setPreventAnim] = useState(null);
 
@@ -33,7 +32,7 @@ const App = () => {
   }, [location.pathname]);
 
   return (
-    <LangContext.Provider value={{ switchLang, setSwitchLang }}>
+    <LangProvider>
       <ClickedLangContext.Provider value={{ clickedLang, setClickedLang }}>
         <PreventContext.Provider value={{ preventAnim, handlePrevent }}>
           <motion.div
@@ -77,7 +76,7 @@ const App = () => {
           </div>
         </PreventContext.Provider>
       </ClickedLangContext.Provider>
-    </LangContext.Provider>
+    </LangProvider>
   );
 };
 

@@ -3,7 +3,7 @@ import cv from "../../assets/pdf/cv.pdf";
 import SplitType from "split-type";
 import PreventContext from "../../context/PreventContext";
 import LanguageSwitcher from "./LanguageSwitcher";
-import LangContext from "../../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 
 const HeaderNav = () => {
   const { preventAnim } = useContext(PreventContext);

@@ -1,4 +1,13 @@
-import { createContext } from "react";
+import React, { createContext, useState } from "react";
 
-const LangContext = createContext();
-export default LangContext;
+export const LangContext = createContext();
+
+export const LangProvider = ({ children }) => {
+  const [switchLang, setSwitchLang] = useState("fr");
+
+  return (
+    <LangContext.Provider value={{ switchLang, setSwitchLang }}>
+      {children}
+    </LangContext.Provider>
+  );
+};

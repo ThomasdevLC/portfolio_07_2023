@@ -1,15 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import fr from "../../assets/images/fr.png";
 import uk from "../../assets/images/uk.png";
-import LangContext from "../../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 
 const LanguageSwitcher = () => {
   const { switchLang, setSwitchLang } = useContext(LangContext);
+  const [canToggle, setCanToggle] = useState(true);
 
   const toggleLanguage = () => {
-    setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
+    if (canToggle) {
+      setSwitchLang((switchLang) => (switchLang === "fr" ? "en" : "fr"));
+      setCanToggle(false);
+
+      setTimeout(() => {
+        setCanToggle(true);
+      }, 1100);
+    }
   };
-  console.log("header switchLang", switchLang);
 
   return (
     <nav className="lang" onClick={() => toggleLanguage()}>
