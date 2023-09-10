@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import cv from "../../assets/pdf/cv.pdf";
 import SplitType from "split-type";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -8,8 +8,10 @@ import { LangContext } from "../../context/LangContext";
 const HeaderNav = () => {
   const { preventAnim } = useContext(PreventContext);
   const { switchLang } = useContext(LangContext);
+  const [prevSwitchLang, setPrevSwitchLang] = useState(switchLang);
   const borderRef = useRef(null);
   const cvRef = useRef(null);
+  const cvTextRef = useRef(null);
   const langRef = useRef(null);
 
   useEffect(() => {
@@ -50,6 +52,18 @@ const HeaderNav = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (prevSwitchLang !== switchLang) {
+      const cvTextElement = cvTextRef.current;
+      gsap.fromTo(
+        cvTextElement,
+        { y: -60 },
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
+      );
+    }
+    setPrevSwitchLang(switchLang);
+  }, [switchLang, prevSwitchLang]);
+
   return (
     <>
       <div className="header">
@@ -67,7 +81,7 @@ const HeaderNav = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                MON CV
+                <p ref={cvTextRef}> MON CV</p>
               </a>
             ) : (
               <a
@@ -77,7 +91,7 @@ const HeaderNav = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                MY CV
+                <p ref={cvTextRef}>MY CV</p>
               </a>
             )}
           </div>

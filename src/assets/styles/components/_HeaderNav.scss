@@ -53,6 +53,8 @@
       overflow: hidden;
 
       &__cv {
+        overflow: hidden;
+
         font-family: var(--font-title);
         font-size: 18px;
         font-weight: 500;

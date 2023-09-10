@@ -11,8 +11,8 @@ import homeEn from "../../data/homeText/homeEn";
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
   const { switchLang } = useContext(LangContext);
-  const Element = !preventAnim ? motion.div : "div";
   const [prevSwitchLang, setPrevSwitchLang] = useState(switchLang);
+  const Element = !preventAnim ? motion.div : "div";
 
   const positionRef = useRef(null);
   const textRef = useRef(null);
