@@ -58,7 +58,7 @@ const HeaderNav = () => {
       gsap.fromTo(
         cvTextElement,
         { y: -60 },
-        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
+        { duration: 0.6, y: 0, ease: "power2.out", delay: 0.2 }
       );
     }
     setPrevSwitchLang(switchLang);
