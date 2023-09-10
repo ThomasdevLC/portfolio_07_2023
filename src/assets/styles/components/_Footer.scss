@@ -1,8 +1,7 @@
 @use "../mixins" as mixin;
 
 .footer {
-  background-color: var(--background);
-  height: 130px;
+  height: 100px;
   position: relative;
 
   @include mixin.xs {
@@ -17,7 +16,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px 60px;
+    padding: 45px 60px;
+    background-color: var(--background);
 
     @include mixin.lg-lt {
       padding: 30px;

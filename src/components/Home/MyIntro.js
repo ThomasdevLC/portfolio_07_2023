@@ -23,7 +23,7 @@ const MyIntro = () => {
       gsap.fromTo(
         positionElement,
         { y: -40 },
-        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.3 }
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
       );
       const textElement = textRef.current;
       gsap.fromTo(

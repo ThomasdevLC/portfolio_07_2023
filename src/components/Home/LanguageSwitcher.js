@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
 
       setTimeout(() => {
         setCanToggle(true);
-      }, 1100);
+      }, 1000);
     }
   };
 
