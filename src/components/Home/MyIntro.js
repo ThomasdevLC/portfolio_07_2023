@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import pic from "../../assets/images/pic.png";
 import cv from "../../assets/pdf/cv.pdf";
 import WorksTitleResp from "../../components/Home/WorksTitleResp";
-import PreventContext from "../../context/PreventContext";
+import { PreventContext } from "../../context/PreventContext";
 import { LangContext } from "../../context/LangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";

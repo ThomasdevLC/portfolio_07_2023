@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import PreventContext from "../context/PreventContext";
+import { PreventContext } from "../context/PreventContext";
 
 const SvgModule = () => {
   const { preventAnim } = useContext(PreventContext);

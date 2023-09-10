@@ -1,5 +1,18 @@
-import { createContext } from "react";
+import React, { createContext, useState, useEffect } from "react";
+import getWindowWidth from "../utils/widthWatcher";
 
-const PreventContext = createContext();
+export const PreventContext = createContext();
 
-export default PreventContext;
+export const PreventProvider = ({ children }) => {
+  const [preventAnim, setPreventAnim] = useState(null);
+
+  useEffect(() => {
+    getWindowWidth() < 1470 ? setPreventAnim(true) : setPreventAnim(null);
+  }, []);
+
+  return (
+    <PreventContext.Provider value={{ preventAnim, setPreventAnim }}>
+      {children}
+    </PreventContext.Provider>
+  );
+};

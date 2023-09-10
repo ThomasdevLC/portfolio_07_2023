@@ -1,14 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
 import video from "../../assets/videos/groupomania-video.mp4";
 import transition from "../../utils/transitions";
-import usePrevent from "../../hooks/usePrevent";
+import { PreventContext } from "../../context/PreventContext";
 
 const Groupomania = () => {
+  const { setPreventAnim } = useContext(PreventContext);
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  usePrevent(true);
+
+  setPreventAnim(true);
 
   const toggleVideo = () => {
     if (isPlaying) {

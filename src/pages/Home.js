@@ -5,9 +5,8 @@ import WorksLinks from "../components/Home/WorksLinks";
 import HeaderNav from "../components/Home/HeaderNav";
 import Footer from "../components/Home/Footer";
 import transition from "../utils/transitions";
-
+import { PreventContext } from "../context/PreventContext";
 import { motion } from "framer-motion";
-import PreventContext from "../context/PreventContext";
 
 const Home = () => {
   const { preventAnim } = useContext(PreventContext);

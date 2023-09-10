@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import PreventContext from "../../context/PreventContext";
+import { PreventContext } from "../../context/PreventContext";
 import worklist from "../../worklist/worklistData";
 import getWindowWidth from "../../utils/widthWatcher";
 

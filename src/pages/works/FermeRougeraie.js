@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
 import farmProducts from "../../assets/images/ferme_rougeraie_about.png";
 import farmAbout from "../../assets/images/ferme_rougeraie_products.png";
 import transition from "../../utils/transitions";
-import usePrevent from "../../hooks/usePrevent";
+import { PreventContext } from "../../context/PreventContext";
 
 const FermeRougeraie = () => {
-  usePrevent(true);
+  const { setPreventAnim } = useContext(PreventContext);
+
+  setPreventAnim(true);
 
   return (
     <div className="farm__container">

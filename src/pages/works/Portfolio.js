@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
 import transition from "../../utils/transitions";
-import usePrevent from "../../hooks/usePrevent";
+import { PreventContext } from "../../context/PreventContext";
 
 const Portfolio = () => {
-  usePrevent(true);
+  const { setPreventAnim } = useContext(PreventContext);
+  setPreventAnim(true);
 
   return (
     <div className="portfolio__container">

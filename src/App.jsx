@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
@@ -8,33 +8,18 @@ import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
 import Portfolio from "./pages/works/Portfolio";
-import { LangProvider } from "./context/LangContext";
 import ClickedLangContext from "./context/ClickedLangContext";
-import PreventContext from "./context/PreventContext";
-import getWindowWidth from "./utils/widthWatcher";
+import { LangProvider } from "./context/LangContext";
+import { PreventProvider } from "./context/PreventContext";
 import "./App.scss";
 
 const App = () => {
-  const location = useLocation();
   const [clickedLang, setClickedLang] = useState(null);
-  const [preventAnim, setPreventAnim] = useState(null);
-
-  useEffect(() => {
-    getWindowWidth() < 1470 ? setPreventAnim(true) : setPreventAnim(null);
-  }, []);
-
-  const handlePrevent = (data) => {
-    setPreventAnim(data);
-  };
-
-  useEffect(() => {
-    setClickedLang(null);
-  }, [location.pathname]);
 
   return (
     <LangProvider>
       <ClickedLangContext.Provider value={{ clickedLang, setClickedLang }}>
-        <PreventContext.Provider value={{ preventAnim, handlePrevent }}>
+        <PreventProvider>
           <motion.div
             className="slide-out"
             initial={{ scaleY: 1 }}
@@ -74,7 +59,7 @@ const App = () => {
               </Routes>
             </AnimatePresence>
           </div>
-        </PreventContext.Provider>
+        </PreventProvider>
       </ClickedLangContext.Provider>
     </LangProvider>
   );

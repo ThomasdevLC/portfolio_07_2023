@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useContext } from "react";
 import cv from "../../assets/pdf/cv.pdf";
 import SplitType from "split-type";
-import PreventContext from "../../context/PreventContext";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { PreventContext } from "../../context/PreventContext";
 import { LangContext } from "../../context/LangContext";
 
 const HeaderNav = () => {
