@@ -1,16 +1,15 @@
-import React, { useEffect, useContext, useRef } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { PreventContext } from "../../context/PreventContext";
 import { LangContext } from "../../context/LangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
-import ClickedLangContext from "../../context/ClickedLangContext";
 import SvgModule from "../../svg/SvgModule.js";
 import "../../svg/SvgModule.scss";
 
 const WorksTitle = () => {
-  const { switchLang } = useContext(LangContext);
-  const { clickedLang } = useContext(ClickedLangContext);
   const { preventAnim } = useContext(PreventContext);
+  const { switchLang } = useContext(LangContext);
+  const [prevSwitchLang, setPrevSwitchLang] = useState(switchLang);
 
   const titleRef = useRef(null);
 
@@ -20,19 +19,23 @@ const WorksTitle = () => {
       gsap.fromTo(
         titleElement,
         { y: 180 },
-        { duration: 1, y: 0, ease: "power2.out", delay: 1.7 }
+        { duration: 1, y: 0, ease: "power2.out", delay: 2 }
       );
     }
   }, []);
 
-  if (clickedLang === "click") {
-    const titleElement = titleRef.current;
-    gsap.fromTo(
-      titleElement,
-      { y: -180 },
-      { duration: 1, y: 0, ease: "power2.out", delay: 0.2 }
-    );
-  }
+  useEffect(() => {
+    if (prevSwitchLang !== switchLang) {
+      const titleElement = titleRef.current;
+      gsap.fromTo(
+        titleElement,
+        { y: -180 },
+        { duration: 0.8, y: 0, ease: "power2.out", delay: 0.2 }
+      );
+    }
+    setPrevSwitchLang(switchLang);
+  }, [switchLang, prevSwitchLang]);
+
   return (
     <div className="">
       <div className="svgBox">
