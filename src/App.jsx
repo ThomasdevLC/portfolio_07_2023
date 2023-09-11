@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
@@ -13,6 +13,8 @@ import { PreventProvider } from "./context/PreventContext";
 import "./App.scss";
 
 const App = () => {
+  const location = useLocation();
+
   return (
     <LangProvider>
       <PreventProvider>
