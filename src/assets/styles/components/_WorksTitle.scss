@@ -5,7 +5,6 @@
   height: 100%;
 
   &__container {
-    // padding-top: 40px;
     overflow: hidden;
 
     @include mixin.xl-lt {
@@ -30,26 +29,31 @@
 
       @include mixin.lg-lt {
         height: 100%;
+        line-height: 150px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 30px;
       }
 
       &__works {
         @include mixin.lg-lt {
           font-size: 150px;
         }
+        @include mixin.sm {
+          font-size: 140px;
+        }
       }
       &__years {
         @include mixin.lg {
-          font-size: 105px;
+          font-size: 100px;
         }
         @include mixin.md {
           font-size: 95px;
         }
         @include mixin.sm {
-          font-size: 95px;
+          font-size: 85px;
         }
       }
     }

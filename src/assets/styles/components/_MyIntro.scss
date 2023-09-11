@@ -16,6 +16,16 @@
     width: 50%;
     display: flex;
   }
+  @include mixin.md {
+    border-right: none;
+    width: 340px;
+    display: flex;
+  }
+  @include mixin.sm {
+    border-right: none;
+    width: 310px;
+    display: flex;
+  }
 
   @include mixin.xs {
     width: 100%;
