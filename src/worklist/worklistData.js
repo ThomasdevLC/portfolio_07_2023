@@ -7,11 +7,10 @@ const worklist = [
     // image: require("../assets/images/portfolio.png"),
     image: require("../assets/images/asphalt_link.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
-    link: "portfolio",
-    intro:
-      " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
+    link: "bikeshop",
+    intro: " Site web pour une marque de vélo fictive",
     pitch:
-      "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
+      "Dans ma démarche d'amélioration en tant que développeur frontend, j'ai récemment entrepris un projet personnel. L'objectif initial était d'explorer deux bibliothèques d'animation : GSAP et Framer Motion. Mon principal but était de créer des animations fluides et des effets visuels pour un site web fictif de marque de vélo",
     url: "http://test.com/",
   },
   {
@@ -67,8 +66,7 @@ const worklist = [
     image: require("../assets/images/groupomania_link.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
-    intro:
-      " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
+    intro: " Réseau social interne pour les employés d'une entreprise réalisé durant ma formation Openclassrooms.",
     pitch:
       "Le projet fullstack  comprend une page de connexion permettant à l'utilisateur de se connecter, ou bien de créer un compte, une fonctionnalité de création de messages ainsi qu' une page listant les posts et commentaires.",
     url: "http://test.com/",

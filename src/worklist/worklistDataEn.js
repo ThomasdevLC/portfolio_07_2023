@@ -7,10 +7,9 @@ const worklistEn = [
     image: require("../assets/images/portfolio.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion"],
     link: "portfolio",
-    intro:
-      "Internal social network for employees of a company, created during my OpenClassrooms training.",
+    intro: "Website for a fictitious bicycle brand",
     pitch:
-      "The full-stack project includes a login page allowing the user to sign in or create an account, a feature to create messages, as well as a page listing posts and comments.",
+      "In my quest to improve as a frontend developer, I recently undertook a personal project. The aim was to explore two animation libraries: GSAP and Framer Motion. My main objective was to create fluid animations and visual effects for a fictitious bicycle brand website.",
     url: "http://test.com/",
   },
 
@@ -35,8 +34,7 @@ const worklistEn = [
     image: require("../assets/images/gca.png"),
     tags: ["Vue", "Pinia", "Sass", "Figma"],
     link: "pwa",
-    intro:
-      "During my internship at the company GCA, I developed a mobile-first application designed specifically to meet the needs of the sales teams.",
+    intro: "During my internship at the company GCA, I developed a mobile-first application designed specifically to meet the needs of the sales teams.",
     pitch:
       "This project, developed using Vue 3 and configured with Vite, was created with the aim of keeping salespeople informed of their sales figures and objectives in real-time. By adopting a Progressive Web App (PWA) approach, the application can be installed directly on users' home screens, providing an experience similar to that of a native app.",
     url: "http://test.com/",
@@ -63,8 +61,7 @@ const worklistEn = [
     image: require("../assets/images/groupomania.png"),
     tags: ["React", "Sass", "NodeJs"],
     link: "groupomania",
-    intro:
-      "Internal social network for employees of a company, created during my OpenClassrooms training.",
+    intro: "Internal social network for employees of a company, created during my OpenClassrooms training.",
     pitch:
       "The full-stack project includes a login page allowing the user to sign in or create an account, a feature to create messages, as well as a page listing posts and comments.",
     url: "http://test.com/",

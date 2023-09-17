@@ -7,7 +7,7 @@ import Groupomania from "./pages/works/Groupomania";
 import Kasa from "./pages/works/Kasa";
 import Pwa from "./pages/works/Pwa";
 import FermeRougeraie from "./pages/works/FermeRougeraie";
-import Portfolio from "./pages/works/Portfolio";
+import BikeShop from "./pages/works/BikeShop";
 import { LangProvider } from "./context/LangContext";
 import { PreventProvider } from "./context/PreventContext";
 import "./App.scss";
@@ -38,7 +38,7 @@ const App = () => {
               <Route path="/groupomania/:id" element={<Groupomania />}></Route>
               <Route path="/kasa/:id" element={<Kasa />}></Route>
               <Route path="/pwa/:id" element={<Pwa />}></Route>
-              <Route path="/Portfolio/:id" element={<Portfolio />}></Route>
+              <Route path="/bikeshop/:id" element={<BikeShop />}></Route>
               <Route path="*" element={<Home />}></Route>
             </Routes>
           </AnimatePresence>
