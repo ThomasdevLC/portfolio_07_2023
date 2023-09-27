@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
-import pwa from "../../assets/images/pwa.png";
-import pwa_2 from "../../assets/images/pwa_2.png";
+import pwa from "../../assets/images/pwa.webp";
+import pwa_2 from "../../assets/images/pwa_2.webp";
 import transition from "../../utils/transitions";
 import { PreventContext } from "../../context/PreventContext";
 

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import WorksComponent from "../../components/WorksComponent";
 import BackBtn from "../../components/works/BackBtn";
-import bike_anim from "../../assets/images/bike_anim.png";
-import bike_final from "../../assets/images/bike_final.png";
-import bike_shop from "../../assets/images/bike_shop.png";
+import bike_anim from "../../assets/images/bike_anim.webp";
+import bike_final from "../../assets/images/bike_final.webp";
+import bike_shop from "../../assets/images/bike_shop.webp";
 import transition from "../../utils/transitions";
 import { PreventContext } from "../../context/PreventContext";
 
