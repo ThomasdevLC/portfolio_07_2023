@@ -5,7 +5,7 @@ const worklistEn = [
     description: "E-commerce Website",
     period: "August 2023",
     image: require("../assets/images/asphalt_link.png"),
-    tags: ["React", "Sass", "Gsap", "Framer-Motion"],
+    tags: ["React", "Sass", "Gsap", "Framer-Motion", "Figma"],
     link: "portfolio",
     intro: "Website for a fictitious bicycle brand",
     pitch:
