@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import cv from "../../assets/pdf/cv.pdf";
+import cvfr from "../../assets/pdf/cvfr.pdf";
+import cven from "../../assets/pdf/cven.pdf";
 import SplitType from "split-type";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { PreventContext } from "../../context/PreventContext";
@@ -30,36 +31,20 @@ const HeaderNav = () => {
       });
 
       const borderElement = borderRef.current;
-      gsap.fromTo(
-        borderElement,
-        { width: "0%" },
-        { width: "100%", duration: 1.5, ease: "power2.out", delay: 1.2 }
-      );
+      gsap.fromTo(borderElement, { width: "0%" }, { width: "100%", duration: 1.5, ease: "power2.out", delay: 1.2 });
 
       const cvElement = cvRef.current;
-      gsap.fromTo(
-        cvElement,
-        { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.8 }
-      );
+      gsap.fromTo(cvElement, { opacity: 0, y: 25 }, { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.8 });
 
       const langElement = langRef.current;
-      gsap.fromTo(
-        langElement,
-        { opacity: 0, y: 25 },
-        { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.9 }
-      );
+      gsap.fromTo(langElement, { opacity: 0, y: 25 }, { opacity: 1, duration: 0.6, y: 0, ease: "power2.out", delay: 2.9 });
     }
   }, []);
 
   useEffect(() => {
     if (prevSwitchLang !== switchLang) {
       const cvTextElement = cvTextRef.current;
-      gsap.fromTo(
-        cvTextElement,
-        { y: -60 },
-        { duration: 0.7, y: 0, ease: "power2.out", delay: 0.2 }
-      );
+      gsap.fromTo(cvTextElement, { y: -60 }, { duration: 0.7, y: 0, ease: "power2.out", delay: 0.2 });
     }
     setPrevSwitchLang(switchLang);
   }, [switchLang, prevSwitchLang]);
@@ -73,28 +58,11 @@ const HeaderNav = () => {
         </div>
         <div className="header__right">
           <div className="header__right__box ">
-            {switchLang === "fr" ? (
-              <a
-                className="header__right__cvbox__cv "
-                ref={cvRef}
-                href={cv}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p ref={cvTextRef}> MON CV</p>
-              </a>
-            ) : (
-              <a
-                className="header__right__cvbox__cv "
-                ref={cvRef}
-                href={cv}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <p ref={cvTextRef}>MY CV</p>
-              </a>
-            )}
+            <a className="header__right__cvbox__cv" ref={cvRef} href={switchLang === "fr" ? cvfr : cven} target="_blank" rel="noreferrer">
+              <p ref={cvTextRef}>{switchLang === "fr" ? "MON CV" : "MY CV"}</p>
+            </a>
           </div>
+
           <div className="header__right__langmode" ref={langRef}>
             <LanguageSwitcher />
           </div>
