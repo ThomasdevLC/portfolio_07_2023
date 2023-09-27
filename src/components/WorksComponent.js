@@ -14,26 +14,16 @@ const WorksComponent = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
-    const selectedProject = (
-      switchLang === "fr" ? worklistFr : worklistEn
-    ).find((w) => w.id === projectId);
+    const selectedProject = (switchLang === "fr" ? worklistFr : worklistEn).find((w) => w.id === projectId);
     setProject(selectedProject);
   }, [projectId, switchLang]);
 
   useEffect(() => {
     if (project) {
       const containerElement = containerRef.current;
-      gsap.fromTo(
-        containerElement,
-        { opacity: 0, y: -140 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 0.7 }
-      );
+      gsap.fromTo(containerElement, { opacity: 0, y: -140 }, { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 0.7 });
       const titleElement = titleRef.current;
-      gsap.fromTo(
-        titleElement,
-        { opacity: 0, y: 65 },
-        { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.2 }
-      );
+      gsap.fromTo(titleElement, { opacity: 0, y: 65 }, { opacity: 1, duration: 0.8, y: 0, ease: "power2.out", delay: 1.2 });
     }
   }, [project]);
 
@@ -69,7 +59,11 @@ const WorksComponent = () => {
                         ))}
                       </ul>
                     </td>
-                    <td>{project.url}</td>
+                    <td>
+                      <a href={project.url} target="_blank" rel="noreferrer">
+                        {project.url}
+                      </a>
+                    </td>
                   </tr>
                 </tbody>
               </table>

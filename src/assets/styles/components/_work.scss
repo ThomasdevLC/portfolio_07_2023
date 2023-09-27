@@ -114,6 +114,7 @@ th,
 td {
   padding: 10px 20px;
   text-align: left;
+  word-wrap: break-word;
 
   @include mixin.sm-lt {
     padding: 10px;
