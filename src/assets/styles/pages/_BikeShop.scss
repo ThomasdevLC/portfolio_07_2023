@@ -13,9 +13,20 @@
 
   & img {
     padding: 40px 0px;
+
+    @include mixin.md-lt {
+      padding: 30px 0px;
+    }
+    @include mixin.xs {
+      padding: 20px 0px;
+    }
   }
 
   @include mixin.md-lt {
-    padding: 40px;
+    padding: 0px 40px;
+  }
+
+  @include mixin.xs {
+    padding: 0px 20px;
   }
 }

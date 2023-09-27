@@ -6,7 +6,7 @@ const WorksTitleResp = () => {
   const { switchLang } = useContext(LangContext);
 
   return (
-    <div className="workstitle br">
+    <div className="workstitle">
       <div className="workstitle__container" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="workstitle__container__text">
           {switchLang === "fr" ? <p className="workstitle__container__text__works">PROJETS</p> : <p className="workstitle__container__text__works">WORKS</p>}
