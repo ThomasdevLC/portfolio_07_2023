@@ -89,8 +89,8 @@
   &__text {
     overflow: hidden;
     font-size: 14px;
-    margin: 10px 0 30px 0;
-    height: 170px;
+    margin: 10px 0 20px 0;
+    height: 175px;
 
     @include mixin.xl-lt {
       height: 130px;
