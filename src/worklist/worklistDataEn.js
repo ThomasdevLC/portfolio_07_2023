@@ -7,10 +7,10 @@ const worklistEn = [
     image: require("../assets/images/asphalt_link.png"),
     tags: ["React", "Sass", "Gsap", "Framer-Motion", "Figma"],
     link: "portfolio",
-    intro: "Website for a fictitious bicycle brand",
+    intro: "Website for a fictional bicycle brand",
     pitch:
-      "In my quest to improve as a frontend developer, I recently undertook a personal project. The aim was to explore two animation libraries: GSAP and Framer Motion. My main objective was to create fluid animations and visual effects for a fictitious bicycle brand website.",
-    url: "http://test.com/",
+      "I recently undertook a personal project to improve as a frontend developer. The aim was to explore two animation libraries: GSAP and Framer Motion. My main objective was to create fluid animations and visual effects for a fictional bicycle brand website.",
+    url: "http://bike-shop.thomaslecam.com/",
   },
 
   {
@@ -49,8 +49,7 @@ const worklistEn = [
     link: "kasa",
     intro:
       "As part of an OpenClassrooms project, I was asked to integrate the Figma mockup of a platform for renting accommodations between individuals using React.js and react-router.",
-    pitch:
-      "Complete redesign of the original site coded over 10 years ago with significant legacy code. I implemented the front-end part using React. The site is responsive, and the components are modular and reusable.",
+    pitch: " I implemented the front-end part using React. The site is responsive, and the components are modular and reusable.",
     url: "http://kasa.thomaslecam.com/",
   },
   {

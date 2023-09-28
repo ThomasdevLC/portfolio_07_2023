@@ -49,8 +49,7 @@ const worklist = [
     link: "kasa",
     intro:
       "Dans le cadre d'un des projet Openclassrooms, il était demandé d'intégrer la maquette figma d'une plateforme de location de logements entre particuliers avec la technologie React.js et l'utilisation de react-router.",
-    pitch:
-      "Refonte totale du site originale codé il y a plus de 10 ans avec un code legacy important. J'ai implémenté la partie front-end à l'aide de React. Le site est responsive et les composants sont modulaires et réutilisables.",
+    pitch: "J'ai implémenté la partie front-end à l'aide de React. Le site est responsive et les composants sont modulaires et réutilisables.",
     url: "http://kasa.thomaslecam.com/",
   },
   {
