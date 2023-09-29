@@ -59,10 +59,17 @@ const WorksComponent = () => {
                         ))}
                       </ul>
                     </td>
-                    <td>
-                      <a href={project.url} target="_blank" rel="noreferrer">
-                        {project.url}
-                      </a>
+                    <td className="project__table__td__link">
+                      <div>
+                        <a href={project.url} target="_blank" rel="noreferrer">
+                          {project.url}
+                        </a>
+                      </div>
+                      <div>
+                        <a href={project.url2} target="_blank" rel="noreferrer">
+                          {project.url2}
+                        </a>
+                      </div>
                     </td>
                   </tr>
                 </tbody>

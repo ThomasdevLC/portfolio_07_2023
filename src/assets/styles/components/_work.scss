@@ -101,6 +101,11 @@
         font-size: 12px;
       }
     }
+    &__td__link {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 }
 
