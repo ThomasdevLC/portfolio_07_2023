@@ -25,6 +25,7 @@ const worklistEn = [
     pitch:
       "The site was developed using Vue 3 for the frontend, NodeJS for the backend, and MongoDb for the product database. I implemented a shopping cart so that users can add products and place their orders. As an administrator, Léa, the producer, can log in to the site and access a comprehensive summary of all orders. The administration page also allows her to create product cards and manage their display on the site.",
     url: "http://fermerougeraie.thomaslecam.com/",
+    url2: "http://fermerougeraie.thomaslecam.com/admin",
   },
   {
     id: 3,

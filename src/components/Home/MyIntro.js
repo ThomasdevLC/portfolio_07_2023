@@ -4,10 +4,10 @@ import pic from "../../assets/images/pic.png";
 import cvfr from "../../assets/pdf/cvfr.pdf";
 import cven from "../../assets/pdf/cven.pdf";
 import WorksTitleResp from "../../components/Home/WorksTitleResp";
-import { PreventContext } from "../../context/PreventContext";
-import { LangContext } from "../../context/LangContext";
 import homeFr from "../../data/homeText/homeFr";
 import homeEn from "../../data/homeText/homeEn";
+import { PreventContext } from "../../context/PreventContext";
+import { LangContext } from "../../context/LangContext";
 
 const MyIntro = () => {
   const { preventAnim } = useContext(PreventContext);
