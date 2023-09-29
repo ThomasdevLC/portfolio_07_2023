@@ -13,49 +13,53 @@ const WorksLinks = () => {
   const workLinkRefs = useRef([]);
 
   const manageMouseEnter = (e, index) => {
-    gsap.to(e.target, {
-      top: "-32px",
-      backgroundColor: "#fdff87",
-      duration: 0.4,
-    });
+    if (getWindowWidth() > 1470) {
+      gsap.to(e.target, {
+        top: "-32px",
+        backgroundColor: "#fdff87",
+        duration: 0.4,
+      });
 
-    const imgBox = imgBoxRefs.current[index];
-    gsap.set(imgBox, {
-      xPercent: 60,
-      yPercent: 50,
-      rotation: -15,
-      delay: 0.1,
-    });
+      const imgBox = imgBoxRefs.current[index];
+      gsap.set(imgBox, {
+        xPercent: 60,
+        yPercent: 50,
+        rotation: -15,
+        delay: 0.1,
+      });
 
-    gsap.to(imgBox, {
-      opacity: 1,
-      scale: 1,
-      yPercent: -50,
-      rotation: 5,
-      delay: 0.1,
-    });
+      gsap.to(imgBox, {
+        opacity: 1,
+        scale: 1,
+        yPercent: -50,
+        rotation: 5,
+        delay: 0.1,
+      });
+    }
   };
 
   const manageMouseLeave = (e, index) => {
-    gsap.to(e.target, {
-      top: "0",
-      backgroundColor: "white",
-      duration: 0.4,
-      delay: 0.2,
-    });
+    if (getWindowWidth() > 1470) {
+      gsap.to(e.target, {
+        top: "0",
+        backgroundColor: "white",
+        duration: 0.4,
+        delay: 0.2,
+      });
 
-    const imgBox = imgBoxRefs.current[index];
-    gsap.to(imgBox, {
-      opacity: 0,
-      yPercent: 30,
-      xPercent: 25,
-      scale: 0.8,
-      rotation: -2,
-      delay: 0.1,
-      duration: 0.4,
-      ease: "power3.inOut",
-      delay: 0.2,
-    });
+      const imgBox = imgBoxRefs.current[index];
+      gsap.to(imgBox, {
+        opacity: 0,
+        yPercent: 30,
+        xPercent: 25,
+        scale: 0.8,
+        rotation: -2,
+        delay: 0.1,
+        duration: 0.4,
+        ease: "power3.inOut",
+        delay: 0.2,
+      });
+    }
   };
 
   const manageMouseMove = (e, index) => {
@@ -63,10 +67,7 @@ const WorksLinks = () => {
     const imgBox = imgBoxRefs.current[index];
 
     const workLinkRect = workLink.getBoundingClientRect();
-    const offsetX = Math.min(
-      e.clientX - workLinkRect.left,
-      getWindowWidth() < 1910 ? 250 : 520
-    );
+    const offsetX = Math.min(e.clientX - workLinkRect.left, getWindowWidth() < 1910 ? 250 : 520);
 
     gsap.to(imgBox, {
       x: offsetX - workLinkRect.width / 2,
@@ -110,15 +111,8 @@ const WorksLinks = () => {
                 ))}
               </div>
 
-              <div
-                className="workslinks__box__imgbox"
-                ref={(im) => (imgBoxRefs.current[index] = im)}
-              >
-                <img
-                  className="workslinks__box__img"
-                  src={project.image}
-                  alt={project.title}
-                />
+              <div className="workslinks__box__imgbox" ref={(im) => (imgBoxRefs.current[index] = im)}>
+                <img className="workslinks__box__img" src={project.image} alt={project.title} />
               </div>
             </Element>
           </NavLink>
