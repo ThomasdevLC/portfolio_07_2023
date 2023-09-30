@@ -9,7 +9,7 @@ const worklist = [
     link: "bikeshop",
     intro: " Site web pour une marque de vélo fictive",
     pitch:
-      "Dans ma démarche d'amélioration en tant que développeur frontend, j'ai récemment entrepris un projet personnel. L'objectif initial était d'explorer deux bibliothèques d'animation : GSAP et Framer Motion. Mon principal but était de créer des animations fluides et des effets visuels pour un site web fictif de marque de vélo",
+      "Dans ma démarche d'amélioration en tant que développeur frontend, j'ai récemment entrepris un projet personnel. L'objectif initial était d'explorer deux bibliothèques d'animation : GSAP et Framer Motion. Mon principal but était de créer des animations fluides et des effets visuels pour un site web fictif de marque de vélo.",
     url: "http://bike-shop.thomaslecam.com/",
   },
   {
@@ -49,7 +49,7 @@ const worklist = [
     tags: ["React", "Sass"],
     link: "kasa",
     intro:
-      "Dans le cadre d'un des projet Openclassrooms, il était demandé d'intégrer la maquette figma d'une plateforme de location de logements entre particuliers avec la technologie React.js et l'utilisation de react-router.",
+      "Dans le cadre d'un des projets Openclassrooms, il était demandé d'intégrer la maquette figma d'une plateforme de location de logements entre particuliers avec la technologie React.js et l'utilisation de react-router.",
     pitch: "J'ai implémenté la partie front-end à l'aide de React. Le site est responsive et les composants sont modulaires et réutilisables.",
     url: "http://kasa.thomaslecam.com/",
   },
