@@ -10,7 +10,7 @@ const worklist = [
     intro: " Site web pour une marque de vélo fictive",
     pitch:
       "Dans ma démarche d'amélioration en tant que développeur frontend, j'ai récemment entrepris un projet personnel. L'objectif initial était d'explorer deux bibliothèques d'animation : GSAP et Framer Motion. Mon principal but était de créer des animations fluides et des effets visuels pour un site web fictif de marque de vélo.",
-    url: "http://bike-shop.thomaslecam.com/",
+    url: "https://bike-shop.thomaslecam.com/",
   },
   {
     id: 2,
@@ -38,7 +38,8 @@ const worklist = [
       "Lors de mon stage dans l'entreprise GCA, j'ai développé une application mobile first conçue spécifiquement pour répondre aux besoins des équipes commerciales.",
     pitch:
       "Ce projet, développé avec Vue 3 et configuré avec Vite, a été créé dans le but de tenir les commerciaux informés de leurs chiffres de vente et de leurs objectifs en temps réel. En adoptant une approche PWA (Progressive Web App), l'application peut  être installée directement sur l'écran d'accueil des utilisateurs, offrant ainsi une expérience similaire à celle d'une application native.",
-    url: "http://pwa.thomaslecam.com/",
+    url: "http://gstatpwa.thomaslecam.com/login/b_duveau",
+    url2: "http://gstatpwa.thomaslecam.com/login/d_bauchu",
   },
   {
     id: 4,
@@ -51,7 +52,7 @@ const worklist = [
     intro:
       "Dans le cadre d'un des projets Openclassrooms, il était demandé d'intégrer la maquette figma d'une plateforme de location de logements entre particuliers avec la technologie React.js et l'utilisation de react-router.",
     pitch: "J'ai implémenté la partie front-end à l'aide de React. Le site est responsive et les composants sont modulaires et réutilisables.",
-    url: "http://kasa.thomaslecam.com/",
+    url: "https://kasa.thomaslecam.com/",
   },
   {
     id: 5,
